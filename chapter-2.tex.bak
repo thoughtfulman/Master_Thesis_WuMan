@@ -2,3 +2,11 @@
 
 \chapter{可见光多波段通信系统概述} 
 \section{引言}
+\section{室内可见光通信基本原理}
+\subsection{基础硬件：发光二极管与光电二极管}
+\subsection{可见光系统模型}
+\section{OFDM技术在室内可见光通信中的应用}
+\subsection{OFDM技术简介}
+\subsection{可见光中的OFDM调制}
+\section{自适应传输技术简介}
+\section{本章小结}

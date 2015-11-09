@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  8 NOV 2015 09:13
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  9 NOV 2015 10:02
 entering extended mode
 **Main
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\Main.tex
+(E:\WuMan\Master_Thesis_WuMan\Main.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\seuthesis.cls
+(E:\WuMan\Master_Thesis_WuMan\seuthesis.cls
 Document Class: seuthesis 2012/04/19 2.1.2 The LaTeX template for thesis of Sou
 theast University
 Document Class `seuthesis' v2.1.2 by Xu Yuan, Song Yihan, Huang Xiaoyu (2012/04
@@ -1115,9 +1115,8 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 LaTeX Warning: Unused global option(s):
     [10.5pt].
 
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\Main.aux
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\chapter-1.aux)
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\chapter-2.aux))
+(E:\WuMan\Master_Thesis_WuMan\Main.aux
+(E:\WuMan\Master_Thesis_WuMan\chapter-2.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
@@ -1233,8 +1232,7 @@ LaTeX Info: Redefining \ref on input line 13.
 LaTeX Info: Redefining \pageref on input line 13.
 LaTeX Info: Redefining \nameref on input line 13.
 
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\Main.out)
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\Main.out)
+(E:\WuMan\Master_Thesis_WuMan\Main.out) (E:\WuMan\Master_Thesis_WuMan\Main.out)
 \@outlinefile=\write3
 .................................................
 . fontspec info: "no-scripts"
@@ -1264,9 +1262,8 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . * 'bold italic' with NFSS spec.:
 . <->"SimSun/ICU:mapping=tex-text;embolden=4,slant=0.17;"
 .................................................
-
 [seuthesis]: Load seuthesis-utf8.cfg successfully!
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\seuthesis-utf8.cfg
+(E:\WuMan\Master_Thesis_WuMan\seuthesis-utf8.cfg
 File: seuthesis.cfg 
 )
 \@indexfile=\write4
@@ -1305,7 +1302,7 @@ Writing index file Main.idx
 * \@reversemargintrue
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\chapter-1.tex
+(E:\WuMan\Master_Thesis_WuMan\chapter-2.tex
 第\CJKnumber {1}章 1.
 (d:\CTEX\MiKTeX\tex\generic\oberdiek\se-ascii-print.def
 File: se-ascii-print.def 2010/03/01 v1.8 stringenc: Printable ASCII characters
@@ -1360,15 +1357,6 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
-LaTeX Font Info:    Try loading font information for U+msa on input line 5.
-(d:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 5.
-
-(d:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
 .................................................
 . fontspec info: "no-scripts"
 . 
@@ -1399,117 +1387,44 @@ ei},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+) [1
 
 
 
 
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
- [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3])
-[4] (E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\chapter-2.tex
-第\CJKnumber {2}章 2.
-) [5
+] [2
 
 
 
-] [6
+] (E:\WuMan\Master_Thesis_WuMan\Main.bbl
 
+Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
-
-] (E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\Main.bbl
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
- [7
+) [3
 
 ]
-
-LaTeX Font Warning: Font shape `EU1/TimesNewRoman(0)/m/sl' undefined
-(Font)              using `EU1/TimesNewRoman(0)/m/n' instead on input line 193.
-
-
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-LaTeX Font Warning: Font shape `EU1/SimSun(0)/m/sl' undefined
-(Font)              using `EU1/SimSun(0)/m/n' instead on input line 193.
-
-[8]) [9]
 File: figures/back-cover.png Graphic file (type QTm)
  <use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
- [10
+ [4
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
 
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\Main.aux
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\chapter-1.aux)
-(E:\WuMan\文档\毕业论文\Master_Thesis_WuMan\chapter-2.aux))
+(E:\WuMan\Master_Thesis_WuMan\Main.aux
+(E:\WuMan\Master_Thesis_WuMan\chapter-2.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 79.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 79.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
  ) 
 Here is how much of TeX's memory you used:
- 25730 strings out of 430478
- 469760 string characters out of 3191501
- 572873 words of memory out of 3000000
- 28514 multiletter control sequences out of 15000+200000
- 9027 words of font info for 76 fonts, out of 3000000 for 9000
+ 25486 strings out of 430478
+ 464427 string characters out of 3191501
+ 548826 words of memory out of 3000000
+ 28307 multiletter control sequences out of 15000+200000
+ 4601 words of font info for 49 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,8n,63p,787b,616s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,6n,63p,787b,584s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Main.pdf (10 pages).
+Output written on Main.pdf (4 pages).

@@ -1,13 +1,6 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Main.aux
 The style file: seuthesis.bst
-A level-1 auxiliary file: chapter-1.aux
 A level-1 auxiliary file: chapter-2.aux
+I found no \citation commands---while reading file Main.aux
 Database file #1: Reference.bib
-Repeated entry---line 239 of file Reference.bib
- : @article{vuvcic2010513
- :                       ,
-I'm skipping whatever remains of this entry
-Warning--empty year in afgani2006visible
-You can't pop an empty literal stack for entry afgani2006visible
-while executing---line 3542 of file seuthesis.bst
-(There were 2 error messages)
+(There was 1 error message)

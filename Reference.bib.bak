@@ -1,0 +1,376 @@
+% This file was created with JabRef 2.6.
+% Encoding: UTF8
+
+@ARTICLE{陈特2013可见光通信的研究,
+  title={可见光通信的研究},
+  author={陈特 and 刘璐 and 胡薇薇},
+  journal={中兴通讯技术},
+  volume = {1},
+  number={1},
+  pages={49--52},
+  year={2013}
+}
+@inproceedings{tanaka2001indoor,
+  title={Indoor visible communication utilizing plural white LEDs as lighting},
+  author={Tanaka, Yuichi and Komine, Toshihiko and Haruyama, Shinichiro and Nakagawa, Masao},
+  booktitle={Personal, Indoor and Mobile Radio Communications, 2001 12th IEEE International Symposium on},
+  volume={2},
+  pages={F--81},
+  year={2001},
+  organization={IEEE}
+}
+@inproceedings{fan2002effect,
+  title={The effect of reflection on indoor visible-light communication system utilizing white LEDs},
+  author={Fan, Kanei and Komine, Toshihiko and Tanaka, Yuichi and Nakagawa, Masao},
+  booktitle={Wireless Personal Multimedia Communications, 2002. The 5th International Symposium on},
+  volume={2},
+  pages={611--615},
+  year={2002},
+  organization={IEEE}
+}
+@article{komine2003integrated,
+  title={Integrated system of white LED visible-light communication and power-line communication},
+  author={Komine, Toshihiko and Nakagawa, Masao},
+  journal={Consumer Electronics, IEEE Transactions on},
+  volume={49},
+  number={1},
+  pages={71--79},
+  year={2003},
+  publisher={IEEE}
+}
+@article{komine2004fundamental,
+  title={Fundamental analysis for visible-light communication system using LED lights},
+  author={Komine, Toshihiko and Nakagawa, Masao},
+  journal={Consumer Electronics, IEEE Transactions on},
+  volume={50},
+  number={1},
+  pages={100--107},
+  year={2004},
+  publisher={IEEE}
+}
+@inproceedings{gfeller1978infrared,
+  title={Infrared communication for in-house applications},
+  author={Gfeller, FR and Muller, HR and Vettiger, P},
+  booktitle={IEEE COMPCON},
+  volume={78},
+  pages={132--138},
+  year={1978}
+}
+@article{gfeller1979wireless,
+  title={Wireless in-house data communication via diffuse infrared radiation},
+  author={Gfeller, Fritz R and Bapst, Urs},
+  journal={Proceedings of the IEEE},
+  volume={67},
+  number={11},
+  pages={1474--1486},
+  year={1979},
+  publisher={IEEE}
+}
+@inproceedings{tanaka2000wireless,
+  title={Wireless optical transmissions with white colored LED for wireless home links},
+  author={Tanaka, Yuichi and Haruyama, Shinichirou and Nakagawa, Masao},
+  booktitle={Personal, Indoor and Mobile Radio Communications, 2000. PIMRC 2000. The 11th IEEE International Symposium on},
+  volume={2},
+  pages={1325--1329},
+  year={2000},
+  organization={IEEE}
+}
+@inproceedings{vuvcic2009125,
+  title={125 Mbit/s over 5 m wireless distance by use of OOK-Modulated phosphorescent white LEDs},
+  author={Vu{\v{c}}ic, J and Kottke, C and Nerreter, S and Habel, K and Langer, K-D and Walewski, JW and others},
+  booktitle={Optical Communication, 2009. ECOC'09. 35th European Conference on},
+  pages={1--2},
+  year={2009},
+  organization={IEEE}
+}
+@article{vuvcic2009white,
+  title={White light wireless transmission at 200 Mb/s net data rate by use of discrete-multitone modulation},
+  author={Vu{\v{c}}i{\'c}, J and Kottke, C and Nerreter, S and Langer, K-D and Walewski, JW and others},
+  journal={Photonics Technology Letters, IEEE},
+  volume={21},
+  number={20},
+  pages={1511--1513},
+  year={2009},
+  publisher={IEEE}
+}
+@article{vuvcic2010513,
+  title={513 Mbit/s visible light communications link based on DMT-modulation of a white LED},
+  author={Vu{\v{c}}i{\'c}, Jelena and Kottke, Christoph and Nerreter, Stefan and Langer, Klaus-Dieter and Walewski, Joachim W},
+  journal={Journal of Lightwave Technology},
+  volume={28},
+  number={24},
+  pages={3512--3518},
+  year={2010},
+  publisher={IEEE}
+}
+@inproceedings{vucic2011803,
+  title={803 Mbit/s visible light WDM link based on DMT modulation of a single RGB LED luminary},
+  author={Vucic, Jelena and Kottke, Christoph and Habel, Kai and Langer, Klaus-Dieter},
+  booktitle={Optical Fiber Communication Conference},
+  pages={OWB6},
+  year={2011},
+  organization={Optical Society of America}
+}
+@inproceedings{afgani2006visible,
+  title={Visible light communication using OFDM},
+  author={Afgani, Mostafa Z and Haas, Harald and Elgala, Hany and Knipp, Dietmar},
+  booktitle={Testbeds and Research Infrastructures for the Development of Networks and Communities, 2006. TRIDENTCOM 2006. 2nd International Conference
+  on},
+  pages={6--pp},
+  organization={IEEE}
+}
+@article{elgala2009indoor,
+  title={Indoor broadcasting via white LEDs and OFDM},
+  author={Elgala, Hany and Mesleh, Raed and Haas, Harald},
+  journal={Consumer Electronics, IEEE Transactions on},
+  volume={55},
+  number={3},
+  pages={1127--1134},
+  year={2009},
+  publisher={IEEE}
+}
+@inproceedings{mesleh2010indoor,
+  title={Indoor MIMO optical wireless communication using spatial modulation},
+  author={Mesleh, Raed and Mehmood, Rashid and Elgala, Hany and Haas, Harald},
+  booktitle={Communications (ICC), 2010 IEEE International Conference on},
+  pages={1--5},
+  year={2010},
+  organization={IEEE}
+}
+@article{mesleh2011optical,
+  title={Optical spatial modulation},
+  author={Mesleh, Raed and Elgala, Hany and Haas, Harald},
+  journal={Journal of Optical Communications and Networking},
+  volume={3},
+  number={3},
+  pages={234--244},
+  year={2011},
+  publisher={Optical Society of America}
+}
+@inproceedings{elgala2009study,
+  title={A study of LED nonlinearity effects on optical wireless transmission using OFDM},
+  author={Elgala, Hany and Mesleh, Raed and Haas, Harald},
+  booktitle={Wireless and Optical Communications Networks, 2009. WOCN'09. IFIP International Conference on},
+  pages={1--5},
+  year={2009},
+  organization={IEEE}
+}
+@article{elgala2009non,
+  title={Non-linearity effects and predistortion in optical OFDM wireless transmission using LEDs},
+  author={Elgala, H and Mesleh, R and Haas, H},
+  journal={International Journal of Ultra Wideband Communications and Systems},
+  volume={1},
+  number={2},
+  pages={143--150},
+  year={2009},
+  publisher={Inderscience Publishers}
+}
+@inproceedings{stefan2011optical,
+  title={Optical wireless OFDM system on FPGA: Study of LED nonlinearity effects},
+  author={Stefan, Irina and Elgala, Hany and Mesleh, Raed and Brien, Dominic O and Haas, Harald},
+  booktitle={Vehicular Technology Conference (VTC Spring), 2011 IEEE 73rd},
+  pages={1--5},
+  year={2011},
+  organization={IEEE}
+}
+@inproceedings{chun2014demonstration,
+  title={Demonstration of a Bi-directional visible light communication with an overall sum-rate of 110 Mb/s using LEDs as emitter and detector},
+  author={Chun, Hyunchae and Rajbhandari, Sujan and Faulkner, Grahame and Tsonev, Dobroslav and Haas, Harald and O'Brien, Dominic},
+  booktitle={Photonics Conference (IPC), 2014 IEEE},
+  pages={132--133},
+  year={2014},
+  organization={IEEE}
+}
+@inproceedings{manousiadis2015demonstration,
+  title={Demonstration of 2.3 Gb/s RGB white-light VLC using polymer based colour-converters and GaN micro-LEDs},
+  author={Manousiadis, Pavlos and Chun, Hyunchae and Rajbhandari, Sujan and Mulyawan, Rahmat and Vithanage, Dimali A and Faulkner, Grahame and Tsonev,
+  Dobroslav and McKendry, Jonathan JD and Ijaz, Muhammad and Xie, Enyuan and others},
+  booktitle={Summer Topicals Meeting Series (SUM), 2015},
+  pages={222--223},
+  year={2015},
+  organization={IEEE}
+}
+@article{wang2015dynamic,
+  title={Dynamic load balancing with handover in hybrid Li-Fi and Wi-Fi networks},
+  author={Wang, Yunlu and Haas, Harald},
+  journal={Journal of Lightwave Technology},
+  volume={33},
+  number={22},
+  pages={4671--4682},
+  year={2015},
+  publisher={IEEE}
+}
+@inproceedings{stefan2014hybrid,
+  title={Hybrid Visible Light and Radio Frequency Communication Systems},
+  author={Stefan, Irina and Haas, Harald},
+  booktitle={Vehicular Technology Conference (VTC Fall), 2014 IEEE 80th},
+  pages={1--5},
+  year={2014},
+  organization={IEEE}
+}
+@inproceedings{basnayaka2015hybrid,
+  title={Hybrid RF and VLC Systems: Improving User Data Rate Performance of VLC Systems},
+  author={Basnayaka, Dushyantha A and Haas, Harald},
+  booktitle={Vehicular Technology Conference (VTC Spring), 2015 IEEE 81st},
+  pages={1--5},
+  year={2015},
+  organization={IEEE}
+}
+@article{minh2008high,
+  title={High-speed visible light communications using multiple-resonant equalization},
+  author={Minh, Hoa Le and O'Brien, Dominic and Faulkner, Grahame and Zeng, Lubin and Lee, Kyungwoo and Jung, Daekwang and Oh, YunJe},
+  journal={Photonics Technology Letters, IEEE},
+  volume={20},
+  number={14},
+  pages={1243--1245},
+  year={2008},
+  publisher={IEEE}
+}
+@article{le2009100,
+  title={100-Mb/s NRZ visible light communications using a postequalized white LED},
+  author={Le Minh, Hoa and O'Brien, Dominic and Faulkner, Grahame and Zeng, Lubin and Lee, Kyungwoo and Jung, Daekwang and Oh, YunJe and Won, Eun Tae},
+  journal={Photonics Technology Letters, IEEE},
+  volume={21},
+  number={15},
+  pages={1063--1065},
+  year={2009},
+  publisher={IEEE}
+}
+@article{vuvcic2010513,
+  title={513 Mbit/s visible light communications link based on DMT-modulation of a white LED},
+  author={Vu{\v{c}}i{\'c}, Jelena and Kottke, Christoph and Nerreter, Stefan and Langer, Klaus-Dieter and Walewski, Joachim W},
+  journal={Journal of Lightwave Technology},
+  volume={28},
+  number={24},
+  pages={3512--3518},
+  year={2010},
+  publisher={IEEE}
+}
+@article{khalid20121,
+  title={1-Gb/s transmission over a phosphorescent white LED by using rate-adaptive discrete multitone modulation},
+  author={Khalid, AM and Cossu, G and Corsini, R and Choudhury, P and Ciaramella, E},
+  journal={Photonics Journal, IEEE},
+  volume={4},
+  number={5},
+  pages={1465--1473},
+  year={2012},
+  publisher={IEEE}
+}
+@article{cossu20123,
+  title={3.4 Gbit/s visible optical wireless transmission based on RGB LED},
+  author={Cossu, G and Khalid, AM and Choudhury, P and Corsini, R and Ciaramella, E},
+  journal={Optics express},
+  volume={20},
+  number={26},
+  pages={B501--B506},
+  year={2012},
+  publisher={Optical Society of America}
+}
+@article{hussein201510,
+  title={10 Gbps Mobile Visible Light Communication System Employing Angle Diversity, Imaging Receivers, and Relay Nodes},
+  author={Hussein, Ahmed Taha and Elmirghani, Jaafar MH},
+  journal={Journal of Optical Communications and Networking},
+  volume={7},
+  number={8},
+  pages={718--735},
+  year={2015},
+  publisher={Optical Society of America}
+}
+@article{丁德强2006可见光通信及其关键技术研究,
+  title={可见光通信及其关键技术研究},
+  author={丁德强 and 柯熙政},
+  journal={半导体光电},
+  volume={27},
+  number={2},
+  pages={114--117},
+  year={2006}
+}
+@article{于志刚2008白光,
+  title={白光 LED 照明通信系统中的分集接收技术},
+  author={于志刚 and 陈长缨 and 赵俊 and 王康模 and 刘兴华 and 刘小冲},
+  journal={光通信技术},
+  volume={32},
+  number={9},
+  pages={52--54},
+  year={2008}
+}
+@article{张立2010室内,
+  title={室内 LED 光无线通信多径效应抑制 [J]},
+  author={张立 and 朱娜 and 张宁},
+  journal={通信技术},
+  volume={43},
+  number={07},
+  pages={198--200},
+  year={2010},
+  publisher={万方数据资源系统}
+}
+@inproceedings{ma2012effects,
+  title={Effects of LED lighting degradation and junction temperature variation on the performance of visible light communication},
+  author={Ma, Chao and Zhang, Hongming and Cui, Kaiyun and Yao, Minyu and Xu, Zhengyuan},
+  booktitle={Systems and Informatics (ICSAI), 2012 International Conference on},
+  pages={1596--1600},
+  year={2012},
+  organization={IEEE}
+}
+@inproceedings{zhang2012capacity,
+  title={Capacity of MIMO visible light communication channels},
+  author={Zhang, Xie and Cui, Kaiyun and Zhang, Hongming and Xu, Zhengyuan},
+  booktitle={2012 IEEE Photonics Society Summer Topical Meeting Series},
+  year={2012}
+}
+@inproceedings{ma2012distributions,
+  title={Distributions of PAPR and crest factor of OFDM signals for VLC},
+  author={Ma, Chao and Zhang, Hongming and Yao, Minyu and Xu, Zhengyuan and Cui, Kaiyun},
+  booktitle={2012 IEEE Photonics Society Summer Topical Meeting Series},
+  year={2012}
+}
+@article{wang2013demonstration,
+  title={Demonstration of 575-Mb/s downlink and 225-Mb/s uplink bi-directional SCM-WDM visible light communication using RGB LED and phosphor-based
+  LED},
+  author={Wang, Yuanquan and Wang, Yiguang and Chi, Nan and Yu, Jianjun and Shang, Huiliang},
+  journal={Optics express},
+  volume={21},
+  number={1},
+  pages={1203--1208},
+  year={2013},
+  publisher={Optical Society of America}
+}
+@inproceedings{wang2013875,
+  title={875-Mb/s asynchronous bi-directional 64QAM-OFDM SCM-WDM transmission over RGB-LED-based visible light communication system},
+  author={Wang, Yuanquan and Shao, Yufeng and Shang, Huiliang and Lu, Xiaoyuan and Wang, Yiguang and Yu, Jianjun and Chi, Nan},
+  booktitle={Optical Fiber Communication Conference},
+  pages={OTh1G--3},
+  year={2013},
+  organization={Optical Society of America}
+}
+@article{chi2014ultra,
+  title={Ultra-high-speed single red-green-blue light-emitting diode-based visible light communication system utilizing advanced modulation formats},
+  author={Chi, Nan and Wang, Yuanquan and Wang, Yiguang and Huang, Xingxing and Lu, Xiaoyuan},
+  journal={Chinese Optics Letters},
+  volume={12},
+  number={1},
+  pages={010605},
+  year={2014},
+  publisher={Chinese Optical Society}
+}
+@article{wang2014integrated,
+  title={Integrated 10 Gb/s multilevel multiband passive optical network and 500 Mb/s indoor visible light communication system based on Nyquist single
+  carrier frequency domain equalization modulation},
+  author={Wang, Yuanquan and Shi, Jianyang and Yang, Chao and Wang, Yiguang and Chi, Nan},
+  journal={Optics letters},
+  volume={39},
+  number={9},
+  pages={2576--2579},
+  year={2014},
+  publisher={Optical Society of America}
+}
+@article{xu2014aco,
+  title={ACO-OFDM-Specified Recoverable Upper Clipping With Efficient Detection for Optical Wireless Communications},
+  author={Xu, Wei and Wu, Man and Zhang, Hua and You, Xiaohu and Zhao, Chunming},
+  journal={Photonics Journal, IEEE},
+  volume={6},
+  number={5},
+  pages={1--17},
+  year={2014},
+  publisher={IEEE}
+}
