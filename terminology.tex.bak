@@ -1,0 +1,35 @@
+﻿% !Mode:: "TeX:UTF-8"
+\begin{terminology}
+    \begin{longtable}{lll}
+
+        \bf{AC}          &	Access controller                                &	接入控制器	  \\
+        \bf{AWGN}        &	Additional white Gaussian noise                  &	加性白高斯噪声	\\
+        \bf{BF}          &	Beamforming                                      &	空间波束赋形   \\
+        \bf{BWA}         &	Broadband wireless access                        &	宽带无线接入   \\
+        \bf{CDM}         &	Code division multiplexing                       &	码分复用   \\
+        \bf{DWDM}	     &	Dense wavelength division multiplexing           &	密集波分复用	\\
+        \bf{EL}          &	Electroluminescence                              &	电致发光效应   \\
+        \bf{FHSS}        &	Frequency-hopping spread spectrum                &	跳频   \\
+        \bf{FOV}         &	Field of view                                    &	视场角	   \\
+        \bf{IM/DD}       &	Intensity modulation/direct detect               &	强度调制/直接检测	\\
+        \bf{IRC}	     &	Infared communications                           &	红外通信	  \\
+        \bf{ISI}	     &	Inter symbol interference                        &	符号间干扰	\\
+        \bf{ISO}         &	International organization for standardization   &	国际标准化组织   \\
+        \bf{LD}          &  Laser diode                                      & 半导体激光器     \\
+        \bf{LED}         &	Light emitting diodes                            &	发光二极管	  \\
+        \bf{LOS}         &	Light of sight                                   &	可视直达径	\\
+        \bf{LTE}         &	Long term evolution                              &	长期演进	\\
+        \bf{MIMO}        &	Multiple-input multiple-output                   &	多输入多输出   \\
+        \bf{Non-LOS}     &	None light of sight                              &	非直达径	\\
+        \bf{NS2}         &	Network simulation version 2                     &	网络仿真器	   \\
+        \bf{OFDM}        &	Orthogonal frequency division multiplexing       &	正交频分复用技术   \\
+        \bf{OMEGA}       &	Home gigabits access                             &	家庭吉比特接入	 \\
+        \bf{PC}          &	Personal computer                                &	个人计算机   \\
+        \bf{SNR}         &	Signal to noise ratio                            &	信噪比	    \\
+        \bf{VLC}         &	Visible light communication                      &	可见光通信	  \\
+        \bf{VLCC}        &	Visible light communication consortium           &	可见光通信协会	  \\
+        \bf{WLAN}	     &	Wireless local area networks                     &	无线局域网	\\
+        \bf{WLED}        &	White light emitting diodes                      &	白色发光二极管	  \\
+
+    \end{longtable}
+\end{terminology}
