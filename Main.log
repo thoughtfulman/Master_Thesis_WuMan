@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  9 NOV 2015 10:29
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  9 NOV 2015 15:04
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1387,21 +1387,72 @@ ei},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
-) [1
+File: figures/Chapter-2/BasicOpticalSystem.eps Graphic file (type eps)
+<figures/Chapter-2/BasicOpticalSystem.eps>
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
 
 
 
 
 
-] [2
+]
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
 
-
-
-] (E:\WuMan\Master_Thesis_WuMan\Main.bbl
+[2] (E:\WuMan\Master_Thesis_WuMan\Main.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
 ) [3
+
+
+
 
 ]
 File: figures/back-cover.png Graphic file (type QTm)
@@ -1419,12 +1470,12 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 79.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 25491 strings out of 430478
- 464550 string characters out of 3191501
- 553826 words of memory out of 3000000
- 28312 multiletter control sequences out of 15000+200000
- 4601 words of font info for 49 fonts, out of 3000000 for 9000
+ 25515 strings out of 430478
+ 464999 string characters out of 3191501
+ 553860 words of memory out of 3000000
+ 28326 multiletter control sequences out of 15000+200000
+ 4657 words of font info for 56 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,6n,63p,787b,584s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,7n,63p,787b,678s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on Main.pdf (4 pages).
