@@ -1,7 +1,8 @@
-% !Mode:: "TeX:UTF-8" 
+% !Mode:: "TeX:UTF-8"
 
-\chapter{可见光多波段通信系统概述} 
+\chapter{可见光多波段通信系统概述}
 \section{引言}
+得益于LED灯在照明市场的风行，可见光通信迎来了前所未有的发展机遇。
 \section{室内可见光通信基本原理}
 \subsection{基础硬件：发光二极管与光电二极管}
 \subsection{可见光系统模型}
