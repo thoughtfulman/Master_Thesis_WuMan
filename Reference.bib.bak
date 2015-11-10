@@ -374,3 +374,20 @@
   year={2014},
   publisher={IEEE}
 }
+@MASTERSTHESIS{Yangxuecheng2015,
+  author = {杨学成},
+  title = {高速可见光通信系统设计},
+  school = {东南大学},
+  year = {2015},
+  address = {南京},
+  owner = {Leyuan Pan},
+  timestamp = {2015.3.6}
+}
+@MASTERSTHESIS{Chenchunyan2014,
+  author = {陈春艳},
+  title = {无线光通信调制技术研究},
+  school = {东南大学},
+  address = {南京},
+  year = {2014},
+  language = {Chinese}
+}

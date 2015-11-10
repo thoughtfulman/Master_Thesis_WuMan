@@ -5,12 +5,31 @@
 得益于LED灯在照明市场的风行，能使LED灯兼顾通信和照明两重功能的可见光通信技术因其绿色环保、高速便捷、频谱资源不受限制等优点受到了越来越多的关注。可见光通信技术极有可能在未来的无线通信中占有一席之地，特别是诸如机舱、医院和矿井这些特殊应用场景下。本章将先介绍可见光通信的基本原理，包括基础硬件发光二极管(LED)和光电二极管(PD)的基本工作原理及可见光通信系统模型，然后将概述OFDM在可见光通信中的应用，并且比较ACO-OFDM及DCO-OFDM之间的区别，最后将简介自适应传输技术及其在可见光通信中的应用。
 \section{室内可见光通信基本原理}
 \subsection{可见光系统模型}
+与传统的无线通信技术通过调幅、调频或调相技术将信息调制到射频载波上不同，可见光通信利用的是人眼可见的波长在380 nm到780 nm之间的电磁波来传输信息，并且是使用强度调制(Intensity Modulation，IM)、直接检测(Direct Detection，DD)技术。如\autoref{fig:BasicOpticalSystem}所示，在发射端，利用LED灯的易于调制性，在线性范围内，LED 的发光强度与输入电流功率成正比，将电信号调制到LED发光强度上；在接收端，利用PD的输入反向电流功率与接收到的光强成正比的特性，用光电二极管去检测LED发光强度的变化，将光信号转换成电信号。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Chapter-2/BasicOpticalSystem.eps}
+    \caption{光无线通信系统模型}
+    \label{fig:BasicOpticalSystem}
+\end{figure}
+如\autoref{fig:BasicOpticalSystem}所示，在电信号域（Electrisity domain）发射端输出电压信号$x(t)$经过发光二极管后变成LED的电流$i_{TX}(t)$信号，接收端光敏二极管PD输出电流$i_{RX}(t)$，其最后转换成接收信号$y(t)$ ，在光信号域（Light Domain），首先在发射端发光二极管LED的电流信号$i_{TX}(t)$ 转变为发光强度$s(t)$，经过光信道后，在接收端光电二极管PD收到的光强信号为$r(t)$，经过光电转换，得到电流$i_{RX}(t)$。
+所以在实际可见光通信系统中，信号传输由电光变换，光通道传输及光电变换三个过程组成，如\autoref{fig:BasebandModle}所示，接收端信号$y(t)$ 可以表示为：
+\begin{equation}
+    y(t)=x(t)\otimes h_1(t)\otimes h_2(t)\otimes h_3(t)+z(t)
+\end{equation}
+其中，$x(t)$表示发射端基带电压信号，$h_1(t)$表示电光转换系统的时域信道冲激响应（Channel Impose Response，CIR），$h_2(t)$表示可见光信道的时域信道冲激响应，$h_3(t)$表示光电转换系统的时域信道冲激响应
+\cite{Yangxuecheng2015}，
+$z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，符从$z(t)\sim N(0,N_0/2)$分布，$N_0$为其功率谱密度，$\otimes$表示卷积运算。可见光通信系统的噪声，通常主要由热噪声和散弹噪声
+\cite{Chenchunyan2014}。热噪声是一种高斯白噪声，在传统的射频无线通信系统中是很常见的。
+散弹噪声也可以建模为白高斯噪声来处理，因为两个独立分布的高斯噪声还是高斯的，故我们可以将系统噪声统一建模为与信号独立的高斯白噪声。
+
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{figures/Chapter-2/BasicOpticalSystem.eps}
-\caption{光无线通信系统模型}
-\label{fig:BasicOpticalSystem}
+\includegraphics[width=0.9\textwidth]{figures/Chapter-2/BasebandModle.eps}
+\caption{光无线通信系统基带处理模型}
+\label{fig:BasebandModle}
 \end{figure}
+
 \subsection{光电元器件简介}
 \subsubsection{发光二极管(LED)}
 \subsubsection{光电二极管(PD)}
