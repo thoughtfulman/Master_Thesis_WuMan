@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  11 NOV 2015 11:11
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  11 NOV 2015 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1858,7 +1858,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 File: figures/chapter-2/BasebandModle.eps Graphic file (type eps)
 
-<figures/chapter-2/BasebandModle.eps>) [2]
+<figures/chapter-2/BasebandModle.eps> [2]
+Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
+File: figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps Graphic file (typ
+e eps)
+
+<figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps>
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+File: figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps Graphic file 
+(type eps)
+
+<figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps>)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
@@ -1870,11 +1896,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[3] [4
+[3] [4] (./Main.bbl) [5
 
 
 
-] (./Main.bbl) [5
 
 ]
 File: figures/back-cover.png Graphic file (type QTm)
@@ -1892,12 +1917,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 30056 strings out of 493727
- 551745 string characters out of 6147889
- 677077 words of memory out of 5000000
- 33067 multiletter control sequences out of 15000+600000
+ 30062 strings out of 493727
+ 551975 string characters out of 6147889
+ 678077 words of memory out of 5000000
+ 33071 multiletter control sequences out of 15000+600000
  9193 words of font info for 65 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 73i,7n,89p,10424b,659s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,7n,89p,10424b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Main.pdf (6 pages).
