@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  11 NOV 2015 17:13
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  11 NOV 2015 20:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1859,44 +1859,73 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figures/chapter-2/BasebandModle.eps Graphic file (type eps)
 
 <figures/chapter-2/BasebandModle.eps> [2]
-
-Package natbib Warning: Citation `LE2011' on page 3 undefined on input line 39.
-
-
-Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 43 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
 File: figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps Graphic file (typ
 e eps)
+
 <figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps>
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
 File: figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps Graphic file 
 (type eps)
 
-<figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps>)
+<figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 44--49
+ [][][][] 
+ []
+
+
+Package natbib Warning: Citation `LE2011' on page 3 undefined on input line 53.
+
+
+
+Package natbib Warning: Citation `LRTB2011' on page 3 undefined on input line 5
+3.
+
+
+Underfull \vbox (badness 3138) has occurred while \output is active []
+
+
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
-l.56     \include{chapter-2}
-                            
+l.54 
+     
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[3] [4] (./Main.bbl) [5
+[3]
+File: figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps Graphic file (type ep
+s)
+ <figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps>
+Invalid UTF-8 byte or sequence at line 66 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 66 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 66 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 66 replaced by U+FFFD.
+File: figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps Graphic file (type ep
+s)
+
+<figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 62--67
+ [][][][] 
+ []
+
+) [4] (./Main.bbl) [5
 
 
 
@@ -1916,19 +1945,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
  (./Main.aux (./chapter-2.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 30065 strings out of 493727
- 552068 string characters out of 6147889
+ 30084 strings out of 493727
+ 552646 string characters out of 6147889
  678077 words of memory out of 5000000
- 33073 multiletter control sequences out of 15000+600000
- 9201 words of font info for 66 fonts, out of 8000000 for 9000
+ 33089 multiletter control sequences out of 15000+600000
+ 9209 words of font info for 67 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 73i,7n,89p,10424b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,11n,89p,10424b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Main.pdf (6 pages).
