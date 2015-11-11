@@ -1,4 +1,49 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: Main.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Main.aux
 The style file: seuthesis.bst
 A level-1 auxiliary file: chapter-2.aux
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: Reference.bib
+You've used 2 entries,
+            6690 wiz_defined-function locations,
+            1207 strings with 8626 characters,
+and the built_in function-call counts, 474 in all, are:
+= -- 42
+> -- 8
+< -- 2
++ -- 6
+- -- 2
+* -- 26
+:= -- 83
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 2
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 20
+empty$ -- 55
+format.name$ -- 4
+if$ -- 107
+int.to.chr$ -- 1
+int.to.str$ -- 3
+missing$ -- 4
+newline$ -- 18
+num.names$ -- 4
+pop$ -- 10
+preamble$ -- 1
+purify$ -- 2
+quote$ -- 0
+skip$ -- 15
+stack$ -- 0
+substring$ -- 4
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 2
+width$ -- 0
+write$ -- 31
