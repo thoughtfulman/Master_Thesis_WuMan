@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  10 NOV 2015 08:50
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  10 NOV 2015 10:10
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1456,18 +1456,19 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
- [2]
-(E:\WuMan\Master_Thesis_WuMan\Main.bbl) [3
+ [2] [3] [4
 
 
 
+]
+(E:\WuMan\Master_Thesis_WuMan\Main.bbl) [5
 
 ]
 File: figures/back-cover.png Graphic file (type QTm)
  <use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
 
-[4
+[6
 
 
 ]
@@ -1478,12 +1479,12 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 79.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 25600 strings out of 430478
- 466564 string characters out of 3191501
+ 25601 strings out of 430478
+ 466582 string characters out of 3191501
  560951 words of memory out of 3000000
- 28387 multiletter control sequences out of 15000+200000
+ 28388 multiletter control sequences out of 15000+200000
  9027 words of font info for 76 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  63i,7n,63p,787b,681s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Main.pdf (4 pages).
+Output written on Main.pdf (6 pages).
