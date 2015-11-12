@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  11 NOV 2015 20:35
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  12 NOV 2015 09:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1925,10 +1925,29 @@ Overfull \hbox (10.95001pt too wide) in paragraph at lines 62--67
  [][][][] 
  []
 
-) [4] (./Main.bbl) [5
+Invalid UTF-8 byte or sequence at line 73 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 73 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 73 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 73 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 73 replaced by U+FFFD.
+File: figures/chapter-2/LZ4radiationflux.eps Graphic file (type eps)
+<figures/chapter-2/LZ4radiationflux.eps>) [4]
+! Undefined control sequence.
+\chaptername ->第\CJKnumber 
+                             {\thechapter }章
+l.56     \include{chapter-2}
+                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[5] [6
 
 
 
+] (./Main.bbl) [7
 
 ]
 
@@ -1937,7 +1956,7 @@ Package natbib Warning: There were undefined citations.
 File: figures/back-cover.png Graphic file (type QTm)
 <use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
- [6
+ [8
 
 
 ]
@@ -1948,12 +1967,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 30084 strings out of 493727
- 552646 string characters out of 6147889
+ 30087 strings out of 493727
+ 552726 string characters out of 6147889
  678077 words of memory out of 5000000
- 33089 multiletter control sequences out of 15000+600000
+ 33091 multiletter control sequences out of 15000+600000
  9209 words of font info for 67 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  73i,11n,89p,10424b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Main.pdf (6 pages).
+Output written on Main.pdf (8 pages).
