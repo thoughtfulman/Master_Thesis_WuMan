@@ -53,7 +53,7 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
 众所周知，白光是一种混合光，故我们日常用于照明的白光LED灯发出的白光也是由几种光合成的。现在市面上的白光LED主要有两种类型。一种是磷光激发型，由蓝光LED激发荧光物质发出黄光，然后蓝光与黄光混合成我们人眼看到的白光；另一种是多色混合型，由多个LED发出不同颜色的光直接合成为白光，这种类型常见的红绿蓝(RGB)LED灯内部就含有三块晶片，分别发红光、绿光和蓝光。图\ref{fig:OSTAR-Spectrum}所示是德国OSRAM公司生产的磷光激发型发光二极管Lighting Plus LE UM S2LN的相对光谱分布图\cite{LE2011}，图中峰值位于445 nm处的是蓝光LED发出的蓝色光波，而峰值位于555 nm处的是蓝光激发荧光物质产生的黄光。因为激发荧光物质发黄光的响应时间过长，在使用磷光型LED进行可见光通信时，一般同时会在接收端加蓝色滤光片，滤掉响应过慢的黄光，所以虽然我们人眼看到的是白光，但是信号其实只调制在蓝光上，这就是前文中提到单色白光LED通信。图\ref{fig:RGB-Spectrum}所示多色混合型LED的相对光谱分布图\citep{LRTB2011}，其具体型号为LRTB R98G，同为OSRAM生产。图中可见红绿蓝三种色光的峰值分别位于635 nm、525 nm和465 nm处，与林光激发型LED不同的是，红绿蓝三种色光分别由三种不同的LED晶片产生，都有很好的响应速度，我们可以对这三种色光分别调制，达到同时传输三路数据的目的，这样可以大大加大传输速率，即为前文所述的多色白光无线通信系统，也是本课题主要研究对象。
 
 
-因为基于多色混合型LED的可见光通信系统能将各基色独立调制，总速率为各基色速率之和，所以相对于使用磷光激发型LED的单色光通信系统速率优势明显。现在也有专门的公司设计适合可见光通信的LED，如硅谷光擎(LED Engin)，其生产了多种通信特性优异的多色混合型LED，如\autoref{fig:LED_LZ4_SputrcalPower}所示为型号为LZC-03MA07的多色混合型LED的相对光谱功率分布和绝对光谱功率分布。从图\ref{fig:LED_LZ4_relativeSputrcalPower}中可以看出各基色光之间隔离明显，相互之间的干扰很少，同时图\ref{fig:LED_LZ4_absoluteSputrcalPower}说明各基色的发光功率相差明显，在设计多色光通信系统时也可以优化各个基色光发射功率，减少干扰，这个是我们后面研究的内容。
+因为基于多色混合型LED的可见光通信系统能将各基色独立调制，总速率为各基色速率之和，所以相对于使用磷光激发型LED的单色光通信系统速率优势明显。现在也有专门的公司设计适合可见光通信的LED，如硅谷光擎(LED Engin)，其生产了多种通信特性优异的多色混合型LED，如\autoref{fig:LED_LZ4_SputrcalPower}所示为型号为LZC-03MA07的多色混合型LED的相对光谱功率分布和绝对光谱功率分布。从图\ref{fig:LED_LZ4_relativeSputrcalPower}中可以看出该白光LED其由四种基色组成，分别为红(Red)、绿(Green)、蓝(Blue)和黄(Yellow)，其中黄色有时也称为琥珀色(Amber)，并且各基色光之间隔离明显，相互之间的干扰很少，同时图\ref{fig:LED_LZ4_absoluteSputrcalPower}说明各基色的发光功率相差明显，在设计多色光通信系统时也可以优化各个基色光发射功率，减少干扰，这个是我们后面研究的内容。
 \begin{figure}[h]
     \centering
     \subfloat[LZC-03MA07相对光谱功率分布]{
@@ -68,6 +68,21 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
     \label{fig:LED_LZ4_SputrcalPower}
 \end{figure}
 
+对于电光转换器件LED而言，我们除了要注意体面提到的线性范围和响应时间这两个指标之外，还要考虑LED的特性随温度的变化，如\autoref{fig:LZC_temprature}所示\cite{LZC2013}，图\ref{fig:LZC_relativeLightOuput}表明随着温度的升高，LED的输出光功率降低，但是各基色光功率降低的幅度不相同，其中黄光(Amber)下降得最快，单温度升高到120 $^{\circ}$C时，输出功率降到常温下的20\%；而蓝光(Blue)受到的影响较小，功率输出变化不明显。受温度影响的还有各基色的主波长，主波长是指各基色光谱功率分布的峰值位置，如蓝光对应的是450 nm。如图\ref{fig:LZC_wavelengthShift}所示，也是黄光主波长变化最快，波长的漂移将导致接收端的滤光片效果降低，从而限制了总体的接收信噪比(Signal Noise Ratio, SNR)。故在设计可见光通信系统硬件时也要特别留意给LED散热，现在普遍的做法是将LED安装在散热面积很大的金属灯头上。
+\begin{figure}[h]
+    \centering
+    \subfloat[LZC-03MA07各基色相对输出光功率与温度的关系]{
+        \label{fig:LZC_relativeLightOuput}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-2/LED_Temperature_Light_Output.eps}
+    }
+    \subfloat[LZC-03MA07各基色主波长偏移量与温度的关系]{
+        \label{fig:LZC_wavelengthShift}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-2/LED_Temperature_Wavelength_Shift.eps}
+    }
+    \caption{LZC-03MA07特性随温度变化关系}
+    \label{fig:LZC_temprature}
+\end{figure}
+\subsection{光电转换器件}
 
 \section{OFDM技术在室内可见光通信中的应用}
 \subsection{OFDM技术简介}

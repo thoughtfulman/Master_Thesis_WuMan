@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,5 +14,20 @@
 陈春艳.
 \newblock 无线光通信调制技术研究[D]:[硕士学位论文].
 \newblock 南京: 东南大学, 2014.
+
+\bibitem[Semiconductors(2011){\natexlab{a}}]{LE2011}
+Semiconductors O~O.
+\newblock OSRAM OSTAR - Lighting plus LE UW S2LN[G].
+\newblock 2011.
+
+\bibitem[Semiconductors(2011){\natexlab{b}}]{LRTB2011}
+Semiconductors O~O.
+\newblock OSRAM Multi CHIPLED LRTB R98G[G].
+\newblock 2011.
+
+\bibitem[Engin(2013)]{LZC2013}
+Engin L.
+\newblock High Luminous Efficacy RGBA LED Emitter LZC-03MA07[G].
+\newblock 2013.
 
 \end{thebibliography}
