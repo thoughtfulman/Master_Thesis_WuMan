@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  13 NOV 2015 09:32
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  13 NOV 2015 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1931,10 +1931,10 @@ Overfull \hbox (10.95001pt too wide) in paragraph at lines 77--82
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)
+[4])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
+
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
@@ -1946,11 +1946,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[5] [6
+[5] [6] (./Main.bbl) [7
 
 
 
-] (./Main.bbl) [7
 
 ]
 File: figures/back-cover.png Graphic file (type QTm)
@@ -1968,11 +1967,11 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 30096 strings out of 493727
- 552898 string characters out of 6147889
- 678077 words of memory out of 5000000
- 33101 multiletter control sequences out of 15000+600000
- 9193 words of font info for 65 fonts, out of 8000000 for 9000
+ 30121 strings out of 493727
+ 553914 string characters out of 6147889
+ 679077 words of memory out of 5000000
+ 33126 multiletter control sequences out of 15000+600000
+ 10441 words of font info for 70 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  73i,11n,89p,10424b,718s stack positions out of 5000i,500n,10000p,200000b,80000s
 
