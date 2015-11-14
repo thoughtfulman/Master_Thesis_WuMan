@@ -114,7 +114,9 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
     \caption{滤色片滤色性能}
     \label{fig:MulticolorFilterGain}
 \end{figure}
-类型于滤波器对于射频无线通信的作用，滤光片也对可见光通信系统的性能有着重要的影响，但是精密的滤光片虽然性能优良，但制造工艺复杂、价格昂贵，不利用可见光通信技术的推广，所以在可见光通信中一般会选择价格一般但性能稍差的滤波片，然后借助数字信号处理技术来弥补滤光片性能的不足。本课题搭建的硬件平台发射端使用的是前面提到的混合型LED——LZC-03MA07，接收端使用四块滤光片滤出四个基色，分别是蓝光滤光片DTB435、绿光滤光片DTB530、黄光滤光片DTB600和红光滤光片HB610。
+类型于滤波器对于射频无线通信的作用，滤光片也对可见光通信系统的性能有着重要的影响，但是精密的滤光片虽然性能优良，但制造工艺复杂、价格昂贵，不利用可见光通信技术的推广，所以在可见光通信中一般会选择价格一般但性能稍差的滤波片，然后借助数字信号处理技术来弥补滤光片性能的不足。本课题搭建的硬件平台发射端使用的是前面提到的混合型LED——LZC-03MA07，接收端使用四块滤光片滤出四个基色，分别是蓝光滤光片DTB435、绿光滤光片DTB530、黄光滤光片DTB600和红光滤光片HB610，它们的滤光带通增益如
+\autoref{fig:MulticolorFilterGain}所示，其中除红光滤光片是低通滤光片外(对频率而言)，其他三个都是带通的，各滤光片对光信号都有一些衰减，其中黄光滤光片的衰减最大，并且各色之间都有一些串扰。
+\autoref{fig:MultiColorReceiveredFilter}所示是接收端未加滤光片接收信号和由四个经滤光片提取的四个基色组合的光功率的比较，可以更清楚地看出滤光片的功能和对信号的衰减。
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/Chapter-2/MultiColorReceiveredFilter.eps}
@@ -123,6 +125,12 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
 \end{figure}
 \section{OFDM技术在室内可见光通信中的应用}
 \subsection{OFDM技术简介}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Chapter-2/HistoryOfOFDM.eps}
+    \caption{OFDM技术发展历程及其应用}
+    \label{fig:MultiColorReceiveredFilter}
+\end{figure}
 \subsection{可见光中的OFDM调制}
 \section{自适应传输技术简介}
 \section{本章小结}
