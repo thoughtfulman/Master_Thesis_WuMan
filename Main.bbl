@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -29,5 +29,10 @@ Semiconductors O~O.
 Engin L.
 \newblock High Luminous Efficacy RGBA LED Emitter LZC-03MA07[G].
 \newblock 2013.
+
+\bibitem[深圳市激埃特光电有限公司(2015)]{OpticalFilter}
+深圳市激埃特光电有限公司.
+\newblock 带通滤光片介绍[EB/OL].
+\newblock \url{http://www.giaitech.com/product/130-cn.html}, 2015.
 
 \end{thebibliography}
