@@ -125,7 +125,9 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
 \end{figure}
 \section{OFDM技术在室内可见光通信中的应用}
 \subsection{OFDM技术简介}
-正交频分复用(OFDM)是一种多载波调制技术，是一种能有效地对抗频率选择性衰落途径，而且频谱利用率较高，实现简单，在很多现代通信系统中得到了广泛的应用，如DSL、WIFI及LTE等。
+正交频分复用(OFDM)是一种多载波调制技术，是一种能有效地对抗频率选择性衰落途径，而且频谱利用率较高，实现简单，在很多现代通信系统中得到了广泛的应用，如DSL、WIFI及LTE等。OFDM技术发展历程及其应用如
+\autoref{fig:HistoryOfOFDM}所示，最早由美国贝尔实验室的Chang 在1966 申请的专利“正交频分复用数字传输系统”提出；1969年，Salz和Weinstein研究了使用傅里叶变换来实现OFDM的通信系统；用来抵抗码间干扰的循环前缀(Cyclic Prefix, CP)于1980年加入OFDM系统。这是OFDM技术理论发展最重要的三个节点
+\cite{armstrong2009ofdm}。在上世纪80年代中期，人们开始研究OFDM技术在实际通信系统中的应用，1985年，同样来自贝尔实验室的Cimini研究了OFDM用于移动通信的可能性；1987年， Lassalle 和 Alard将OFDM技术推广到无线广播系统，并且揭示了前向纠错编码和OFDM技术结合的重要性，对于广播通信工程师而言，OFDM技术也称为C-OFDM(Coded OFDM)；最先提出在有线通信中使用OFDM技术的是来自斯坦福大学的Cioffi等人，同时他们展示了OFDM可以作为数字用户线路(Digital Subscriber Line, DSL)的一种替代调制方式；如绪论所述，OFDM近年来也开始被应用于光通信中，根据在时序信号要不要加直流偏置可以把光OFDM分为DCO-OFDM和ACO-OFDM两种
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/Chapter-2/HistoryOfOFDM.eps}

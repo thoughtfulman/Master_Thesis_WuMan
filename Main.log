@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  15 NOV 2015 16:03
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  15 NOV 2015 20:38
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1544,8 +1544,64 @@ Underfull \vbox (badness 2165) has occurred while \output is active []
  [6]
 File: figures/Chapter-2/HistoryOfOFDM.eps Graphic file (type eps)
 
-<figures/Chapter-2/HistoryOfOFDM.eps>) [7] [8]
-(E:\WuMan\Master_Thesis_WuMan\Main.bbl
+<figures/Chapter-2/HistoryOfOFDM.eps> [7]
+File: figures/Chapter-2/DCO-OFDMStructure.eps Graphic file (type eps)
+
+<figures/Chapter-2/DCO-OFDMStructure.eps>
+
+Package natbib Warning: Citation `proakisdigital' on page 8 undefined on input 
+line 146.
+
+
+Underfull \vbox (badness 4454) has occurred while \output is active []
+
+ [8]
+File: figures/Chapter-2/ACO-OFDMStructure.eps Graphic file (type eps)
+
+<figures/Chapter-2/ACO-OFDMStructure.eps>
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [9]
+Invalid UTF-8 byte or sequence at line 210 replaced by U+FFFD.
+File: figures/Chapter-2/DCO-OFDMSignal.eps Graphic file (type eps)
+
+<figures/Chapter-2/DCO-OFDMSignal.eps>
+Invalid UTF-8 byte or sequence at line 214 replaced by U+FFFD.
+File: figures/Chapter-2/ACO-OFDMSignal.eps Graphic file (type eps)
+ <figures/Chapter-2/ACO-OFDMSignal.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 210--215
+ [][][][] 
+ []
+
+) [10] (E:\WuMan\Master_Thesis_WuMan\Main.bbl
 
 Package xeCJK Warning: Unknown CJK family `tt' is ignored.
 Use \setCJKfamilyfont to define a CJK family. on input line 36.
@@ -1575,22 +1631,24 @@ Underfull \hbox (badness 1189) in paragraph at lines 39--42
 J].  Lightwave Technology, Journal of, 2009,
  []
 
-) [9
+) [11
 
 
 
 
 ]
+
+Package natbib Warning: There were undefined citations.
+
 File: figures/back-cover.png Graphic file (type QTm)
- <use  "figures/back-cover.png" >
+<use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
- [10
+ [12
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
-
-(E:\WuMan\Master_Thesis_WuMan\Main.aux
+ (E:\WuMan\Master_Thesis_WuMan\Main.aux
 (E:\WuMan\Master_Thesis_WuMan\chapter-2.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
@@ -1601,12 +1659,12 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 25755 strings out of 430478
- 470191 string characters out of 3191501
+ 25789 strings out of 430478
+ 470971 string characters out of 3191501
  563227 words of memory out of 3000000
- 28523 multiletter control sequences out of 15000+200000
- 12222 words of font info for 93 fonts, out of 3000000 for 9000
+ 28546 multiletter control sequences out of 15000+200000
+ 12278 words of font info for 100 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  63i,11n,65p,787b,798s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Main.pdf (10 pages).
+Output written on Main.pdf (12 pages).

@@ -124,16 +124,96 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
     \label{fig:MultiColorReceiveredFilter}
 \end{figure}
 \section{OFDM技术在室内可见光通信中的应用}
-\subsection{OFDM技术简介}
+\subsection{OFDM技术发展历程}
 正交频分复用(OFDM)是一种多载波调制技术，是一种能有效地对抗频率选择性衰落途径，而且频谱利用率较高，实现简单，在很多现代通信系统中得到了广泛的应用，如DSL、WIFI及LTE等。OFDM技术发展历程及其应用如
 \autoref{fig:HistoryOfOFDM}所示，最早由美国贝尔实验室的Chang 在1966 申请的专利“正交频分复用数字传输系统”提出；1969年，Salz和Weinstein研究了使用傅里叶变换来实现OFDM的通信系统；用来抵抗码间干扰的循环前缀(Cyclic Prefix, CP)于1980年加入OFDM系统。这是OFDM技术理论发展最重要的三个节点
-\cite{armstrong2009ofdm}。在上世纪80年代中期，人们开始研究OFDM技术在实际通信系统中的应用，1985年，同样来自贝尔实验室的Cimini研究了OFDM用于移动通信的可能性；1987年， Lassalle 和 Alard将OFDM技术推广到无线广播系统，并且揭示了前向纠错编码和OFDM技术结合的重要性，对于广播通信工程师而言，OFDM技术也称为C-OFDM(Coded OFDM)；最先提出在有线通信中使用OFDM技术的是来自斯坦福大学的Cioffi等人，同时他们展示了OFDM可以作为数字用户线路(Digital Subscriber Line, DSL)的一种替代调制方式；如绪论所述，OFDM近年来也开始被应用于光通信中。
+\cite{armstrong2009ofdm}。在上世纪80年代中期，人们开始研究OFDM技术在实际通信系统中的应用，1985年，同样来自贝尔实验室的Cimini研究了OFDM用于移动通信的可能性；1987年， Lassalle 和 Alard将OFDM技术推广到无线广播系统，并且揭示了前向纠错编码和OFDM技术结合的重要性，对于广播通信工程师而言，OFDM技术也称为C-OFDM(Coded OFDM)；最先提出在有线通信中使用OFDM技术的是来自斯坦福大学的Cioffi等人，同时他们展示了OFDM可以作为数字用户线路(Digital Subscriber Line, DSL)的一种替代调制方式；如绪论所述，OFDM近年来也开始被应用于光通信中，根据在时序信号要不要加直流偏置可以把光OFDM分为直流偏置光OFDM调制方式(DC-biased optical OFDM，DCO-OFDM)和非对称光OFDM调制方式(Asymmetrically-clipped optical OFDM, ACO-OFDM)两种，下面简要介绍这两种光OFDM调制技术。
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/Chapter-2/HistoryOfOFDM.eps}
     \caption{OFDM技术发展历程及其应用}
     \label{fig:HistoryOfOFDM}
 \end{figure}
-\subsection{可见光中的OFDM调制}
+\subsection{DCO-OFDM简介}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/Chapter-2/DCO-OFDMStructure.eps}
+    \caption{DCO-OFDM流程图}
+    \label{fig:DCO-OFDMStructure}
+\end{figure}
+
+DCO-OFDM调制流程如\autoref{fig:DCO-OFDMStructure}所示。为了使OFDM调制后的信号为实信号，
+我们需要将调制到OFDM子载波上的复信号做共轭对称\cite{proakisdigital}，利用假设OFDM调制前的复信号为$X(k),k = 0, 1, 2, \cdots, N/2-1$，那么其共轭对称信号为：
+\begin{equation}
+    \tilde{X}(k) =
+    \begin{cases}
+        \Re\{X(0)\}  & k = 0 \\
+        X(k) & k = 1, 2, \cdots, \tilde{N}-1 \\
+        \Im\{X(0)\} & k = \tilde{N} \\
+        X^*(N-k) & k = \tilde{N}+1, \cdots, N-1
+    \end{cases}
+    \label{equ:HermitianSymmetry}
+\end{equation}
+其中$N=2\tilde{N}$为FFT长度，“$\Re\{\cdot\}$”代表取实部操作，“$\Im\{\cdot\}$”代表取虚部操作，“$(\cdot)^*$”表示共轭操作。对得到的共轭对称信号$\tilde{X}(k),k=0,1,...,N-1$做IFFT（Inverse Fast Fourier Transformation）运算，即可得到实数时域信号$x(n)$：
+\begin{equation}
+    x(n) = \frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}\tilde{X}(k)e^{\frac{j2\pi kn}{N}}
+    \label{equ:DCO_OFDM_Sig}
+\end{equation}
+
+图\autoref{fig:DCO-OFDMSignal}是DCO-OFDM调制后信号的时域波形，
+可以发现虽然我们用共轭对称的方法得到了时域的实数信号，包含正负信号，但是由于光的强度只能为正，
+所以我们需要在实数信号上加上直流偏置，所加的直流偏置既要使得时域信号非负，同时也不能过大以至于进入LED的电光转换非线性区域。
+采用增加直流偏置
+的方式虽然实现方法简单，却使得系统的功率效率下降。
+
+\subsection{ACO-OFDM调制}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/Chapter-2/ACO-OFDMStructure.eps}
+    \caption{ACO-OFDM流程图}
+    \label{fig:ACO-OFDMStructure}
+\end{figure}
+
+ACO-OFDM调制方式相对于DCO-OFDM调制方式，具有更高的有效功率效率。ACO-OFDM调制方式流程如\autoref{fig:ACO-OFDMStructure}。
+在ACO-OFDM调制方案中，
+假设OFDM调制前的复信号为$X(k),k=0,1,2,\cdots,N/4-1$，我们将频域复信号分配到OFDM频谱的前半段的奇数子载波上，偶数子载波则补零，
+后半段子载波则根据圆周共轭对称原则对应填充。共轭对称规则表示如下：
+\begin{equation}
+    \tilde{X}(k) =
+    \begin{cases}
+        0 & \text{k为偶数} \\
+        X(\frac{k-1}{2}) & k = 1, 3, 5, \cdots, N/2-1 \\
+        X^*(\frac{N-1-k}{2}) & k = N/2+1, N/2+3, \cdots, N-1
+    \end{cases}
+    \label{equ:ACO_OFDM_Freq}
+\end{equation}
+上述共轭对称的频域信号做IFFT得到实数序列，该实数信号具有如下的性质：
+\begin{equation}
+    x(n+N/2) = \frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}\tilde{X}(k) e^{j\frac{2\pi k(n+N/2)}{N}} = \frac{1}{\sqrt{N}} \sum \limits_{k=0}^{N-1} (-1)^k\tilde{X}(k)e^{j\frac{2\pi kn}{N}}
+    \label{equ:ACO_OFDM_equ1}
+\end{equation}
+因为偶数子载波上的信号为0，所以\label{equ_ACO_OFDM_equ1}可以简化为：
+\begin{equation}
+    x(n+N/2) = -\frac{1}{\sqrt{N}} \sum \limits_{k=0}^{N-1} \tilde{X}(k)e^{j\frac{2\pi kn}{N}} = -x(n)
+\end{equation}
+即相距$N/2$的两个信号互为相反数，所以对于长度为N的时域信号$x(n)$，我们只需要保持其非负部分即可保留所有序列信息。
+ACO-OFDM信号只取非负部分即可驱动LED，这样就省去了DCO-OFDM调制方式中添加直流偏置的环节，从而减少了功率损耗，提升了功率效率，
+但ACO-OFDM调制仅用到了DCO-OFDM调制一半子载波，所以其频带利用率较低。两者对比发现，ACO-OFDM调制更适合于功率受限的系统，
+DCO-OFDM系统更适合于带宽受限的系统，而我们所研究的室内可见光系统，原本就需要在系统加入一定的直流偏置满足照明要求，
+所以DCO-OFDM技术用于室内可见光是非常合适的。
+\begin{figure}[h]
+    \centering
+    \subfloat[DCO-OFDM信号]{
+        \includegraphics[width=0.5\textwidth]{figures/Chapter-2/DCO-OFDMSignal.eps}
+        \label{fig:DCO-OFDMSignal}
+    }
+    \subfloat[ACO-OFDM信号]{
+        \includegraphics[width=0.5\textwidth]{figures/Chapter-2/ACO-OFDMSignal.eps}
+        \label{fig:ACO-OFDMSignal}
+    }
+    \caption{DCO-OFDM信号调与ACO-OFDM信号比较}
+    \label{fig:DCO-OFDMVSACO-OFDM}
+\end{figure}
 \section{自适应传输技术简介}
 \section{本章小结}
