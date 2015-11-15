@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  14 NOV 2015 15:38
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  15 NOV 2015 16:03
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1539,7 +1539,7 @@ File: figures/Chapter-2/MulticolorFilterGain.eps Graphic file (type eps)
 File: figures/Chapter-2/MultiColorReceiveredFilter.eps Graphic file (type eps)
 
 <figures/Chapter-2/MultiColorReceiveredFilter.eps>
-Underfull \vbox (badness 2237) has occurred while \output is active []
+Underfull \vbox (badness 2165) has occurred while \output is active []
 
  [6]
 File: figures/Chapter-2/HistoryOfOFDM.eps Graphic file (type eps)
@@ -1569,6 +1569,12 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
 (Font)              size <10.95> substituted on input line 36.
 
+
+Underfull \hbox (badness 1189) in paragraph at lines 39--42
+[]\EU1/TimesNewRoman(0)/m/n/10.5 Armstrong J.  OFDM for optical communications[
+J].  Lightwave Technology, Journal of, 2009,
+ []
+
 ) [9
 
 
@@ -1595,10 +1601,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 25752 strings out of 430478
- 470116 string characters out of 3191501
+ 25755 strings out of 430478
+ 470191 string characters out of 3191501
  563227 words of memory out of 3000000
- 28520 multiletter control sequences out of 15000+200000
+ 28523 multiletter control sequences out of 15000+200000
  12222 words of font info for 93 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  63i,11n,65p,787b,798s stack positions out of 5000i,500n,10000p,200000b,50000s

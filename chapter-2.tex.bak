@@ -125,11 +125,12 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
 \end{figure}
 \section{OFDM技术在室内可见光通信中的应用}
 \subsection{OFDM技术简介}
+正交频分复用(OFDM)是一种多载波调制技术，是一种能有效地对抗频率选择性衰落途径，而且频谱利用率较高，实现简单，在很多现代通信系统中得到了广泛的应用，如DSL、WIFI及LTE等。
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/Chapter-2/HistoryOfOFDM.eps}
     \caption{OFDM技术发展历程及其应用}
-    \label{fig:MultiColorReceiveredFilter}
+    \label{fig:HistoryOfOFDM}
 \end{figure}
 \subsection{可见光中的OFDM调制}
 \section{自适应传输技术简介}
