@@ -84,7 +84,7 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
 \end{figure}
 
 \subsection{光电转换器件}
-现在使用最多的光电转换器件是光电二极管(PD)。光电二极管跟普通的二极管一样，也是一种含有PN节的半导体器件，只是会把PN节中的耗尽区通过某些方式暴露出来以接受光照。所谓耗尽区是在生产二极管时，在P区和N区交界的位置，N区的电子会移向P 区并与空穴结合，这个P区与N区交界的区域就称为耗尽区。但是耗尽区不会持续增加，因为N区的一个自由电子离开它的母体原子，原子就变成了正离子；同理，当自由电子进入P区并与其中的原子结合时，该原子就成为了负离子，离子形成电势阻止更多电子穿过耗尽区。在光电二极管中，耗尽区受到光照，由于光电效应，电子被激发，形成电子-空穴对，在方向配置电压的作用下形成反向电流，这就是光电二极管基本工作原理。
+现在使用最多的光电转换器件是光电二极管(PD)。光电二极管跟普通的二极管一样，也是一种含有PN节的半导体器件，只是会把PN节中的耗尽区通过某些方式暴露出来以接受光照。所谓耗尽区是在生产二极管时，在P区和N区交界的位置，N 区的电子会移向P 区并与空穴结合，这个P区与N区交界的区域就称为耗尽区。但是耗尽区不会持续增加，因为N区的一个自由电子离开它的母体原子，原子就变成了正离子；同理，当自由电子进入P区并与其中的原子结合时，该原子就成为了负离子，离子形成电势阻止更多电子穿过耗尽区。在光电二极管中，耗尽区受到光照，由于光电效应，电子被激发，形成电子-空穴对，在方向配置电压的作用下形成反向电流，这就是光电二极管基本工作原理。
 \begin{table}[htbp]
     \caption{PIN 与 APD光电二极管对比}
     \label{tab:PIN_APD_Comparsion}
@@ -124,16 +124,107 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
     \label{fig:MultiColorReceiveredFilter}
 \end{figure}
 \section{OFDM技术在室内可见光通信中的应用}
-\subsection{OFDM技术简介}
+\subsection{OFDM技术发展历程}
 正交频分复用(OFDM)是一种多载波调制技术，是一种能有效地对抗频率选择性衰落途径，而且频谱利用率较高，实现简单，在很多现代通信系统中得到了广泛的应用，如DSL、WIFI及LTE等。OFDM技术发展历程及其应用如
 \autoref{fig:HistoryOfOFDM}所示，最早由美国贝尔实验室的Chang 在1966 申请的专利“正交频分复用数字传输系统”提出；1969年，Salz和Weinstein研究了使用傅里叶变换来实现OFDM的通信系统；用来抵抗码间干扰的循环前缀(Cyclic Prefix, CP)于1980年加入OFDM系统。这是OFDM技术理论发展最重要的三个节点
-\cite{armstrong2009ofdm}。在上世纪80年代中期，人们开始研究OFDM技术在实际通信系统中的应用，1985年，同样来自贝尔实验室的Cimini研究了OFDM用于移动通信的可能性；1987年， Lassalle 和 Alard将OFDM技术推广到无线广播系统，并且揭示了前向纠错编码和OFDM技术结合的重要性，对于广播通信工程师而言，OFDM技术也称为C-OFDM(Coded OFDM)；最先提出在有线通信中使用OFDM技术的是来自斯坦福大学的Cioffi等人，同时他们展示了OFDM可以作为数字用户线路(Digital Subscriber Line, DSL)的一种替代调制方式；如绪论所述，OFDM近年来也开始被应用于光通信中，根据在时序信号要不要加直流偏置可以把光OFDM分为DCO-OFDM和ACO-OFDM两种
+\cite{armstrong2009ofdm}。在上世纪80年代中期，人们开始研究OFDM技术在实际通信系统中的应用，1985年，同样来自贝尔实验室的Cimini研究了OFDM用于移动通信的可能性；1987年， Lassalle 和 Alard将OFDM技术推广到无线广播系统，并且揭示了前向纠错编码和OFDM技术结合的重要性，对于广播通信工程师而言，OFDM技术也称为C-OFDM(Coded OFDM)；最先提出在有线通信中使用OFDM技术的是来自斯坦福大学的Cioffi等人，同时他们展示了OFDM可以作为数字用户线路(Digital Subscriber Line, DSL)的一种替代调制方式；如绪论所述，OFDM近年来也开始被应用于光通信中，根据在时序信号要不要加直流偏置可以把光OFDM 分为直流偏置光OFDM调制方式(DC-biased optical OFDM，DCO-OFDM)和非对称光OFDM调制方式(Asymmetrically-clipped optical OFDM, ACO-OFDM)两种，下面简要介绍这两种光OFDM调制技术。
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/Chapter-2/HistoryOfOFDM.eps}
     \caption{OFDM技术发展历程及其应用}
     \label{fig:HistoryOfOFDM}
 \end{figure}
-\subsection{可见光中的OFDM调制}
+\subsection{DCO-OFDM简介}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/Chapter-2/DCO-OFDMStructure.eps}
+    \caption{DCO-OFDM流程图}
+    \label{fig:DCO-OFDMStructure}
+\end{figure}
+
+DCO-OFDM调制技术原理框图如\autoref{fig:DCO-OFDMStructure} 所示。因为在光通信中，现在使用的都是强度调制，直接检测技术，所以要保证LED灯输入信号是实数。为了满足这个条件，我们要将逆傅里叶变换(Inverse Fast Fourier Transform, IFFT)之前的频域复信号设计为满足共轭对称的形式\cite{proakisdigital}，假设我们使用的子载波数目为$N/2$，待发送的复信号为$X(k),k = 0, 1, 2, \cdots, N/2-1$，则其对应的共轭对称形式为：
+\begin{equation}
+    \tilde{X}(k) =
+    \begin{cases}
+        \Re\{X(0)\}  & k = 0 \\
+        X(k) & k = 1, 2, \cdots, N/2-1 \\
+        \Im\{X(0)\} & k = N/2 \\
+        X^*(N-k) & k = N/2+1, \cdots, N-1
+    \end{cases}
+    \label{equ:HermitianSymmetry}
+\end{equation}
+其中$N$为FFT长度，“$\Re\{\cdot\}$”表示取实部，“$\Im\{\cdot\}$”为取虚部，“$(\cdot)^*$”代表做共轭运算。现在我们对满足共轭对称的信号$\tilde{X}(k),k=0,1,...,N-1$ 做$N$点IFFT运算，得到时域信号表达式为：
+\begin{equation}
+    x(n) = \frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}\tilde{X}(k)e^{\frac{j2\pi kn}{N}}
+    \label{equ:DCO_OFDM_Sig}
+\end{equation}
+在式\ref{equ:DCO_OFDM_Sig}中，取任意$k$，假设$X(k)=a+bj$，则$X(N-k)=a-bj$，则有：
+\begin{align}
+    T(k) &= X(k)e^{\frac{j2\pi kn}{N}}+X(N-k)e^{\frac{j2\pi (N-k)n}{N}}\nonumber  \\
+    &=\sqrt{a^2+b^2}e^{\frac{j2\pi kn+j\theta}{N}}+\sqrt{a^2+b^2}e^{-\frac{j2\pi kn+j\theta}{N}}\nonumber \\
+    &=2\sqrt{a^2+b^2}\cos(\frac{2\pi kn}{N}+\theta)
+    \label{equ:DCO_OFDM_Proof}
+\end{align}
+其中$\theta$表示$X(k)$的幅角，由式\ref{equ:DCO_OFDM_Proof}知$T(k)$必为实数，那么：
+\begin{equation}
+    x(n)=\frac{1}{\sqrt{N}}(\sum \limits_{k=1}^{N/2-1}T(k)+ \Re\{X(0)\} +\Im\{X(0)\}(-1)^n)
+\end{equation}
+说明IFFT之后输出的时域信号确实为实信号。作为LED强度调制信号，还要满足正数这个条件，而共轭对称后输出的结果虽然已是实数，但是有正有负，为了使其变为正数，我们可以在改实数信号上加一个直流正偏置，但是这个偏置选择也非常讲究，如果偏置过低，则会造成下削波，而过高则会让LED进入非线性区。在实际系统设计时，要根据IFFT输出时域信号的统计情况要决定偏置大小。DCO-OFDM 加偏置后的时域信号如图\autoref{fig:DCO-OFDMSignal}所示。
+
+\begin{figure}[h]
+    \centering
+    \subfloat[DCO-OFDM信号]{
+        \includegraphics[width=0.5\textwidth]{figures/Chapter-2/DCO-OFDMSignal.eps}
+        \label{fig:DCO-OFDMSignal}
+    }
+    \subfloat[ACO-OFDM信号]{
+        \includegraphics[width=0.5\textwidth]{figures/Chapter-2/ACO-OFDMSignal.eps}
+        \label{fig:ACO-OFDMSignal}
+    }
+    \caption{DCO-OFDM信号调与ACO-OFDM信号比较}
+    \label{fig:DCO-OFDMVSACO-OFDM}
+\end{figure}
+\subsection{ACO-OFDM调制}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/Chapter-2/ACO-OFDMStructure.eps}
+    \caption{ACO-OFDM流程图}
+    \label{fig:ACO-OFDMStructure}
+\end{figure}
+DCO-OFDM技术实现简单、频谱利用率高，但是有个缺点就是要加直流偏置，这样降低了其能效效率。ACO-OFDM就是在DCO-OFDM的基础上发展而来的另一种光OFDM 结构，解决要加直流偏置的问题。ACO-OFDM主要是利用IFFT的一个性质，即只在奇数子载波上调制数据，偶数子载波置为0，同时让复信号满足共轭对称性，这样的频域复信号得到的时域实信号满足一个$x(n+N/2)=-x(n)$这样的平移$N/2$ 反对称特性，利用这样的特性，在发射端不需要加偏置，而是直接进行零值削波，在接收端也能正确解调出信息，其原理框图如
+\autoref{fig:ACO-OFDMStructure} 所示。下面先简要证明其平移反对称特性。
+
+如前所述，ACO-OFDM要将所有的偶数子载波的数据置为零，即不用偶数子载波，所以其频谱利用率只有DCO-OFDM的一半。假设OFDM 待调制复信号为$X(k),k=0,1,2,\cdots,N/4-1$，将偶数子载波置为零，同时满足共轭对称性，得到IFFT频域信号为：
+\begin{equation}
+    \tilde{X}(k) =
+    \begin{cases}
+        0 & \text{k为偶数} \\
+        X(\frac{k-1}{2}) & k = 1, 3, 5, \cdots, N/2-1 \\
+        X^*(\frac{N-1-k}{2}) & k = N/2+1, N/2+3, \cdots, N-1
+    \end{cases}
+    \label{equ:ACO_OFDM_Freq}
+\end{equation}
+因为 $\tilde{X}(k)$满足共轭对称性，则其IFFT输出首先一定会是实数，又因为：
+\begin{equation}
+    x(n+N/2) = \frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}\tilde{X}(k) e^{j\frac{2\pi k(n+N/2)}{N}} = \frac{1}{\sqrt{N}} \sum \limits_{k=0}^{N-1} (-1)^k\tilde{X}(k)e^{j\frac{2\pi kn}{N}}
+    \label{equ:ACO_OFDM_equ1}
+\end{equation}
+其中偶数子载波上的信号被置为零，所以\label{equ_ACO_OFDM_equ1} 可以化简为：
+\begin{equation}
+    x(n+N/2) = -\frac{1}{\sqrt{N}} \sum \limits_{k=0}^{N-1} \tilde{X}(k)e^{j\frac{2\pi kn}{N}} = -x(n)
+\end{equation}
+即平移反对称性成立。利用这个特性，发射端可以进行零值削波，即将负值时域信号置为0，正值信号值不变，然后用这个削波后的信号去调制LED，下面证明考虑无噪声的情况下接收端能正确恢复信号。
+
+由傅里叶变换：
+\begin{equation}
+    X(m) = \frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}x(k)e^{-\frac{j2\pi km}{N}}
+    \label{equ:FFT}
+\end{equation}
+式\ref{equ:FFT}可以改写为：
+\begin{align}
+    X(m) = &\frac{1}{\sqrt{N}}\sum \limits_{k=0, x(k)>0}^{N-1}(x(k)e^{-\frac{j2\pi km}{N}}+x(k+N/2)e^{-\frac{j2\pi (k+\frac{N}{2})m}{N}})\nonumber \\
+         &+\frac{1}{\sqrt{N}}\sum \limits_{k=0, x(k)<0}^{N-1}(x(k)e^{-\frac{j2\pi km}{N}}+x(k+N/2)e^{-\frac{j2\pi (k+\frac{N}{2})m}{N}}) \nonumber\\
+\end{align}
 \section{自适应传输技术简介}
 \section{本章小结}

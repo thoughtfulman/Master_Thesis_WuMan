@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -39,5 +39,10 @@ Engin L.
 Armstrong J.
 \newblock OFDM for optical communications[J].
 \newblock Lightwave Technology, Journal of, 2009, 27(3):189--204.
+
+\bibitem[Proakis(2001)]{proakisdigital}
+Proakis J~G.
+\newblock 数字通信: 英文版[M].
+\newblock 北京: 电子工业出版社, 2001.
 
 \end{thebibliography}

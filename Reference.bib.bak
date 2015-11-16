@@ -430,3 +430,13 @@
   typeoflit = {EB/OL},
   url = {http://www.giaitech.com/product/130-cn.html}
 }
+@article{armstrong2009ofdm,
+  title={OFDM for optical communications},
+  author={Armstrong, Jean},
+  journal={Lightwave Technology, Journal of},
+  volume={27},
+  number={3},
+  pages={189--204},
+  year={2009},
+  publisher={IEEE}
+}
