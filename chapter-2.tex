@@ -3,7 +3,7 @@
 \section{引言}
 得益于LED灯在照明市场的风行，使得兼顾通信和照明两重功能的可见光通信技术受到了越来越多的关注。基于LED的可见光通信因其绿色环保、高速便捷、频谱资源不受限制等优点，极有可能在未来的无线通信中占有一席之地，特别是诸如机舱、医院和矿井这些特殊应用场景下。本章将先介绍可见光通信的基本原理，包括基础硬件发光二极管(LED)和光电二极管(PD)的基本工作原理及可见光通信系统模型，然后将概述OFDM在可见光通信中的应用，并且比较ACO-OFDM及DCO-OFDM之间的区别，最后将简介自适应传输技术及其在可见光通信中的应用。
 \section{室内可见光通信基本原理}
-\subsection{可见光系统模型}
+\subsection{可见光通信系统模型}
 与传统的无线通信技术通过调幅、调频或调相技术将信息调制到射频载波上不同，可见光通信利用的是人眼可见的波长在380 nm 到780 nm之间的电磁波来传输信息，并且是使用强度调制(Intensity Modulation，IM)、直接检测(Direct Detection，DD)技术。如\autoref{fig:BasicOpticalSystem}所示，在发射端，利用LED灯的易于调制性，在线性范围内，LED 的发光强度与输入电流功率成正比，将电信号调制到LED发光强度上；在接收端，利用PD的输入反向电流功率与接收到的光强成正比的特性，用光电二极管去检测LED发光强度的变化，将光信号转换成电信号。
 \begin{figure}[htbp]
     \centering
@@ -27,6 +27,36 @@ $z(t)$表示信道加性白高斯噪声(Additive White Gaussian Noise，AWGN)，
 \includegraphics[width=0.9\textwidth]{figures/chapter-2/BasebandModle.eps}
 \caption{光无线通信系统基带处理模型}
 \label{fig:BasebandModle}
+\end{figure}
+
+\subsection{可见光通信系统信道特性}
+\begin{figure}[h]
+    \centering
+    \subfloat[室内可见光信道时域冲激响应]{
+        \label{fig:ChannelImpulseResponse}
+        \begin{minipage}[t]{1\textwidth}
+            \centering
+            \includegraphics[width=0.6\textwidth]{figures/Chapter-2/ChannelImpulseResponse.eps}
+        \end{minipage}
+    }
+    \par
+    \centering
+    \subfloat[室内可见光信道幅频特性]{
+        \label{fig:ChannelImpulseResponse-AmpFreqResponse}
+        \begin{minipage}[t]{0.5\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/Chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps}
+        \end{minipage}
+    }
+    \subfloat[室内可见光信道相频响应]{
+        \label{fig:ChannelImpulseResponse-PhsFreqResponse}
+        \begin{minipage}[t]{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.97\textwidth]{figures/Chapter-2/ChannelImpulseResponse-PhsFreqResponse.eps}
+        \end{minipage}
+    }
+    \caption{室内可见光信道的时频域响应特性}
+    \label{fig:ChannelResponse}
 \end{figure}
 
 \subsection{光电元器件简介}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  16 NOV 2015 16:51
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  16 NOV 2015 20:19
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1441,6 +1441,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: figures/chapter-2/BasebandModle.eps Graphic file (type eps)
 
 <figures/chapter-2/BasebandModle.eps>
+File: figures/Chapter-2/ChannelImpulseResponse.eps Graphic file (type eps)
+
+<figures/Chapter-2/ChannelImpulseResponse.eps>
 .................................................
 . fontspec info: "no-scripts"
 . 
@@ -1456,98 +1459,130 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
- [2]
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-File: figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps Graphic file (typ
-e eps)
 
-<figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps>
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 48 replaced by U+FFFD.
-File: figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps Graphic file 
-(type eps)
-
-<figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 44--49
- [][][][] 
+Overfull \hbox (5.475pt too wide) in paragraph at lines 41--42
+ [][] 
  []
 
+File: figures/Chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps Graphic file
+ (type eps)
+<figures/Chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps>
+File: figures/Chapter-2/ChannelImpulseResponse-PhsFreqResponse.eps Graphic file
+ (type eps)
 
-Underfull \vbox (badness 3138) has occurred while \output is active []
-
- [3]
-File: figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps Graphic file (type ep
-s)
-
-<figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps>
-Invalid UTF-8 byte or sequence at line 66 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 66 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 66 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 66 replaced by U+FFFD.
-File: figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps Graphic file (type ep
-s)
-
-<figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 62--67
- [][][][] 
- []
-
-File: figures/chapter-2/LED_Temperature_Light_Output.eps Graphic file (type eps
-)
-<figures/chapter-2/LED_Temperature_Light_Output.eps>
-File: figures/chapter-2/LED_Temperature_Wavelength_Shift.eps Graphic file (type
- eps)
-
-<figures/chapter-2/LED_Temperature_Wavelength_Shift.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 77--82
+<figures/Chapter-2/ChannelImpulseResponse-PhsFreqResponse.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 50--58
  [][][][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4] [5]
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
+[2]
+Underfull \vbox (badness 7047) has occurred while \output is active []
+
+ [3]
+Invalid UTF-8 byte or sequence at line 74 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 74 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 74 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 74 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 74 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 74 replaced by U+FFFD.
+File: figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps Graphic file (typ
+e eps)
+
+<figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps>
+Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 78 replaced by U+FFFD.
+File: figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps Graphic file 
+(type eps)
+
+<figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 74--79
+ [][][][] 
+ []
+
+File: figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps Graphic file (type ep
+s)
+<figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps>
+Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
+File: figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps Graphic file (type ep
+s)
+
+<figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 92--97
+ [][][][] 
+ []
+
+
+Underfull \vbox (badness 1082) has occurred while \output is active []
+
+ [4]
+File: figures/chapter-2/LED_Temperature_Light_Output.eps Graphic file (type eps
+)
+
+<figures/chapter-2/LED_Temperature_Light_Output.eps>
+File: figures/chapter-2/LED_Temperature_Wavelength_Shift.eps Graphic file (type
+ eps)
+
+<figures/chapter-2/LED_Temperature_Wavelength_Shift.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 107--112
+ [][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
 File: figures/Chapter-2/MulticolorFilterGain.eps Graphic file (type eps)
- <figures/Chapter-2/MulticolorFilterGain.eps>
+
+<figures/Chapter-2/MulticolorFilterGain.eps>
 File: figures/Chapter-2/MultiColorReceiveredFilter.eps Graphic file (type eps)
 
 <figures/Chapter-2/MultiColorReceiveredFilter.eps>
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 1147) has occurred while \output is active []
 
  [6]
 File: figures/Chapter-2/HistoryOfOFDM.eps Graphic file (type eps)
 
-<figures/Chapter-2/HistoryOfOFDM.eps> [7]
+<figures/Chapter-2/HistoryOfOFDM.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
 File: figures/Chapter-2/DCO-OFDMStructure.eps Graphic file (type eps)
 
-<figures/Chapter-2/DCO-OFDMStructure.eps> [8]
+<figures/Chapter-2/DCO-OFDMStructure.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
 File: figures/Chapter-2/ACO-OFDMStructure.eps Graphic file (type eps)
 
 <figures/Chapter-2/ACO-OFDMStructure.eps>
@@ -1584,23 +1619,19 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
-[9] [10]
-Invalid UTF-8 byte or sequence at line 233 replaced by U+FFFD.
+[10] [11]
+Invalid UTF-8 byte or sequence at line 263 replaced by U+FFFD.
 File: figures/Chapter-2/DCO-OFDMSignal.eps Graphic file (type eps)
  <figures/Chapter-2/DCO-OFDMSignal.eps>
-Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 267 replaced by U+FFFD.
 File: figures/Chapter-2/ACO-OFDMSignal.eps Graphic file (type eps)
 
 <figures/Chapter-2/ACO-OFDMSignal.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 233--238
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 263--268
  [][][][] 
  []
 
-) [11] [12
-
-
-
-] (E:\WuMan\Master_Thesis_WuMan\Main.bbl
+) [12] (E:\WuMan\Master_Thesis_WuMan\Main.bbl
 
 Package xeCJK Warning: Unknown CJK family `tt' is ignored.
 Use \setCJKfamilyfont to define a CJK family. on input line 36.
@@ -1632,6 +1663,9 @@ J].  Lightwave Technology, Journal of, 2009,
 
 ) [13
 
+
+
+
 ]
 File: figures/back-cover.png Graphic file (type QTm)
  <use  "figures/back-cover.png" >
@@ -1653,12 +1687,12 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 25794 strings out of 430478
- 471018 string characters out of 3191501
- 563401 words of memory out of 3000000
- 28552 multiletter control sequences out of 15000+200000
+ 25807 strings out of 430478
+ 471557 string characters out of 3191501
+ 569828 words of memory out of 3000000
+ 28562 multiletter control sequences out of 15000+200000
  12270 words of font info for 99 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,11n,65p,787b,798s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,11n,65p,787b,792s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on Main.pdf (14 pages).
