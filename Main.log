@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  17 NOV 2015 13:55
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  19 NOV 2015 10:22
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1116,7 +1116,7 @@ LaTeX Warning: Unused global option(s):
     [10.5pt].
 
 (E:\WuMan\Master_Thesis_WuMan\Main.aux
-(E:\WuMan\Master_Thesis_WuMan\chapter-2.aux))
+(E:\WuMan\Master_Thesis_WuMan\chapter-3.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
@@ -1274,7 +1274,7 @@ Writing index file Main.idx
 * \@reversemargintrue
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(E:\WuMan\Master_Thesis_WuMan\chapter-2.tex
+(E:\WuMan\Master_Thesis_WuMan\chapter-3.tex
 第\CJKnumber {1}章 1.
 (d:\CTEX\MiKTeX\tex\generic\oberdiek\se-ascii-print.def
 File: se-ascii-print.def 2010/03/01 v1.8 stringenc: Printable ASCII characters
@@ -1357,330 +1357,60 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimHei does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimHei(0)' created for font 'SimHei' with options
-. [Mapping=tex-text,BoldFont={SimHei},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimHei},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimH
-ei},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-File: figures/chapter-2/BasicOpticalSystem.eps Graphic file (type eps)
-<figures/chapter-2/BasicOpticalSystem.eps>
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-LaTeX Font Info:    Try loading font information for U+msa on input line 14.
-
-(d:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 14.
-
-(d:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+) [1
 
 
 
 
 
-]
-File: figures/chapter-2/BasebandModle.eps Graphic file (type eps)
-
-<figures/chapter-2/BasebandModle.eps>
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
- [2]
-File: figures/Chapter-2/ChannelImpulseResponse.eps Graphic file (type eps)
-
-<figures/Chapter-2/ChannelImpulseResponse.eps>
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-Overfull \hbox (5.475pt too wide) in paragraph at lines 51--52
- [][] 
- []
-
-File: figures/Chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps Graphic file
- (type eps)
-<figures/Chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps>
-File: figures/Chapter-2/ChannelImpulseResponse-PhsFreqResponse.eps Graphic file
- (type eps)
-
-<figures/Chapter-2/ChannelImpulseResponse-PhsFreqResponse.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 60--68
- [][][][] 
- []
-
-[3]
-Invalid UTF-8 byte or sequence at line 84 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 84 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 84 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 84 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 84 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 84 replaced by U+FFFD.
-File: figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps Graphic file (typ
-e eps)
- <figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps>
-Invalid UTF-8 byte or sequence at line 88 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 88 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 88 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 88 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 88 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 88 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 88 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 88 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 88 replaced by U+FFFD.
-File: figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps Graphic file 
-(type eps)
-
-<figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 84--89
- [][][][] 
- []
-
-
-Underfull \vbox (badness 3138) has occurred while \output is active []
-
- [4]
-File: figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps Graphic file (type ep
-s)
-
-<figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps>
-Invalid UTF-8 byte or sequence at line 106 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 106 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 106 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 106 replaced by U+FFFD.
-File: figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps Graphic file (type ep
-s)
-
-<figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 102--107
- [][][][] 
- []
-
-File: figures/chapter-2/LED_Temperature_Light_Output.eps Graphic file (type eps
-)
-<figures/chapter-2/LED_Temperature_Light_Output.eps>
-File: figures/chapter-2/LED_Temperature_Wavelength_Shift.eps Graphic file (type
- eps)
-
-<figures/chapter-2/LED_Temperature_Wavelength_Shift.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 117--122
- [][][][] 
- []
-
-[5] [6]
-File: figures/Chapter-2/MulticolorFilterGain.eps Graphic file (type eps)
- <figures/Chapter-2/MulticolorFilterGain.eps>
-File: figures/Chapter-2/MultiColorReceiveredFilter.eps Graphic file (type eps)
-
-<figures/Chapter-2/MultiColorReceiveredFilter.eps>
-File: figures/Chapter-2/HistoryOfOFDM.eps Graphic file (type eps)
-
-<figures/Chapter-2/HistoryOfOFDM.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-[8]
-File: figures/Chapter-2/DCO-OFDMStructure.eps Graphic file (type eps)
- <figures/Chapter-2/DCO-OFDMStructure.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-[10]
-File: figures/Chapter-2/ACO-OFDMStructure.eps Graphic file (type eps)
- <figures/Chapter-2/ACO-OFDMStructure.eps>
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimSun does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
-un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-Invalid UTF-8 byte or sequence at line 273 replaced by U+FFFD.
-File: figures/Chapter-2/DCO-OFDMSignal.eps Graphic file (type eps)
-
-<figures/Chapter-2/DCO-OFDMSignal.eps>
-Invalid UTF-8 byte or sequence at line 277 replaced by U+FFFD.
-File: figures/Chapter-2/ACO-OFDMSignal.eps Graphic file (type eps)
- <figures/Chapter-2/ACO-OFDMSignal.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 273--278
- [][][][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [12] [13] [14
+] [2
 
 
 
 ] (E:\WuMan\Master_Thesis_WuMan\Main.bbl
 
-Package xeCJK Warning: Unknown CJK family `tt' is ignored.
-Use \setCJKfamilyfont to define a CJK family. on input line 36.
+Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 36.
-
-(d:\CTEX\MiKTeX\tex\latex\euenc\eu1lmtt.fd
-File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 36.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 36.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 36.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 36.
-
-
-Underfull \hbox (badness 1189) in paragraph at lines 39--42
-[]\EU1/TimesNewRoman(0)/m/n/10.5 Armstrong J.  OFDM for optical communications[
-J].  Lightwave Technology, Journal of, 2009,
- []
-
-) [15
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [3
 
 ]
 File: figures/back-cover.png Graphic file (type QTm)
  <use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
- [16
+ [4
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
 
 (E:\WuMan\Master_Thesis_WuMan\Main.aux
-(E:\WuMan\Master_Thesis_WuMan\chapter-2.aux))
+(E:\WuMan\Master_Thesis_WuMan\chapter-3.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.45pt have occurred.
-
  ) 
 Here is how much of TeX's memory you used:
- 25808 strings out of 430478
- 471580 string characters out of 3191501
- 567760 words of memory out of 3000000
- 28563 multiletter control sequences out of 15000+200000
- 12270 words of font info for 99 fonts, out of 3000000 for 9000
+ 25480 strings out of 430478
+ 464385 string characters out of 3191501
+ 552227 words of memory out of 3000000
+ 28304 multiletter control sequences out of 15000+200000
+ 4577 words of font info for 46 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,11n,65p,787b,795s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,6n,63p,787b,578s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Main.pdf (16 pages).
+Output written on Main.pdf (4 pages).

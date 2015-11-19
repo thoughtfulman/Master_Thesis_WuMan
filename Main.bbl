@@ -1,48 +1,8 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{0}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[杨学成(2015)]{Yangxuecheng2015}
-杨学成.
-\newblock 高速可见光通信系统设计[D]:[硕士学位论文].
-\newblock 南京: 东南大学, 2015.
-
-\bibitem[陈春艳(2014)]{Chenchunyan2014}
-陈春艳.
-\newblock 无线光通信调制技术研究[D]:[硕士学位论文].
-\newblock 南京: 东南大学, 2014.
-
-\bibitem[Semiconductors(2011){\natexlab{a}}]{LE2011}
-Semiconductors O~O.
-\newblock OSRAM OSTAR - Lighting plus LE UW S2LN[G].
-\newblock 2011.
-
-\bibitem[Semiconductors(2011){\natexlab{b}}]{LRTB2011}
-Semiconductors O~O.
-\newblock OSRAM Multi CHIPLED LRTB R98G[G].
-\newblock 2011.
-
-\bibitem[Engin(2013)]{LZC2013}
-Engin L.
-\newblock High Luminous Efficacy RGBA LED Emitter LZC-03MA07[G].
-\newblock 2013.
-
-\bibitem[深圳市激埃特光电有限公司(2015)]{OpticalFilter}
-深圳市激埃特光电有限公司.
-\newblock 带通滤光片介绍[EB/OL].
-\newblock \url{http://www.giaitech.com/product/130-cn.html}, 2015.
-
-\bibitem[Armstrong(2009)]{armstrong2009ofdm}
-Armstrong J.
-\newblock OFDM for optical communications[J].
-\newblock Lightwave Technology, Journal of, 2009, 27(3):189--204.
-
-\bibitem[Proakis(2001)]{proakisdigital}
-Proakis J~G.
-\newblock 数字通信: 英文版[M].
-\newblock 北京: 电子工业出版社, 2001.
 
 \end{thebibliography}
