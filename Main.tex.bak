@@ -9,7 +9,6 @@
 \usepackage{etoolbox}
 \usepackage{algorithm}
 \usepackage{algorithmic}
-
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%以下内容先一键注释掉，等到成文之后再加入编译%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\categorynumber{TN92} % 分类采用《中国图书资料分类法》
@@ -53,9 +52,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 开始正文
 \begin{Main}
-    \include{chapter-1}
+%    \include{chapter-1}
     \include{chapter-2}
-%    \include{chapter-3}
+    \include{chapter-3}
 %    \include{chapter-4}
 %    \include{chapter-5}
 %    \include{chapter-6}
