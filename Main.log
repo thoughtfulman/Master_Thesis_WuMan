@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  20 NOV 2015 16:48
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  21 NOV 2015 15:22
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1357,48 +1357,15 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
-LaTeX Font Info:    Try loading font information for U+msa on input line 9.
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
 (d:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 9.
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
 (d:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-
-Package natbib Warning: Citation `morelli2007synchronization' on page 1 undefin
-ed on input line 9.
-
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font SimHei does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimHei(0)' created for font 'SimHei' with options
-. [Mapping=tex-text,BoldFont={SimHei},BoldFeatures={RawFeature={embolden=4}},It
-alicFont={SimHei},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimH
-ei},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-LaTeX Warning: Reference `sec:Signle Color channel Measurement' on page 1 undef
-ined on input line 16.
-
-
-Underfull \vbox (badness 2080) has occurred while \output is active []
-
- [1
-
-
-
-
-
-]
 File: figures/Chapter-3/BlockTypePilot.eps Graphic file (type eps)
 
 <figures/Chapter-3/BlockTypePilot.eps>
@@ -1419,7 +1386,7 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 .................................................
 File: figures/Chapter-3/CombTypePilot.eps Graphic file (type eps)
  <figures/Chapter-3/CombTypePilot.eps>
-Overfull \hbox (13.68752pt too wide) in paragraph at lines 24--29
+Overfull \hbox (13.68752pt too wide) in paragraph at lines 13--18
  [][][][] 
  []
 
@@ -1468,9 +1435,13 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
-)
-Underfull \vbox (badness 1852) has occurred while \output is active []
+) [1
 
+
+
+
+
+]
 .................................................
 . fontspec info: "no-scripts"
 . 
@@ -1486,25 +1457,17 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
- [2]
-[3] [4
+ [2] (E:\WuMan\Master_Thesis_WuMan\Main.bbl) [3
 
 
 
-] (E:\WuMan\Master_Thesis_WuMan\Main.bbl
-
-Package natbib Warning: Empty `thebibliography' environment on input line 8.
-
-) [5
 
 ]
-
-Package natbib Warning: There were undefined citations.
-
 File: figures/back-cover.png Graphic file (type QTm)
+
 <use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
- [6
+ [4
 
 
 ]
@@ -1513,18 +1476,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
 (E:\WuMan\Master_Thesis_WuMan\chapter-3.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 25606 strings out of 430478
- 466823 string characters out of 3191501
- 566227 words of memory out of 3000000
- 28391 multiletter control sequences out of 15000+200000
- 9043 words of font info for 78 fonts, out of 3000000 for 9000
+ 25581 strings out of 430478
+ 466187 string characters out of 3191501
+ 561227 words of memory out of 3000000
+ 28371 multiletter control sequences out of 15000+200000
+ 9003 words of font info for 73 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,10n,65p,787b,789s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,11n,65p,787b,784s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Main.pdf (6 pages).
+Output written on Main.pdf (4 pages).

@@ -440,3 +440,11 @@
   year={2009},
   publisher={IEEE}
 }
+@book{proakisdigital,
+  title={数字通信: 英文版},
+  author={Proakis, John G},
+  year={2001},
+  address = {北京},
+  publisher={电子工业出版社},
+  language = {Chinese}
+}

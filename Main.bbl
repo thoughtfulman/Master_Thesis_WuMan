@@ -1,8 +1,15 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{1}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[石钧(2012)]{石钧2012ofdm}
+石钧.
+\newblock
+\newblock OFDM
+  无线通信系统信道估计及自适应算法的研究[D]:[PhD
+  Thesis].[S.l.]: 北京邮电大学, 2012.
 
 \end{thebibliography}
