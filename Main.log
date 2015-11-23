@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  22 NOV 2015 11:25
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  22 NOV 2015 19:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1862,34 +1862,111 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-])
-[2] (./Main.bbl) [3
+]
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\mathbf ' on input line 30.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\mathbf ' on input line 45.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\mathbf ' on input line 66.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\mathbf ' on input line 72.
+
+
+Package natbib Warning: Citation `Yangyushan2010' on page 3 undefined on input 
+line 76.
+
+! Undefined control sequence.
+\chaptername ->第\CJKnumber 
+                             {\thechapter }章
+l.107 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[3]) [4] (./Main.bbl) [5
 
 
 
 
 ]
+
+Package natbib Warning: There were undefined citations.
+
 File: figures/back-cover.png Graphic file (type QTm)
- <use  "figures/back-cover.png" >
+<use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
- [4
+ [6
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
- (./Main.aux
-(./chapter-3.aux))
+ (./Main.aux (./chapter-3.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 30033 strings out of 493727
- 551025 string characters out of 6147889
+ 30052 strings out of 493727
+ 551815 string characters out of 6147889
  677077 words of memory out of 5000000
- 33045 multiletter control sequences out of 15000+600000
- 9185 words of font info for 64 fonts, out of 8000000 for 9000
+ 33061 multiletter control sequences out of 15000+600000
+ 9209 words of font info for 67 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 73i,11n,89p,10424b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,15n,89p,10424b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Main.pdf (4 pages).
+Output written on Main.pdf (6 pages).

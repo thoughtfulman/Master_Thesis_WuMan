@@ -23,5 +23,89 @@
 块状导频放置方式见图\ref{fig:BlockTypePilot}，它的导频序列连续放置在一个OFDM符号上，但是在时间上不是连续的，也就是说要隔若干个OFDM符号才放置一个导频序列。在工程实现中，更常见的一种情况是导频序列即用于信道估计，又用于同步，这样一般是一帧放置一个导频符号。块状导频放置方式的优点是结构简单，计算复杂度低，但是因为要隔一段时间才估计一次信道，所以块状导频放置方式一般用于信道时变比较缓慢的信道。
 
 梳状导频放置方式如图\ref{fig:CombTypePilot}所示，在每个OFDM符号上，它只选择在特定的子载波上放置导频序列，而其他子载波上放置数据符号，并且每个OFDM符号的结构都是如此。它的工作原理是先估计出放置了导频的子载波处的信道响应，然后根据这些信道响应通过插值的方式得到那些放置了数据符号的子载波处的信道响应。它的优点是每个符号都会估计信道，能够应对快速时变的信道，但是它要使用插值计算，所以复杂度比较高，并且估计准确度也较低。
+
+从接收端数字信号处理的角度来讲，可以分为基于导频的信道估计可以分为最小二乘法准则(Least Square，LS)和最小均方误差估计准则(minimum mean square error，MMSE)
+两种，为了说明这两种准则的工作原理，我们先建立OFDM数字处理模型，并且假设循环前缀的长度大于最大多径时延，则根据我们在第二章中线性信道模型可得：
+\begin{equation}
+\bf y=h\otimes x+z
+\label{equ:time-domain signal}
+\end{equation}
+其中$\otimes$代表循环卷积，$\textbf x$为发射信号向量，$\textbf y$为接收信号向量，$\textbf x$为噪声信号向量。
+
+对\autoref{equ:time-domain signal}两边同时做离散时间傅里叶变换，得到：
+\begin{equation}
+\begin{aligned}
+ DFT(\textbf y)&= DFT( \textbf h\otimes \textbf x)+DFT(\textbf z)\\
+ &=DFT(\textbf h)\times DFT(\textbf x)+DFT(\textbf z)
+\end{aligned}
+\end{equation}
+
+我们知道对向量做傅里叶变换相当于在对向量左成乘上傅里叶变换矩阵，所以我们得到：
+\begin{equation}
+\bf Y= XFh+M=XH+Z
+\end{equation}
+其中：
+\begin{equation}
+\begin{aligned}
+&\textbf X=diag(DFT(\textbf x))=diag(\textbf F\textbf x )=diag([ X(0), X(1),..., X(N-1)]^T)\\
+&\textbf Y=DFT(\textbf y)= \textbf F\textbf y =[ Y(0), Y(1),..., Y(N-1)]^{T} \\
+&\textbf Z=DFT(\textbf z)= \textbf F\textbf y =[ Z(0), Z(1),..., Z(N-1)]^{T} \\
+&\textbf H=DFT(\textbf h)= \textbf F\textbf h =[ H(0), H(1),..., H(N-1)]^{T} \\
+&\textbf F=\begin{bmatrix}
+W_N^{00} &\dots  &W_N^{0(N-1)} \\
+\vdots &\ddots   &\vdots  \\
+W_N^{(N-1)0} &\dots  &W_N^{(N-1)(N-1)}\\
+\end{bmatrix}\quad
+W_N^{nk}=\frac{1}{N}e^{-j2\pi(n/N)k}\\
+\end{aligned}
+\end{equation}
+
+$\textbf X$、$\textbf Y$、$\textbf H$
+分别表示频域发射信号，频域接收信号和信道频域响应值，$\textbf Z$为频域高斯噪声。由此我们得到了衰落信道下的OFDM系统模型，
+下面我们来探讨常用的估计方法。信道估计准则有两种，分别是最小二乘法准则(Least Square，LS)和最小均方误差估计准则(minimum mean square error，MMSE)。
+基于最小二乘准则的的估计算法目标是使得目标函数$\bf J(H)$最小：
+\begin{equation}
+arg\ \underset {H}{min}\ \textbf J(\textbf H)=arg\ \underset {H}{min}\left \{  {\left |\textbf Y- \textbf X\textbf H \right|}^2\right \}
+\end{equation}
+由此求得的最小二乘解也就是信道LS估计值$\textbf H_{LS}$:
+\begin{equation}
+{\hat{\textbf H}}_{LS} =\bf X^{-1}Y
+\label{equ:Least Square channel Estimation}
+\end{equation}
+
+线性最小均方误差估计算法（Linear minimum mean square error ，LMMSE）则是基一种于统计估计理论的贝叶斯估计方法，LMMSE估计是对LS估计的最佳线性滤波\cite{Yangyushan2010}，此时将信道频域响应$\textbf H$看成一个随机向量，信道估计问题可以看成对LS估计结果$H_{LS}$的线性滤波。假设频域LMMSE估计器的形式为：
+\begin{equation}
+{\hat{\textbf H}}_{LMMSE} =\textbf Q{\hat{\textbf H}}_{LS}
+\end{equation}
+
+其中，$\textbf Q$是滤波矩阵，LMMSE的目标是使得估计得到的信道系数与实际的信道系数之间的均方误差（Mean Square Error，MSE）$\Lambda(\textbf Q)$ 最小:
+\begin{equation}
+arg\ \underset {\textbf Q}{min}\ {\Lambda} (\textbf Q)=arg\ \underset {\textbf Q}{min}\left \{  {\left |\textbf H_{R}- \textbf H_{LMMSE} \right|}^2\right\}
+\end{equation}
+
+其中，$\textbf H_R$是真实信道，由此得到的LMMSE信道估计器为：
+\begin{equation}
+\textbf H_{LMMSE}=\textbf F \textbf R_{hY}\textbf R_{YY}^{-1}\textbf Y
+\end{equation}
+
+其中，$\textbf R_{hY}$是信道冲激响应向量$\textbf h$和接收端信号向量$\textbf Y$的互协方差矩阵，$\textbf R_{YY}$是接收端信号向量$\textbf Y$的自协方差矩阵，$\textbf R_{hh}$是$\textbf h$的自协方差矩阵，$\sigma^2$是噪声方差。其中$\textbf R_{\textbf h\textbf Y}$和$\textbf R_{\textbf Y\textbf Y}$分别为：
+
+\begin{equation}
+\begin{aligned}
+\textbf R_{\textbf h\textbf Y}=E(\textbf h\textbf Y)=\textbf R_{\textbf h\textbf h}\textbf R_{\textbf h\textbf Y}{\textbf F}^{H}\textbf Y\\
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\textbf R_{\textbf Y\textbf Y}=E(\textbf Y\textbf Y)=\textbf X\textbf F\textbf R_{\textbf h\textbf h}\textbf F^{H}{\textbf X}^H+\sigma^2{\textbf I}_N\\
+\end{aligned}
+\end{equation}
+
+由此我们得到了对OFDM系统信道的LMMSE估计器和LS估计器。LMMSE算法得到估计结果具有最小的均方误差，性能较优，
+但是其计算复杂度过高，LS算法虽然性能相较于MMSE算法有所下降，但是其计算简单。
+
+LS估计器的性能容易受到信道加性噪声的影响，噪声越强，LS估计器的MSE越大。
+
 \section{可见光各波段之间串扰估计}
 \section{本章小结}
