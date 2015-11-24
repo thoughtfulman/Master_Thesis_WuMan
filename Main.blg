@@ -2,6 +2,9 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: Main.aux
 The style file: seuthesis.bst
 A level-1 auxiliary file: chapter-3.aux
 Database file #1: Reference.bib
-You can't pop an empty literal stack for entry 石钧2012ofdm
+Warning--there's a number but no volume in 付可2015lte
+You can't pop an empty literal stack for entry 付可2015lte
 while executing---line 3542 of file seuthesis.bst
-(There was 1 error message)
+You can't pop an empty literal stack for entry 付可2015lte
+while executing---line 3542 of file seuthesis.bst
+(There were 2 error messages)

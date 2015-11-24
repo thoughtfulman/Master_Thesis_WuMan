@@ -3,27 +3,113 @@
 \section{引言}
 所谓信道估计，就是在接收端估计出信道状态信息（Channel State Information，CSI），为下一步地解调做准备，也是自适应传输技术的基础。无线通信一个重要的特征就是发射端到接收端之间的路径比较复杂，不像有线通信那样是固定且可预知的，所以信道估计技术在无线通信领域格外重要，特别是在OFDM 等需要相干检测的系统中。本章将着重介绍信道估计技术，首先介绍传统射频通信中OFDM 系统的信道估计方法，然后具体到可见光通信系统中的信道估计问题，再将结合实际系统设计，讨论信道的非线性问题，最后将研究多色可见光通信系统中各波段之间串扰的估计。
 \section{OFDM信道估计常用方法}
-
+信道估计总体可以分为两大类，盲信道估计和基于导频的信道估计。盲信道不需要额外的导频或者训练序列，因此频率利用率高；但是它的缺点是计算量大、算法复杂，而且精度低、收敛速度缓慢，难以用于移动通信环境
+\cite{石钧2012ofdm}。基于导频的信道估计原理是在发射端插入专门用于信道估计的导频或者训练序列，并且这些序列对于接收端也是已知的，接收端根据接收到的经过了信道后的导频序列与原导频序列之间的关系，估计出信道冲击响应（Channel Impulse Response，CIR）。这类信道估计方法因为要插入导频序列会稍微降低整个系统的传输速率，但是其估计实现复杂度低、估计精度高，在实际工程中大都采用这种方法。本节也主要讨论基于导频的信道估计算法。
 \begin{figure}[htbp]
     \centering
     \subfloat[块状导频放置方式]{
         \label{fig:BlockTypePilot}
-        \includegraphics[width = 0.5\textwidth]{figures/Chapter-3/BlockTypePilot.eps}
+        \includegraphics[width = 0.5\textwidth]{figures/chapter-3/BlockTypePilot.eps}
     }
     \subfloat[梳状导频放置方式]{
-        \label{fig:CombTypePilot}
-        \includegraphics[width = 0.5\textwidth]{figures/Chapter-3/CombTypePilot.eps}
+    	\label{fig:CombTypePilot}
+        \includegraphics[width = 0.5\textwidth]{figures/chapter-3/CombTypePilot.eps}
     }
-    \caption{导频防止方式}
+    \caption{导频放置方式}
     \label{fig:PilotAllocation}
 \end{figure}
+对于基于导频的信道估计而言，研究人员对其导频放置方式也进行了深入的研究，如\autoref{fig:PilotAllocation} 所示，常见的有块状和梳状两种放置方式。
 
+块状导频放置方式见图\ref{fig:BlockTypePilot}，它的导频序列连续放置在一个OFDM符号上，但是在时间上不是连续的，也就是说要隔若干个OFDM符号才放置一个导频序列。在工程实现中，更常见的一种情况是导频序列即用于信道估计，又用于同步，这样一般是一帧放置一个导频符号。块状导频放置方式的优点是结构简单，计算复杂度低，但是因为要隔一段时间才估计一次信道，所以块状导频放置方式一般用于信道时变比较缓慢的信道。
 
+梳状导频放置方式如图\ref{fig:CombTypePilot}所示，在每个OFDM符号上，它只选择在特定的子载波上放置导频序列，而其他子载波上放置数据符号，并且每个OFDM 符号的结构都是如此。它的工作原理是先估计出放置了导频的子载波处的信道响应，然后根据这些信道响应通过插值的方式得到那些放置了数据符号的子载波处的信道响应。它的优点是每个符号都会估计信道，能够应对快速时变的信道，但是它要使用插值计算，所以复杂度比较高，并且估计准确度也较低。
 
-
-
-
-\section{可见光信道估计}
-\section{可见光信道非线性分析}
+为了说明这两种基于导频信道估计的工作原理，我们先建立OFDM 数字处理模型，并且假设循环前缀的长度大于最大多径时延，则根据我们在第二章中线性信道模型可得：
+\begin{equation}
+\bf y=h\otimes x+z
+\label{equ:time-domain signal}
+\end{equation}
+其中$\otimes$表示线性卷积运算，$\textbf x$为发射信号向量，$\textbf y$ 为接收信号向量，$\textbf x$为噪声信号向量，并且假设发射信号向量$\textbf x$ 的长度为$N$。根据同步信号，除掉接收信号向量$\textbf y$中的循环前缀，然后再取长度等于$N$的序列$\textbf y_c$，$\textbf y_c$即为$\textbf x$ 与$\textbf h$ 的长度为$N$的圆周卷积结果，根据DFT 的圆周卷积特性有：
+\begin{equation}
+\bf Y=XH+Z
+\label{equ:chapter-3-3}
+\end{equation}
+其中$\textbf X$表示频域发射信号，$\textbf Y$表示频域接收信号，$\textbf Z$表示频域高斯噪声，$\textbf F$表示离散傅里叶变换矩阵，它们的具体表达式如下：
+\begin{equation}
+\begin{aligned}
+&\textbf X=diag(DFT(\textbf x))==diag([ X(0), X(1),..., X(N-1)]^T)\\
+&\textbf Y=DFT(\textbf y_c) =[ Y(0), Y(1),..., Y(N-1)]^{T} \\
+&\textbf Z=DFT(\textbf z) =[ Z(0), Z(1),..., Z(N-1)]^{T} \\
+&\textbf H=DFT(\textbf h) =[ H(0), H(1),..., H(N-1)]^{T} \\
+\end{aligned}
+\end{equation}
+\subsection{基于块状导频的信道估计}
+块状导频放置方式将导频序列放在连续的一个OFDM符号子载波上，所以最直接的方式就是利用这些导频序列来估计信道冲激响应，即等效为在式
+\ref{equ:chapter-3-3}中已知了频域发射信号$\textbf X$，估计信道频域响应$\textbf H$，常见的估计方法有最小二乘法准则(Least Square，LS)、最小均方误差估计准则(minimum mean square error，MMSE)、线性最小均方误差准则（linear minimum mean square error，LMMSE ）及基于SVD分解的MMSE算法等。
+\subsubsection{LS估计算法}
+基于LS准则的的估计算法目标是使得接收信号与通过该模型恢复出来的信号之间的距离最小，假设LS算法的结果是${\hat{\textbf H}}_{LS}$，则其目标函数为：
+\begin{equation}
+arg\ \underset {{\hat{\textbf H}}_{LS}}{min}\ \textbf {L}({\hat{\textbf H}}_{LS})
+=arg\ \underset {{\hat{\textbf H}}_{LS}}{min}\left \{  {\left |\textbf Y- \textbf X{\hat{\textbf H}}_{LS} \right|}^2\right \}
+\label{equ:chapter-3-4}
+\end{equation}
+将上面的目标函数展开可得：
+\begin{equation}
+\textbf {L}({\hat{\textbf H}}_{LS}) = \sum_{i=0}^{N-1} {|Y(i)-X(i)\hat{H}_{LS}(i)|}^2
+\end{equation}
+所以式\ref{equ:chapter-3-4}取得最小值时必有：
+\begin{equation}
+\hat{H}_{LS}(i) = \frac{Y(i)}{X(i)} \ \ (i=0,1,2,...,N-1)
+\end{equation}
+也可以写为向量形式为：
+\begin{equation}
+{\hat{\textbf H}}_{LS} =\bf X^{-1}Y
+\label{equ:Least Square channel Estimation}
+\end{equation}
+从上面最后的结果看出最小二乘估计算法计算复杂度非常简单，只需要两次傅里叶变换和$N$次复数除法即可，但是它没有考虑噪声的影响，在信噪比不高的情况下，估计精度不高。
+\subsubsection{MMSE估计算法}
+可以使用信道冲激响应和噪声的统计特性来提高估计精度，MMSE算法假设信道冲激响应$\textbf H$与噪声$\textbf Z$ 是相互独立的，同时利用信道和噪声的二阶统计量来帮助提高信道估计的准确度，可以利用二阶统计量提高精度的原因是二阶统计量是慢时变的。
+MMSE估计算法的目标是使得信道估计值与真实值之间的误差最小：
+\begin{equation}
+arg\ \underset {{\hat{\textbf H}_{MMSE}}}{min}\ {\textbf M} ({\hat{\textbf H}_{MMSE}})=arg\ \underset {{\hat{\textbf H}_{MMSE}}}{min}\left \{  {\left |{\textbf H_{R}}- {\hat{\textbf H}_{MMSE}} \right|}^2\right\}
+\end{equation}
+上式中$\textbf H_R$表示真实信道的频域冲激响应，MMSE 的解为\cite{Kay1993FSS}:
+\begin{equation}
+\hat{\textbf H}_{MMSE}= \textbf R_{HY}\textbf R_{YY}^{-1}\textbf Y
+\label{equ:MMSE1}
+\end{equation}
+其中$\textbf R_{HY}$表示信道频域响应$\textbf H$与接收信号$\textbf Y$之间的互协方差矩阵，$\textbf R_{YY}$表示$\textbf Y$的自相关矩阵，具体表达式如下：
+\begin{equation}
+\begin{aligned}
+\textbf R_{HY}&=E(\textbf H{\textbf Y}^H)={\textbf R}_{HH}{\textbf X}^H \\
+\textbf R_{YY} &= E({\textbf Y}{\textbf Y}^H)={\textbf X}{\textbf R}_{HH}{\textbf X}^H + \sigma_n^2{\textbf I}_N
+\end{aligned}
+\label{equ:MMSE2}
+\end{equation}
+上式中$\textbf R_{HH}=E(\textbf H {\textbf H}^H)$表示信道冲激响应的自相关矩阵，$\sigma_n^2$为加性高斯白噪声的方差，$\textbf I_N$为$N\times N$的单位矩阵。结合式\ref{equ:Least Square channel Estimation}、\ref{equ:MMSE1}及\ref{equ:MMSE2}，MMSE信道估计的结果可以用LS信道估计的结果来表示：
+\begin{equation}
+\hat{\textbf H}_{MMSE}= \textbf R_{HH}(\textbf R_{HH}+\sigma_n^2(\textbf X \textbf X^H)^{-1})^{-1}{\hat{\textbf H}_{LS}}
+\label{equ:MMSE3}
+\end{equation}
+这里我们可以看出MMSE估计算法的计算复杂度比较高，需要矩阵的相关及求逆运算，并且它的复杂度会随着子载波数目增加而成指数上升。
+\subsubsection{LMMSE估计算法}
+LMMSE是对MMSE的简化，使用$E[(\textbf X \textbf X_H)^{-1}]$ 来代替式\ref{equ:MMSE3}中的$(\textbf X \textbf X_H)^{-1}$，并且考虑到发射信号$\textbf X$各子载波上的符号是随机等概地取自调制符号星座点的，所以有：
+\begin{equation}
+E[(\textbf X \textbf X^H)^{-1}]=E[|1/x_k|^2]\textbf I_N
+\end{equation}
+再结合平均信噪比的定义$SNR=E[|x_k|^2]/{\sigma_n^2}$ 将其代入式\ref{equ:MMSE3} 可得：
+\begin{equation}
+\hat{\textbf H}_{LMMSE}=\textbf R_{HH}(\textbf R_{HH}+\frac{\beta}{SNR}\textbf I_N)^{-1}\hat{\textbf H}_{LS}
+\label{equ:LMMSE1}
+\end{equation}
+其中$\beta$是与调制星座图相关的常量\cite{张乃元2010lte}，从式\ref{equ:LMMSE1}中可以看出，LMMSE算法的复杂度相对于MMSE已经降低了不少，但是总的来说还是需要计算$\textbf R_{HH}$和矩阵求逆，复杂度还是偏高的，但其保留了MMSE的核心思想，相较于MMSE性能损失不大。
+\subsubsection{基于SVD分解的MMSE估计算法}
+由前面的分析可知，LMMSE虽然对MMSE算法进行了简化，但是还是需要计算自相关矩阵$\textbf R_{HH}$和矩阵求逆，为了进一步简化运算，可以对式\ref{equ:LMMSE1}中系统$\textbf R_{HH}$这个$N\times N$矩阵进行奇异值分解：
+\begin{equation}
+\textbf R_{HH} = U \Lambda U^H
+\label{equ:SVD1}
+\end{equation}
+将式
+\subsection{基于梳状导频的信道估计}
 \section{可见光各波段之间串扰估计}
 \section{本章小结}
