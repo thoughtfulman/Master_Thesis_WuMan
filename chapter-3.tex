@@ -122,5 +122,79 @@ E[(\textbf X \textbf X^H)^{-1}]=E[|1/x_k|^2]\textbf I_N
 \end{equation}
 其中$\Delta_M = diag\left(\frac{\lambda_1}{\lambda_1+\frac{\beta}{SNR}},\frac{\lambda_2}{\lambda_2+\frac{\beta}{SNR}},\cdots,\frac{\lambda_M}{\lambda_M+\frac{\beta}{SNR}}\right)$，SVD分解算法将原来MMSE算法中的矩阵相关和求逆运算变成了矩阵的SVD分解，并且通过去掉较小的特征值来进行降低，进一步降低了复杂度。
 \subsection{基于梳状导频的信道估计}
+梳状导频放置方式如图\ref{fig:CombTypePilot}所示，在每个OFDM符号上只在特定的位置放置了导频训练序列，而其他的子载波都是放置数据的。它的估计方法是首先使用上节中LS、MMSE、LMMSE或者SVD分解方法估计出放置了导频训练序列处的信道冲激响应，然后再用插值法得到其他放置数据位置的信道冲激响应值。
+
+假设在梳状导频放置方式中有M个子载波放置了导频序列，并且从第一个子载波处开始放置，则他们放置的位置为$k_0,k_1,\cdots,k_{M-1}$，其中$k_i=iD_f, i=0,1,\cdots,M-1$，$D_f=N/M$为导频放置间隔子载波数。此模型下发射数据$\textbf X=diag(X(0),X(1),\cdots,X(N-1))$ 可表示为：
+\begin{equation}
+X(k)=
+\begin{cases}
+P_i, \ k=iD_f \\
+data, \ k=iD_f+d, d=1,2,\cdots,D_f-1
+\end{cases}
+\end{equation}
+其中$P_m$表示导频序列，data表示发送数据，我们称放置了导频序列的子载波为导频子载波，而称放置了信息数据的子载波为数据子载波。则可以得到导频子载波的信道LS 估计值为：
+\begin{equation}
+\hat{H}_{LS}(k_i) = \frac{Y(k_i)}{P_i}, i=0,1,\cdots,M-1
+\label{equ:Comb1}
+\end{equation}
+其中$Y(k),k=0,1,\cdots,N-1$为接收信息序列。为了提供信道冲激响应的估计准确度，我们也可以使用MMSE、LMMSE 或者SVD估计法，如LMMSE估计的结果为：
+\begin{equation}
+\hat{\tilde{\textbf H}}_{LMMSE}=\textbf R_{\tilde{H}\tilde{H}}(\textbf R_{\tilde{H}\tilde{H}}+\frac{\beta}{SNR}\textbf I_M)^{-1}\hat{\tilde{\textbf H}}_{LS}
+\end{equation}
+其中$\hat{\tilde{\textbf H}}_{LS}=[\hat{H}_{LS}(k_0),\hat{H}_{LS}(k_1),\cdots,\hat{H}_{LS}(k_{M-1})]^T$ 为式\ref{equ:Comb1}中得到的LS估计值，$\textbf R_{\tilde{H}\tilde{H}}=E(\tilde{H}\tilde{H})$为导频子载波频域信道冲激响应的自相关矩阵。
+
+通过块状导频放置方式的LS、MMSE、LMMSE或者SVD分解估计法我们可以得到梳状导频放置方式中导频子载波的信道冲激响应，下面要通过插值来得到放置信息数据处的信道估计，常见的插值方法有一阶线性插值、二阶多项式插值及变换域插值等。
+\subsubsection{一阶线性插值}
+一阶线性插值就是利用相邻的两个导频子载波的信道冲激响应来计算他们之间的数据子载波的信道信息，对于任意一个位于第$m$个与第$m+1$个导频子载波之间数据子载波$k, mD_f<k<(m+1)D_f$，我们可以得到他的线性插值估计值为\cite{sandell1996comparative}：
+\begin{equation}
+\begin{aligned}
+\hat{H}(k)&=\hat{H}(mD_f+d) \\
+&=(\hat{H}(k_{m+1}-\hat{H}(k_m))\frac{d}{D_f}+\hat{H}(k_m)
+\end{aligned}
+\end{equation}
+其中$m=0,1,\cdots,M-2$，$d=0,1,\cdots,D_f-1$。从上式中可以看到，在这个模型中最后一个子载波不是导频子载波，所以最后的$D_f-1$个数据子载波只能用最后两个导频子载波来估计，其表达式为：
+\begin{equation}
+\begin{aligned}
+\hat{H}(k) &= \hat{H}((M-1)D_f+d) \\
+&= (\hat{H}(k_{M-1})-\hat{H}(k_{M-2}))\frac{d}{D_f}+\hat{H}(k_{M-1})
+\end{aligned}
+\end{equation}
+\subsubsection{二阶多项式插值}
+一般而言，进行插值运算时，结果准确度会随着阶数的增加而增加\cite{garcia2000pilot}，但是插值阶数越高，也就意味中计算复杂度越高，所以为了寻求准确度与复杂度之间的均衡，在工程中常用的插值方式还是一阶插值和二阶插值，二阶插值的表达式为：
+\begin{equation}
+\begin{aligned}
+\hat{H}(k) &= \hat{H}(mD_f+d) \\
+&=c_{-1}\hat{H}(k_{m-1})+c_0\hat{H}(k_m)+c_1\hat{H}(k_{m+1})
+\end{aligned}
+\end{equation}
+其中$m=0,1,\cdots,M-3$，$d=0,1,\cdots,D_f-1$，$c_{-1}=\alpha(\alpha-1)/2$，
+$c_0=-(\alpha-1)(\alpha+1)$，$c_1=\alpha(\alpha+1)/2$，$\alpha=d/D_f$。二阶多项式插值也存在最后的$2(D_f-1)$的数据子载波不适应上面的公式的问题，不过可以使用一阶插值来处理最后的这些子载波。
+\subsubsection{变换域插值}
+文献\onlinecite{zhao1997novel}中提出了一种基于FFT/IFFT变换的高精度插值方法。这种插值方法首先也是得到各导频子载波上的信道冲激响应估计值$\hat{H}(k_m)$，再进行M点FFT变换，将其变换到变换域：
+\begin{equation}
+Q_M(q)=\sum_{m=0}^{M-1}\hat{H}(k_m)e^{\frac{-j2\pi mq}{M}},\ q=0,1,\cdots,M-1
+\end{equation}
+然后在变换域进行补零，将整个序列长度由$M$点扩充为$N$ 点，补零的公式为：
+\begin{equation}
+Q_N(q)=
+\begin{aligned}
+\begin{cases}
+Q_M(q), &0\leq q \leq P_c \\
+0, &P_c < q < N-P_c \\
+Q_M(q-N+M),&N-P_c \leq  q \leq N-1
+\end{cases}
+\end{aligned}
+\end{equation}
+其中$P_c$称为”截止频率“，可以将上式中补零的过程看出了个带阻滤波器，而$P_c$就决定了这个滤波器的带阻位置，$P_c$的选择要使得通带内的信道能量占总能量的90\% 到95\%，即保证\ref{equ:Tranform1}中$0.90\leq R \leq 0.95$。
+\begin{equation}
+R=\frac{\sum_{p=0}^{P_c}|\bar{Q}_M(p)|^2+\sum_{p=M-P_c}^{M-1}|\bar{Q}_M(p)|^2}{\sum_{p=0}^{M-1}|\bar{Q}_M(p)|^2}
+\label{equ:Tranform1}
+\end{equation}
+上式中$\bar{Q}_M(p)$表示$Q_M(p)$的平均值。得到扩展后的变换域序列$\textbf Q_N$之后，可以用$N$点IFFT变换得到插值结果：
+\begin{equation}
+\hat{H}(k) = a\cdot \sum_{q=0}^{N-1}Q_N(q)e^{\frac{j2\pi qk}{N}}, \quad 0\leq k \leq N-1
+\end{equation}
+式中$a$的作用是均衡M点FFT变换与N点IFFT变换之间的系数变化。
+\section{可见光通信中的信道估计}
 \section{可见光各波段之间串扰估计}
 \section{本章小结}

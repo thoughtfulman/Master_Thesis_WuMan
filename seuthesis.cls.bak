@@ -120,7 +120,7 @@
 \newcommand{\fs}{\CJKfamily{zhfs}}
 \setmainfont{Times New Roman}% 英文默认Time New Roman
 %设置行内文献引用
-\newcommand{\onlinecite}[1]{\hspace{-0.5 ex} \nocite{#1}[\citenum{#1}]}
+\newcommand{\onlinecite}[1]{\hspace{-1 ex} \nocite{#1}\citenum{#1}} 
 \newcommand{\chuhao}{\fontsize{42pt}{46pt}\selectfont}
 \newcommand{\xiaochuhao}{\fontsize{36pt}{40pt}\selectfont}
 \newcommand{\yichu}{\fontsize{32pt}{36pt}\selectfont}

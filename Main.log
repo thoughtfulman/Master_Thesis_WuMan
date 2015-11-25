@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  24 NOV 2015 21:24
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  25 NOV 2015 16:21
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1079,7 +1079,7 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 110.
 . * 'bold italic' with NFSS spec.:
 . <->"Times New Roman/BI/ICU:script=latn;language=DFLT;mapping=tex-text;"
 .................................................
-Package hyperref Info: Option `colorlinks' set `true' on input line 152.
+Package hyperref Info: Option `colorlinks' set `true' on input line 154.
 )
 (d:\CTEX\MiKTeX\tex\latex\etoolbox\etoolbox.sty
 Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
@@ -1476,18 +1476,18 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . This font family consists of the following shapes:
 .................................................
 
-[2] [3]) [4] [5] [6
+[2] [3] [4] [5]) [6] [7] [8
 
 
 
-] (E:\WuMan\Master_Thesis_WuMan\Main.bbl) [7
+] (E:\WuMan\Master_Thesis_WuMan\Main.bbl) [9
 
 ]
 File: figures/back-cover.png Graphic file (type QTm)
 
 <use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
- [8
+ [10
 
 
 ]
@@ -1498,12 +1498,12 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 25646 strings out of 430478
- 467577 string characters out of 3191501
- 569227 words of memory out of 3000000
- 28430 multiletter control sequences out of 15000+200000
+ 25669 strings out of 430478
+ 468104 string characters out of 3191501
+ 569251 words of memory out of 3000000
+ 28453 multiletter control sequences out of 15000+200000
  9051 words of font info for 79 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,11n,65p,787b,784s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,12n,65p,787b,784s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Main.pdf (8 pages).
+Output written on Main.pdf (10 pages).

@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -25,5 +25,23 @@ Kay S~M.
 张乃元.
 \newblock LTE 系统中的信道估计技术研究[D]:[硕士学位论文].
 \newblock 北京: 北京邮电大学, 2010.
+
+\bibitem[Sandell and Edfors(1996)]{sandell1996comparative}
+Sandell M, Edfors O.
+\newblock A comparative study of pilot-based channel estimators for wireless
+  OFDM[J].
+\newblock Lulea Univ. of Technol., Lulea, Sweden, Res. Rep. TULEA, 1996, 1996.
+
+\bibitem[Garcia et al.(2000)]{garcia2000pilot}
+Garcia M~F~G, Zazo S, Paez-Borrallo J.
+\newblock Pilot patterns for channel estimation in OFDM[J].
+\newblock Electronics Letters, 2000, 36(12):1049--1050.
+
+\bibitem[Zhao and Huang(1997)]{zhao1997novel}
+Zhao Y, Huang A.
+\newblock A novel channel estimation method for OFDM mobile communication
+  systems based on pilot signals and transform-domain processing[C].
+\newblock In: Vehicular Technology Conference, 1997, IEEE 47th.
+\newblock 1997. 3:2089--2093.
 
 \end{thebibliography}

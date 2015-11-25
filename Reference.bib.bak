@@ -472,3 +472,28 @@
   school={北京邮电大学},
   language={Chinese}
 }
+@article{付可2015lte,
+  title={LTE 上行块状导频的信道估计研究},
+  author={付可 and 江舟},
+  journal={电子设计工程},
+  number={8},
+  year={2015},
+  publisher={万方数据资源系统}
+}
+@article{sandell1996comparative,
+  title={A comparative study of pilot-based channel estimators for wireless OFDM},
+  author={Sandell, Magnus and Edfors, Ove},
+  journal={Lulea Univ. of Technol., Lulea, Sweden, Res. Rep. TULEA},
+  volume={1996},
+  year={1996}
+}
+@article{garcia2000pilot,
+  title={Pilot patterns for channel estimation in OFDM},
+  author={Garcia, MJ Fernandez-Getino and Zazo, S and Paez-Borrallo, JM},
+  journal={Electronics Letters},
+  volume={36},
+  number={12},
+  pages={1049--1050},
+  year={2000},
+  publisher={IET}
+}
