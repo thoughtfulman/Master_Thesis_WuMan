@@ -1,1 +1,0 @@
-这里面的linear_circular_convolution.m会告诉你CP所起的作用。
