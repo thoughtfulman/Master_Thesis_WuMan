@@ -137,7 +137,7 @@ data, \ k=iD_f+d, d=1,2,\cdots,D_f-1
 \hat{H}_{LS}(k_i) = \frac{Y(k_i)}{P_i}, i=0,1,\cdots,M-1
 \label{equ:Comb1}
 \end{equation}
-其中$Y(k),k=0,1,\cdots,N-1$为接收信息序列。为了提供信道冲激响应的估计准确度，我们也可以使用MMSE、LMMSE或者SVD估计法，如LMMSE估计的结果为：
+其中$Y(k),k=0,1,\cdots,N-1$为接收信息序列。为了提供信道冲激响应的估计准确度，我们也可以使用MMSE、LMMSE 或者SVD估计法，如LMMSE估计的结果为：
 \begin{equation}
 \hat{\tilde{\textbf H}}_{LMMSE}=\textbf R_{\tilde{H}\tilde{H}}(\textbf R_{\tilde{H}\tilde{H}}+\frac{\beta}{SNR}\textbf I_M)^{-1}\hat{\tilde{\textbf H}}_{LS}
 \end{equation}
@@ -174,17 +174,27 @@ $c_0=-(\alpha-1)(\alpha+1)$，$c_1=\alpha(\alpha+1)/2$，$\alpha=d/D_f$。二阶
 \begin{equation}
 Q_M(q)=\sum_{m=0}^{M-1}\hat{H}(k_m)e^{\frac{-j2\pi mq}{M}},\ q=0,1,\cdots,M-1
 \end{equation}
-然后在变换域进行补零，将整个序列长度由$M$点扩充为$N$点，补零的公式为：
+然后在变换域进行补零，将整个序列长度由$M$点扩充为$N$ 点，补零的公式为：
 \begin{equation}
 Q_N(q)=
 \begin{aligned}
 \begin{cases}
-
 Q_M(q), &0\leq q \leq P_c \\
 0, &P_c < q < N-P_c \\
-Q_M(q-N+M),&N-P_c \leq  q \leq N-1 
+Q_M(q-N+M),&N-P_c \leq  q \leq N-1
 \end{cases}
 \end{aligned}
 \end{equation}
+其中$P_c$称为”截止频率“，可以将上式中补零的过程看出了个带阻滤波器，而$P_c$就决定了这个滤波器的带阻位置，$P_c$的选择要使得通带内的信道能量占总能量的90\% 到95\%，即保证\ref{equ:Tranform1}中$0.90\leq R \leq 0.95$。
+\begin{equation}
+R=\frac{\sum_{p=0}^{P_c}|\bar{Q}_M(p)|^2+\sum_{p=M-P_c}^{M-1}|\bar{Q}_M(p)|^2}{\sum_{p=0}^{M-1}|\bar{Q}_M(p)|^2}
+\label{equ:Tranform1}
+\end{equation}
+上式中$\bar{Q}_M(p)$表示$Q_M(p)$的平均值。得到扩展后的变换域序列$\textbf Q_N$之后，可以用$N$点IFFT变换得到插值结果：
+\begin{equation}
+\hat{H}(k) = a\cdot \sum_{q=0}^{N-1}Q_N(q)e^{\frac{j2\pi qk}{N}}, \quad 0\leq k \leq N-1
+\end{equation}
+式中$a$的作用是均衡M点FFT变换与N点IFFT变换之间的系数变化。
+\section{可见光通信中的信道估计}
 \section{可见光各波段之间串扰估计}
 \section{本章小结}
