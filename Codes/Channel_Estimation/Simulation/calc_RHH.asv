@@ -1,0 +1,12 @@
+clear all;close all;clc;
+load H_cache.mat;
+R_HH = zeros(128);
+for i = 1:100
+    H = conj(H_cache(i,1:128)');
+    R_HH = R_HH + H*H';
+end
+R_HH = R_HH/100;
+SNR = 25;
+M = R_HH * inv(R_HH+diag(ones(1,128))/10/log10(SNR));
+H1 = M * conj(H_cache(2,1:128)');
+H = H_cache(1,1)

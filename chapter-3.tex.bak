@@ -68,7 +68,7 @@ arg\ \underset {{\hat{\textbf H}}_{LS}}{min}\ \textbf {L}({\hat{\textbf H}}_{LS}
 \end{equation}
 从上面最后的结果看出最小二乘估计算法计算复杂度非常简单，只需要两次傅里叶变换和$N$次复数除法即可，但是它没有考虑噪声的影响，在信噪比不高的情况下，估计精度不高。
 \subsubsection{MMSE估计算法}
-可以使用信道冲激响应和噪声的统计特性来提高估计精度，MMSE算法假设信道冲激响应$\textbf H$与噪声$\textbf Z$ 是相互独立的，同时利用信道和噪声的二阶统计量来帮助提高信道估计的准确度，可以利用二阶统计量提高精度的原因是二阶统计量是慢时变的。
+可以使用信道冲激响应和噪声的统计特性来提高估计精度，MMSE 算法假设信道冲激响应$\textbf H$与噪声$\textbf Z$ 是相互独立的，同时利用信道和噪声的二阶统计量来帮助提高信道估计的准确度，可以利用二阶统计量提高精度的原因是二阶统计量是慢时变的。
 MMSE估计算法的目标是使得信道估计值与真实值之间的误差最小：
 \begin{equation}
 arg\ \underset {{\hat{\textbf H}_{MMSE}}}{min}\ {\textbf M} ({\hat{\textbf H}_{MMSE}})=arg\ \underset {{\hat{\textbf H}_{MMSE}}}{min}\left \{  {\left |{\textbf H_{R}}- {\hat{\textbf H}_{MMSE}} \right|}^2\right\}
@@ -86,7 +86,7 @@ arg\ \underset {{\hat{\textbf H}_{MMSE}}}{min}\ {\textbf M} ({\hat{\textbf H}_{M
 \end{aligned}
 \label{equ:MMSE2}
 \end{equation}
-上式中$\textbf R_{HH}=E(\textbf H {\textbf H}^H)$表示信道冲激响应的自相关矩阵，$\sigma_n^2$为加性高斯白噪声的方差，$\textbf I_N$为$N\times N$的单位矩阵。结合式\ref{equ:Least Square channel Estimation}、\ref{equ:MMSE1}及\ref{equ:MMSE2}，MMSE信道估计的结果可以用LS信道估计的结果来表示：
+上式中$\textbf R_{HH}=E(\textbf H {\textbf H}^H)$表示信道冲激响应的自相关矩阵，$\sigma_n^2$为加性高斯白噪声的方差，$\textbf I_N$为$N\times N$的单位矩阵。结合式\ref{equ:Least Square channel Estimation}、\ref{equ:MMSE1} 及\ref{equ:MMSE2}，MMSE信道估计的结果可以用LS信道估计的结果来表示：
 \begin{equation}
 \hat{\textbf H}_{MMSE}= \textbf R_{HH}(\textbf R_{HH}+\sigma_n^2(\textbf X \textbf X^H)^{-1})^{-1}{\hat{\textbf H}_{LS}}
 \label{equ:MMSE3}
@@ -104,7 +104,7 @@ E[(\textbf X \textbf X^H)^{-1}]=E[|1/x_k|^2]\textbf I_N
 \end{equation}
 其中$\beta$是与调制星座图相关的常量\cite{张乃元2010lte}，从式\ref{equ:LMMSE1}中可以看出，LMMSE算法的复杂度相对于MMSE已经降低了不少，但是总的来说还是需要计算$\textbf R_{HH}$和矩阵求逆，复杂度还是偏高的，但其保留了MMSE的核心思想，相较于MMSE性能损失不大。
 \subsubsection{基于SVD分解的MMSE估计算法}
-由前面的分析可知，LMMSE虽然对MMSE算法进行了简化，但是还是需要计算自相关矩阵$\textbf R_{HH}$和矩阵求逆，为了进一步简化运算，可以对式\ref{equ:LMMSE1}中系统$\textbf R_{HH}$这个$N\times N$矩阵进行奇异值分解：
+由前面的分析可知，LMMSE虽然对MMSE算法进行了简化，但是还是需要计算自相关矩阵$\textbf R_{HH}$和矩阵求逆，为了进一步简化运算，可以对式\ref{equ:LMMSE1}中系统$\textbf R_{HH}$ 这个$N\times N$矩阵进行奇异值分解：
 \begin{equation}
 \textbf R_{HH} = U \Lambda U^H
 \label{equ:SVD1}
@@ -116,7 +116,7 @@ E[(\textbf X \textbf X^H)^{-1}]=E[|1/x_k|^2]\textbf I_N
 &=U\left[diag\left(\frac{\lambda_1}{\lambda_1+\frac{\beta}{SNR}},\frac{\lambda_2}{\lambda_2+\frac{\beta}{SNR}},\cdots,\frac{\lambda_N}{\lambda_N+\frac{\beta}{SNR}}\right)\right]U^H\hat{\textbf H}_{LS}
 \end{aligned}
 \end{equation}
-为了进一步简化运算，可以只取$\textbf R_{HH}$钱$M$个比较大的特征值$\lambda_1,\lambda_2,\cdots,\lambda_M$，将最后N-M个较小的特征值为零，记为：
+为了进一步简化运算，可以只取$\textbf R_{HH}$钱$M$个比较大的特征值$\lambda_1,\lambda_2,\cdots,\lambda_M$，将最后N-M 个较小的特征值为零，记为：
 \begin{equation}
 \hat{\textbf H}_{SVD}=U \begin{bmatrix}\Delta_M & 0 \\ 0 & 0 \end{bmatrix} U^H \hat{\textbf H}_{LS}
 \end{equation}
@@ -145,7 +145,7 @@ data, \ k=iD_f+d, d=1,2,\cdots,D_f-1
 
 通过块状导频放置方式的LS、MMSE、LMMSE或者SVD分解估计法我们可以得到梳状导频放置方式中导频子载波的信道冲激响应，下面要通过插值来得到放置信息数据处的信道估计，常见的插值方法有一阶线性插值、二阶多项式插值及变换域插值等。
 \subsubsection{一阶线性插值}
-一阶线性插值就是利用相邻的两个导频子载波的信道冲激响应来计算他们之间的数据子载波的信道信息，对于任意一个位于第$m$个与第$m+1$个导频子载波之间数据子载波$k, mD_f<k<(m+1)D_f$，我们可以得到他的线性插值估计值为\cite{sandell1996comparative}：
+一阶线性插值就是利用相邻的两个导频子载波的信道冲激响应来计算他们之间的数据子载波的信道信息，对于任意一个位于第$m$ 个与第$m+1$个导频子载波之间数据子载波$k, mD_f<k<(m+1)D_f$，我们可以得到他的线性插值估计值为\cite{sandell1996comparative}：
 \begin{equation}
 \begin{aligned}
 \hat{H}(k)&=\hat{H}(mD_f+d) \\
@@ -196,5 +196,6 @@ R=\frac{\sum_{p=0}^{P_c}|\bar{Q}_M(p)|^2+\sum_{p=M-P_c}^{M-1}|\bar{Q}_M(p)|^2}{\
 \end{equation}
 式中$a$的作用是均衡M点FFT变换与N点IFFT变换之间的系数变化。
 \section{可见光通信中的信道估计}
+
 \section{可见光各波段之间串扰估计}
 \section{本章小结}
