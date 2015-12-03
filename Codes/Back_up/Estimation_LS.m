@@ -1,6 +1,5 @@
 %% loading parameters
 clear all;close all; clc;
-[M_LMMSE,M_SVD] = calc_Matrix();
 ReadInitialFile;
 % modulation handles
 %256QAM
@@ -57,6 +56,7 @@ if FixSeedEnable == 1
   rng(Seed);   % set the seed ;
 end
 nError_sum = zeros(nSC,1);
+MSE = zeros(nFrame,1);
 for nf = 1:nFrame
     source = randi([0,1],nBit_sig*nSignal,1);
     % save source in source_ini.
@@ -144,7 +144,7 @@ for nf = 1:nFrame
     %% Pass Channel
     load Channel.mat;
     y_lp = conv(dataTD_zc,h_power_norm);
-    SNR = 25;
+    SNR = 30;
     noise = randn(length(y_lp),1)/sqrt(10^(SNR/10));
     y = y_lp+ noise;
 
@@ -168,9 +168,14 @@ for nf = 1:nFrame
     %  estimate channel
     ZC_freq_rec = fft(ZC_rec) / sqrt(double(2*nSC));
     H = ZC_freq_rec./ ZC_freq;
-   
-    %% LMMSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    H = (M_LMMSE * H.').';
+    load H_ideal.mat;
+    MSE(nf) = mean(abs(H_ideal-H).^2);
+    %% estimate noise %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % ZC_esti = ZC_freq .* H;
+    % ZC_noise = conj(ZC_freq_rec') - repmat(ZC_esti,nFrame_rec,1);
+    % ZC_noise_power = mean( abs(ZC_noise) .^2);
+    % ZC_sig_power = abs(ZC_esti) .^2;
+    % SNR = 10*log10(ZC_sig_power ./ ZC_noise_power) ;
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     nBit_sig = uint32(nBit_sig);
     % equlization and demodulation process frame by frame
@@ -234,6 +239,10 @@ BER_sc(1:nIdleLF)=1;
 BER_sc(nSC-nIdleHF+1:nSC)=1;
 BER_avg = sum(nError_sum)/sum(nModBit(nIdleLF+1:nSC-nIdleHF))/nFrame/nSignal;
 
-BER_LMMSE_sc = BER_sc;
-save('BER.mat','BER_LMMSE_sc','-append');
-plot(BER_LMMSE_sc(nIdleLF+1:nSC-nIdleHF),'r');
+BER_LS_sc = BER_sc;
+BER_LS_avg = BER_avg;
+MSE_LS = mean(MSE);
+save('BER_30dB.mat','BER_LS_sc','-append');
+save('BER_30dB.mat','BER_LS_avg','-append');
+save('BER_30dB.mat','MSE_LS','-append');
+plot(BER_LS_sc(nIdleLF+1:nSC-nIdleHF));

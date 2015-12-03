@@ -1,0 +1,13 @@
+clear all;close all;clc;
+load BER_SNR_25dB.mat;
+ReadInitialFile;
+sc = nIdleLF:nSC-nIdleHF-1;
+plot(sc,BER_SNR_25dB_IDEAL_sc(nIdleLF+1:nSC-nIdleHF),'-<');
+hold on;
+plot(sc,BER_SNR_25dB_LS_sc(nIdleLF+1:nSC-nIdleHF),'->m');
+plot(sc,BER_SNR_25dB_LMMSE_sc(nIdleLF+1:nSC-nIdleHF),'-sk');
+plot(sc,BER_SNR_25dB_SVD_sc(nIdleLF+1:nSC-nIdleHF),'-+r');
+grid on;
+xlabel('Subcarrier Number');
+ylabel('BER');
+legend('Ideal','LS','LMMSE','SVD');

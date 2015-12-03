@@ -1,5 +1,6 @@
 %% loading parameters
 clear all;close all; clc;
+[M_LMMSE,M_SVD] = calc_Matrix();
 ReadInitialFile;
 % modulation handles
 %256QAM
@@ -56,6 +57,7 @@ if FixSeedEnable == 1
   rng(Seed);   % set the seed ;
 end
 nError_sum = zeros(nSC,1);
+MSE = zeros(nFrame,1);
 for nf = 1:nFrame
     source = randi([0,1],nBit_sig*nSignal,1);
     % save source in source_ini.
@@ -118,9 +120,6 @@ for nf = 1:nFrame
     r = 1;
     ZC = exp(-1i*2*pi*r*(n.*n/2+q*n)/nSC).*powerWet;%.* conj(repmat(powerWet,1,nSignal)');    % original ZC sequence of 1 cycle
 
-    %% configure virtual carriers
-    ZC(1:nIdleLF) =0;
-    ZC(nSC-nIdleHF+1:nSC) =0;
 
     %% Generate Hermitian symmetric sequence
     ZC_freq = zeros(1,2*nSC);
@@ -146,9 +145,9 @@ for nf = 1:nFrame
     %% Pass Channel
     load Channel.mat;
     y_lp = conv(dataTD_zc,h_power_norm);
-    SNR = 100;
+    SNR = 30;
     noise = randn(length(y_lp),1)/sqrt(10^(SNR/10));
-    y = y_lp;%+ noise;
+    y = y_lp+ noise;
 
     %% demodulation
     rx = y';
@@ -170,13 +169,11 @@ for nf = 1:nFrame
     %  estimate channel
     ZC_freq_rec = fft(ZC_rec) / sqrt(double(2*nSC));
     H = ZC_freq_rec./ ZC_freq;
-
-    %% estimate noise %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % ZC_esti = ZC_freq .* H;
-    % ZC_noise = conj(ZC_freq_rec') - repmat(ZC_esti,nFrame_rec,1);
-    % ZC_noise_power = mean( abs(ZC_noise) .^2);
-    % ZC_sig_power = abs(ZC_esti) .^2;
-    % SNR = 10*log10(ZC_sig_power ./ ZC_noise_power) ;
+   
+    %% LMMSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    H = (M_LMMSE * H.').';
+    load H_ideal.mat;
+    MSE(nf) = mean(abs(H_ideal-H).^2);
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     nBit_sig = uint32(nBit_sig);
     % equlization and demodulation process frame by frame
@@ -194,7 +191,7 @@ for nf = 1:nFrame
     %% 只用1个ZC序列估计信道
     %     H = H_term(i,:);
     data_freq = conj(data_freq') ./ repmat(H,nSignal,1);
-    data_freq(:,1) = data_freq(:,1)+data_freq(:,1+nSC)*1i;
+    data_freq(:,1) = data_freq(:,1)-data_freq(:,1+nSC)*1i;
     % remove the right part of frequency domain data
     data_freq = data_freq(:,1:nSC);
     % reverse it for conventient
@@ -235,8 +232,15 @@ for nf = 1:nFrame
     end
     nError_sum = nError_sum + nError;
 end
-BER_sc= nError_sum/nFrame ./double(nModbit)/double(nSignal);
+BER_sc= nError_sum/nFrame ./double(nModBit)/double(nSignal);
 BER_sc(1:nIdleLF)=1;
 BER_sc(nSC-nIdleHF+1:nSC)=1;
-BER_avg = sum(nError_sum)/sum(nModBit(nIdleLF+1:nSC-nIdleHF))
+BER_avg = sum(nError_sum)/sum(nModBit(nIdleLF+1:nSC-nIdleHF))/nFrame/nSignal;
 
+BER_LMMSE_sc = BER_sc;
+BER_LMMSE_avg = BER_avg;
+MSE_LMMSE = mean(MSE);
+save('BER_30dB.mat','BER_LMMSE_sc','-append');
+save('BER_30dB.mat','BER_LMMSE_avg','-append');
+save('BER_30dB.mat','MSE_LMMSE','-append');
+plot(BER_LMMSE_sc(nIdleLF+1:nSC-nIdleHF));

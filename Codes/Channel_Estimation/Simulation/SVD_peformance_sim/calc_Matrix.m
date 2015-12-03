@@ -3,7 +3,7 @@ function [M_LMMSE,M_SVD] = calc_Matrix()
     %% loading parameters
     clear all;close all; clc;
     ReadInitialFile;
-    nFrame = 1000;
+    nFrame = 10;
     nSignal = 1;
     H_cache = zeros(nFrame,2*nSC);
     for nf = 1:nFrame
@@ -38,7 +38,7 @@ function [M_LMMSE,M_SVD] = calc_Matrix()
         %% Pass Channel
         load Channel.mat;
         y_lp = conv(dataTD_zc,h_power_norm);
-        SNR = 25;
+        SNR = 30;
         noise = randn(length(y_lp),1)/sqrt(10^(SNR/10));
         y = y_lp+ noise;
 
@@ -75,10 +75,11 @@ function [M_LMMSE,M_SVD] = calc_Matrix()
     M_LMMSE = R_HH * inv(R_HH+snr*diag(ones(1,2*nSC)));
     [v,d] = eigs(R_HH,256);
     for k=1:256
-        if k<30
+        if k<=256
            d(k,k) = d(k,k)/(d(k,k)+snr);
         else
             d(k,k) =0;
+        end
     end
     M_SVD = v*d*v';
 end

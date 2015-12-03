@@ -116,7 +116,7 @@ E[(\textbf X \textbf X^H)^{-1}]=E[|1/x_k|^2]\textbf I_N
 &=U\left[diag\left(\frac{\lambda_1}{\lambda_1+\frac{\beta}{SNR}},\frac{\lambda_2}{\lambda_2+\frac{\beta}{SNR}},\cdots,\frac{\lambda_N}{\lambda_N+\frac{\beta}{SNR}}\right)\right]U^H\hat{\textbf H}_{LS}
 \end{aligned}
 \end{equation}
-为了进一步简化运算，可以只取$\textbf R_{HH}$钱$M$个比较大的特征值$\lambda_1,\lambda_2,\cdots,\lambda_M$，将最后N-M 个较小的特征值为零，记为：
+为了进一步简化运算，可以只取$\textbf R_{HH}$前$M$个比较大的特征值$\lambda_1,\lambda_2,\cdots,\lambda_M$，将最后N-M 个较小的特征值为零，记为：
 \begin{equation}
 \hat{\textbf H}_{SVD}=U \begin{bmatrix}\Delta_M & 0 \\ 0 & 0 \end{bmatrix} U^H \hat{\textbf H}_{LS}
 \end{equation}
@@ -196,6 +196,155 @@ R=\frac{\sum_{p=0}^{P_c}|\bar{Q}_M(p)|^2+\sum_{p=M-P_c}^{M-1}|\bar{Q}_M(p)|^2}{\
 \end{equation}
 式中$a$的作用是均衡M点FFT变换与N点IFFT变换之间的系数变化。
 \section{可见光通信中的信道估计}
+从上节的分析中可以看到基于导频的信道估计中导频子载波的放置有两种方式，一种是块状放置方式，另一种是梳状放置方式。梳状放置方式计算复杂度比较高，但是能够适应快速时变的通信环境，而块状放置方式结构简单，它适应于准静态的信道估计。室内可见光通信信道正是一种准静态信道，所以本课题主要研究基于块状放置的导频信道估计方法。
+\subsection{可见光通信系统帧结构}
+为了讨论实际系统中的信道估计，首先有必要介绍下可见光通信系统的OFDM帧结构及符号结构。如图\ref{fig:FrameStructure} 中所示是一个典型的DCO-OFDM 帧结构示意图，一个OFDM 帧由一个精心设计的导频符号开始，后面跟着$N$个数据符号，而在每个OFDM数据符号中，在N个可用子载波中，最低频的m个和最高频的n 个子载波被设置为虚拟子载波，即在这些子载波上置零而不放置任何数据，在高频设置虚拟子载波很容易理解，从第二章的分析中可以知道室内可见光信道时一个低通的信道，意味着高频子载波的信噪比可能不够，故不能传输数据，而在低频也要设置虚拟子载波是因为在接收端有个去掉DCO-OFDM偏置的隔直电路，其实就是一个高通滤波器，但是这个滤波器不是理想的，会对低频的几个子载波造成影响，所以也要将其设置为虚拟子载波；最后的N 个子载波是保证IFFT 结果为实数加的共轭对称子载波。在系统设计中，为了提高系统的实际传输速率，减少额外开销，选择的导频序列不但要用于信道估计，还要起到定时同步的作用。Zadoff-Chu （ZC）序列就是一种能够同时满足这两个条件的序列，下面先简要介绍下ZC序列。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chapter-3/FrameStructure.eps}
+    \caption{可见光通信系统帧结构}
+    \label{fig:FrameStructure}
+\end{figure}
 
+ZC序列最早由Zadoff、Chu等人提出，具有非常好的自相关性和很低的互相关性的定义如下：
+\begin{equation}
+ZC(k)=
+\begin{aligned}
+\begin{cases}
+e^{-\frac{2\pi r}{N}(k^2/2+qk)}, &N\text{为偶数}\\
+e^{-\frac{2\pi r}{N}(k(k+1)/2+qk)}, &N\text{为奇数}
+\end{cases}
+\end{aligned}
+\end{equation}
+其中$k=0,1,\cdots,N-1$，$q$为任意的整数，$r$称为ZC序列的根指数，取值为小于$N$的正数据，并且要满足与长度$N$互素。
+\begin{figure}[htbp]
+    \centering
+    \subfloat[频域幅度]{
+        \label{fig:ZC_frequency}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-3/ZC_frequency.eps}
+    }
+    \subfloat[时域波形]{
+        \label{fig:LZC_wavelengthShift}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-3/ZC_time.eps}
+    }
+    \caption{用于DCO-OFDM中ZC序列时频域波形}
+    \label{fig:ZC_frequency_time}
+\end{figure}
+如图\ref{fig:ZC_frequency_time}所示为DCO-OFDM使用的ZC序列的示意图，该波形是由$N=128,q=0,r=1$的ZC序列加上128个共轭对称子载波形成的，在图\ref{fig:ZC_frequency}中，除了128号子载波处（放置0号子载波的虚部，故为零）之外，其他子载波的幅度都为1；时域波形为实数，并且其PAPR比较低，这个特性也可以减少信道估计中非线性的干扰。
+\subsection{可见光信道仿真分析}
+可以通过仿真的方法研究各种信道估计算法的性能，为了贴近实际的系统工作环境，仿真的信道取自\ref{subsection:Channel} 节中的实测可见光通信信道时域冲激响应，并且去掉其时延大，能量小的径，只留下能量其中的20径，并进行了能量归一化，其时域频域冲激响应如下图所示：
+\begin{figure}[htbp]
+    \centering
+    \subfloat[时域冲激响应]{
+        \label{fig:Sim_Channel_time}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-3/Sim_Channel_time.eps}
+    }
+    \subfloat[频域冲激响应]{
+        \label{fig:Sim_Channel_frequency}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-3/Sim_Channel_frequency.eps}
+    }
+    \caption{仿真信道冲激响应}
+    \label{fig:ZC_frequency_time}
+\end{figure}
+仿真主要参数设置如表\ref{tab:Signle Color Channel Estimation Paramters}所示，采用DCO-OFDM调制方式，在每个OFDM帧中放20个OFDM符号，也就是说加上导频，一帧共有21个OFDM符号；从图\ref{fig:Sim_Channel_frequency}中可以看出，可见光信道是一个明显的低通信道，低频端的子载波处信噪比高，可以使用高阶调制，而高频段的子载波上信噪比低，只能使用低阶调制或者设置为虚拟子载波，在仿真中我们设置最低频4个子载波和最高频的4个子载波为虚拟子载波，其他子载波上的调制阶数如表\ref{tab:modOrder}所示。
+\begin{table}[ht]
+    \caption{信道估计技术仿真参数}
+    \label{tab:Signle Color Channel Estimation Paramters}
+    \centering
+    \begin{tabular}{ll}
+        \toprule
+        参数名称                & 参数值\\
+        \midrule
+        信道类型                & 室内可见光信道\\
+        多径数量                & 20 \\
+        每帧OFDM符号数        & 20 \\
+        调制方式                & 256,64,16,4-QAM\\
+        光OFDM类型              & DCO-OFDM\\
+        FFT长度                 & 256 \\
+        可用子载波数            & 128 \\
+        低频虚拟子载波          & 4  \\
+        高频虚拟子载波          & 4  \\
+        循环前缀长度            & 24 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+因为在仿真中使用固定的ZC序列作为导频序列，即公式\ref{equ:MMSE3}中的$\textbf X$为ZC序列张成的对角矩阵，则有：
+\begin{equation}
+\textbf X \textbf X^H = \textbf I_N;
+\end{equation}
+所以在这种情况下MMSE估计与LMMSE估计等价，因此在仿真中我们只给出了LMMSE 的结果。
+
+\begin{table}[ht]
+    \caption{各子载波上的调制阶数}
+    \label{tab:modOrder}
+    \centering
+    \begin{tabular}{lllll}
+        \toprule
+        子载波序号    & $4\sim47$  & $48\sim95$  & $96\sim111$ & $112\sim123$ \\
+        \midrule
+        调制阶数      & 256QAM  & 64QAM  &16QAM & 4QAM    \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+图\ref{fig:BER_SNR_avg}展示了在不同信道估计方法下误比特率（Bit Error Rate，BER）随信噪比（SNR）的变化关系，值得注意的是，为了尽量与实际系统吻合，仿真中使用的信噪比是符号信噪比，而不是比特信噪比，并且假设每个子载波上的噪声方差相等。同时，在仿真中计算公式\ref{equ:LMMSE1}和\ref{equ:SVD1}的$\textbf R_{HH}$时，我们取的是从当前帧开始到之前的10帧的信道估计得到的信道自相关矩阵的平均值。可以用下面的公式表示：
+\begin{equation}
+\textbf R_{HH} = E(\textbf H \textbf H^H)=\frac{1}{10}\sum_{i=0}^{9}\textbf H_i \textbf H_i^H
+\end{equation}
+其中$\textbf H_i$表示前面第i帧的信道估计。仿真结果表明LS 估计的性能最差，理想信道估计（Ideal）的性能最好，但是这是不可实现的，而LMMSE 估计和SVD 分解法的效果差不多，劣于理想信道估计而优于LS信道估计，LMMSE估计和SVD估计有大约3 dB的增益，仿真结果与之前的分析吻合。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/chapter-3/BER_SNR_avg.eps}
+\caption{不同信道估计方法BER性能比较}
+\label{fig:BER_SNR_avg}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/chapter-3/MSE_SNR_avg.eps}
+\caption{不同信道估计方法MSE性能比较}
+\label{fig:MSE_SNR_avg}
+\end{figure}
+图\ref{fig:MSE_SNR_avg}给出了不同信道估计算法的均方误差（Mean Square Error， MSE）性能，均方误差的定义如下：
+\begin{equation}
+MSE = E\left(\frac{1}{N}\sum_{i=0}^{N-1}|H_R(i)-\hat{H}(i)|^2\right)
+\end{equation}
+时钟N表示子载波数量，$H_R(i)$表示第i个子载波的真实信道冲激响应，$\hat{H}(i)$表示第i个子载波的信道估计。根据上面的公式，理想信道估计的MSE应该为0，所以在图上我们就没画出了，仿真结果表明LMMSE和SVD信道估计相对于LS信道估计的MSE也有一些提高。
+
+为了进一步比较不同信道估计方法的性能优劣，图\ref{fig:BER_sc}展示了当信噪比设置为25 dB时每个子载波上的BER性能。从图中可以看出，在相同的调制阶数的子载波上，BER 随着子载波序号的增加而升高，这是因为低通信道的作用；在调制阶数变低时，子载波上的BER也剧降。从图中我们也可以看出，这个发射端在子载波上等功率分配的方式使得子载波上的BER方差很大，不利于整体BER性能提高，这方面的分析将在第四章详细说明。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/chapter-3/BER_sc.eps}
+\caption{SNR=25 dB时不同子载波上的误比特率}
+\label{fig:BER_sc}
+\end{figure}
+
+前面在分析基于SVD分解的MMSE算法时提到，为了进一步简化运算，可以只取$\textbf R_{HH}$前$M$个比较大的特征值$\lambda_1,\lambda_2,\cdots,\lambda_M$，将最后N-M 个较小的特征值为零。图\ref{SVD_BER_MSE_SNR_avg}给出了不同M值下BER和MSE性能比较，发现在$M=1$的性能最优，为了分析，表\ref{tab:tezhengzhi}给出了$\textbf R_{HH}$最大的10个特征值，发现第一个值非常大，而后面的都比第一个小很多，这是因为经过SVD分解之后，最大特征值对应的是主成分，而后面的都是噪声，因此$M=1$时性能最优。这样在使用SVD进行信道估计时只需使用最大的特征值即可，不仅可以减少一次矩阵减法，而且还有利于提高估计精度。
+\begin{table}[ht]
+    \caption{$\textbf R_{HH}$前10个最大特征值}
+    \label{tab:modOrder}
+    \centering
+    \begin{tabular}{lllllllllll}
+        \toprule
+        序号 & 1 & 2& 3& 4&5& 6& 7& 8& 9&10 \\
+        \midrule
+        特征值 &255.865 &1.814&0.032&0.031 & 0.028 & 0.027&0.023&0.021&0.020&0.017\\
+        \bottomrule
+    \end{tabular}
+    \label{tab:tezhengzhi}
+\end{table}
+\begin{figure}[htbp]
+    \centering
+    \subfloat[不同M值下BER性能比较]{
+        \label{fig:Sim_Channel_time}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-3/SVD_BER_SNR_avg.eps}
+    }
+    \subfloat[不同M值下MSE性能比较]{
+        \label{fig:Sim_Channel_frequency}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-3/SVD_MSE_SNR_avg.eps}
+    }
+    \caption{SVD信道估计方法不同M值下性能比较}
+    \label{fig:SVD_BER_MSE_SNR_avg}
+\end{figure}
 \section{可见光各波段之间串扰估计}
 \section{本章小结}

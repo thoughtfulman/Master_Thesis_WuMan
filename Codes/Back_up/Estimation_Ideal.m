@@ -144,8 +144,10 @@ for nf = 1:nFrame
     %% Pass Channel
     load Channel.mat;
     y_lp = conv(dataTD_zc,h_power_norm);
-    SNR = 25;
+    SNR = 30;
     noise = randn(length(y_lp),1)/sqrt(10^(SNR/10));
+    % for create ideal channel ,let noise=0 on pilot
+    noise(1:2*nSC+nCP)=0;
     y = y_lp+ noise;
 
     %% demodulation
@@ -238,3 +240,8 @@ BER_sc(1:nIdleLF)=1;
 BER_sc(nSC-nIdleHF+1:nSC)=1;
 BER_avg = sum(nError_sum)/sum(nModBit(nIdleLF+1:nSC-nIdleHF))/nFrame/nSignal;
 
+BER_Ideal_sc = BER_sc;
+BER_Ideal_avg = BER_avg;
+save('BER_30dB.mat','BER_Ideal_sc','-append');
+save('BER_30dB.mat','BER_Ideal_avg','-append');
+plot(BER_Ideal_sc(nIdleLF+1:nSC-nIdleHF));
