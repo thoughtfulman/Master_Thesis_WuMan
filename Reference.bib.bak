@@ -497,3 +497,12 @@
   year={2000},
   publisher={IET}
 }
+@inproceedings{zhao1997novel,
+  title={A novel channel estimation method for OFDM mobile communication systems based on pilot signals and transform-domain processing},
+  author={Zhao, Yuping and Huang, Aiping},
+  booktitle={Vehicular Technology Conference, 1997, IEEE 47th},
+  volume={3},
+  pages={2089--2093},
+  year={1997},
+  organization={IEEE}
+}

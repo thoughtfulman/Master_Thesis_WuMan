@@ -290,7 +290,7 @@ e^{-\frac{2\pi r}{N}(k(k+1)/2+qk)}, &N\text{为奇数}
 \begin{equation}
 \textbf R_{HH} = E(\textbf H \textbf H^H)=\frac{1}{10}\sum_{i=0}^{9}\textbf H_i \textbf H_i^H
 \end{equation}
-其中$\textbf H_i$表示前面第i帧的信道估计。仿真结果表明LS 估计的性能最差，理想信道估计（Ideal）的性能最好，但是这是不可实现的，而LMMSE 估计和SVD 分解法的效果差不多，劣于理想信道估计而优于LS信道估计，LMMSE估计和SVD估计有大约3 dB的增益，仿真结果与之前的分析吻合。
+其中$\textbf H_i$表示前面第i帧的信道估计。仿真结果表明LS 估计的性能最差，理想信道估计（Ideal）的性能最好，但是这是不可实现的，而LMMSE 估计和SVD 分解法的效果差不多，劣于理想信道估计而优于LS信道估计，LMMSE估计和SVD估计有大约3 dB 的增益，仿真结果与之前的分析吻合。
 
 \begin{figure}[htbp]
 \centering
@@ -319,7 +319,8 @@ MSE = E\left(\frac{1}{N}\sum_{i=0}^{N-1}|H_R(i)-\hat{H}(i)|^2\right)
 \label{fig:BER_sc}
 \end{figure}
 
-前面在分析基于SVD分解的MMSE算法时提到，为了进一步简化运算，可以只取$\textbf R_{HH}$前$M$个比较大的特征值$\lambda_1,\lambda_2,\cdots,\lambda_M$，将最后N-M 个较小的特征值为零。图\ref{SVD_BER_MSE_SNR_avg}给出了不同M值下BER和MSE性能比较，发现在$M=1$的性能最优，为了分析，表\ref{tab:tezhengzhi}给出了$\textbf R_{HH}$最大的10个特征值，发现第一个值非常大，而后面的都比第一个小很多，这是因为经过SVD分解之后，最大特征值对应的是主成分，而后面的都是噪声，因此$M=1$时性能最优。这样在使用SVD进行信道估计时只需使用最大的特征值即可，不仅可以减少一次矩阵减法，而且还有利于提高估计精度。
+
+前面在分析基于SVD分解的MMSE算法时提到，为了进一步简化运算，可以只取$\textbf R_{HH}$前$M$个比较大的特征值$\lambda_1,\lambda_2,\cdots,\lambda_M$，将最后N-M 个较小的特征值为零。图\ref{SVD_BER_MSE_SNR_avg}给出了不同M值下BER和MSE性能比较，发现在$M=1$的性能最优，M增大，BER、MSE 性能反而有小许的劣化，当$M=N$时，SVD 与LMMSE 等价（在前面的仿真中选择$M=2$）。
 \begin{table}[ht]
     \caption{$\textbf R_{HH}$前10个最大特征值}
     \label{tab:modOrder}
@@ -333,6 +334,7 @@ MSE = E\left(\frac{1}{N}\sum_{i=0}^{N-1}|H_R(i)-\hat{H}(i)|^2\right)
     \end{tabular}
     \label{tab:tezhengzhi}
 \end{table}
+为了分析，表\ref{tab:tezhengzhi} 给出了$\textbf R_{HH}$ 最大的10 个特征值，发现第一个值非常大，而后面的都比第一个小很多，这是因为经过SVD 分解之后，最大特征值对应的是主成分，而后面的都是噪声，因此$M=1$时性能最优。这样在使用SVD 进行信道估计时只需使用最大的特征值即可，不仅可以减少一次矩阵减法，而且还有利于提高估计精度。
 \begin{figure}[htbp]
     \centering
     \subfloat[不同M值下BER性能比较]{
@@ -346,5 +348,6 @@ MSE = E\left(\frac{1}{N}\sum_{i=0}^{N-1}|H_R(i)-\hat{H}(i)|^2\right)
     \caption{SVD信道估计方法不同M值下性能比较}
     \label{fig:SVD_BER_MSE_SNR_avg}
 \end{figure}
-\section{可见光各波段之间串扰估计}
+\section{实际系统中的信道估计误差}
+进行自适应传输时，不仅需要估计信道的冲激响应以用于解调，还需要估计信道的信噪比信息以选择合适的比特分配和能量分配策略，所以准确的信噪比估计是自适应传输的前提条件。
 \section{本章小结}
