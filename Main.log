@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  7 DEC 2015 14:37
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  8 DEC 2015 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1545,6 +1545,13 @@ LaTeX Warning: Label `fig:Sim_Channel_frequency' multiply defined.
 
 LaTeX Warning: Label `sub@fig:Sim_Channel_frequency' multiply defined.
 
+
+LaTeX Warning: Label `fig:BER_sc' multiply defined.
+
+) (./chapter-4.aux
+
+LaTeX Warning: Label `fig:BER_sc' multiply defined.
+
 ))
 \openout1 = `Main.aux'.
 
@@ -2062,23 +2069,61 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[13] [14
+[13]
+\openout2 = `chapter-4.aux'.
+
+ (./chapter-4.tex [14
 
 
-
-] (./Main.bbl) [15
 
 ]
+! Undefined control sequence.
+\chaptername ->第\CJKnumber 
+                             {\thechapter }章
+l.2 ...��段OFDM系统速率自适应技术研究}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+第{2}章 2.
+! Undefined control sequence.
+\chaptername ->第\CJKnumber 
+                             {\thechapter }章
+l.2 ...��段OFDM系统速率自适应技术研究}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package natbib Warning: Citation `徐凌峰2007ofdm' on page 15 undefined on input li
+ne 3.
+
+File: figures/chapter-4/water_pounding.eps Graphic file (type eps)
+<figures/chapter-4/water_pounding.eps>) [15] [16] (./Main.bbl) [17
+
+
+
+
+]
+
+Package natbib Warning: There were undefined citations.
+
 File: figures/back-cover.png Graphic file (type QTm)
- <use  "figures/back-cover.png" >
+<use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
- [16
+ [18
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
- (./Main.aux
-(./chapter-3.aux))
+ (./Main.aux (./chapter-3.aux)
+(./chapter-4.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 78.
 
@@ -2095,12 +2140,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 30235 strings out of 493727
- 557310 string characters out of 6147889
- 684101 words of memory out of 5000000
- 33222 multiletter control sequences out of 15000+600000
+ 30251 strings out of 493727
+ 557572 string characters out of 6147889
+ 685101 words of memory out of 5000000
+ 33229 multiletter control sequences out of 15000+600000
  12452 words of font info for 90 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  73i,15n,89p,10424b,745s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Main.pdf (16 pages).
+Output written on Main.pdf (18 pages).
