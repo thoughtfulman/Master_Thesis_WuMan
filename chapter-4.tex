@@ -113,7 +113,7 @@ k^{\star} =\arg\ \underset{0\leq k\leq N-1}{\max}diff(k)
 \item{\bf{步骤11：}}在步骤10中得到的各个子载波上的功率基础上再乘以一个比例因子，使得发射总功率$P=\sum_{k=0}{N-1}p_k=P_{total}$，$P_{total}$表示额定功率。
 \end{description}
 
-P.S.Chow 算法的思想是先通过$MaxCount$次迭代找到最优系统性能门限$\gamma_{margin}$，然后得到各个子载波上的比特分配，最后根据各子载波上的比特分配和总输出功率限制得到各子载波上各功率分配，其算法复杂度为$O(MaxCount\cdot N+2N)$，一般情况下$MaxCount$小于10次就会收敛，所以相对于Hughes-Hartogs算法，其算法复杂度下降了很多，关于各种算法性能的比较将在后面给出。
+P.S.Chow 算法的思想是先通过$MaxCount$次迭代找到最优系统性能门限$\gamma_{margin}$，然后得到各个子载波上的比特分配，最后根据各子载波上的比特分配和总输出功率限制得到各子载波上各功率分配，其算法复杂度为$O(MaxCount\cdot N+2N)$，一般情况下$MaxCount$小于10次就会收敛，所以相对于Hughes-Hartogs算法，其算法复杂度下降了很多。
 \subsection{Fischer算法}
 Fischer算法\cite{fischer1996new}也是一种固定发射功率和速率优化系统误比特率的算法（RA准则），但是它与Hughes-Hartogs算法和P.S.Chow算法不同，这两者都是从信道容量的角度出发的，而Fischer算法则是从各个子载波上的误比特率出发，算法的核心思想认为当所有被利用的子载波上的误符号率相等时，则会使得系统的误比特率最优，这个其实也比较容易理解，因为如果有某些子载波的误符号率很高的话，则这些子载波就决定了整个系统的误比特率。
 
@@ -153,7 +153,7 @@ p_k = \frac{P_{total}}{N^\prime}, \forall k \in \mathrm{I}
 
 上面只是理论上的推导，没有限制$b_k$为整数，但是在实际应用中必须要加上这一条件，相应的算法也有小许改动，下面给出Fischer算法的具体实现步骤：
 \begin{description}
-\item{\bf{步骤1：}}首先计算各子载波上的等效噪声方差（等于实际噪声方差除以信道增益）$\sigma_k^2,k=0,1,\cdots,N-1$，$N$为子载波数。然后计算各子载波上的对数噪声$LDN_k=\log_2(\sigma_k^2),k=0,1,\cdot,N-1$，将这些值保存下来，之后的计算中可以重复使用；初始化$\mathrm{I}={0,1,\cdots,N-1}$，$N^\prime=N$。
+\item{\bf{步骤1：}}首先计算各子载波上的等效噪声方差（等于实际噪声方差除以信道增益）$\sigma_k^2,k=0,1,\cdots,N-1$，$N$为子载波数。然后计算各子载波上的对数噪声$LDN_k=\log_2(\sigma_k^2),k=0,1,\cdot,N-1$，将这些值保存下来，之后的计算中可以重复使用；初始化$\mathrm{I}=\{0,1,\cdots,N-1\}$，$N^\prime=N$。
 \item{\bf{步骤2：}}计算可用的子载波上应该分配的比特数：
 \begin{equation}
 b(k) = \frac{R_{target}+\sum_{i\in \mathrm{I}}LDN_i}{N^\prime}-LDN_k
@@ -166,9 +166,47 @@ b(k) = \frac{R_{target}+\sum_{i\in \mathrm{I}}LDN_i}{N^\prime}-LDN_k
 若$R<R_{target}$，则选择量化误差最大的子载波，假设其序号为$k^\star$，调整$\hat{b}(k^\star)=\hat{b}(k^\star)+1$，$R=R+1$，$diff(k^\star)=diff(k^\star)-1$，继续步骤6直到$R=R_{target}$；
 \item{\bf{步骤7：}}最后根据各个子载波上分配的比特数，按下式计算各子载波上应该分配的功率：
 \begin{equation}
-p_k = \frac{P_{total}\cdot \sigma_k^2\cdot 2^{\hat{b}(k)}}{\sum_{i\in \mathrm{I}}\sigma_i^2*2^{\hat{b}(k)}}
+p_k = \frac{P_{total}\cdot \sigma_k^2\cdot 2^{\hat{b}(k)}}{\sum_{i\in \mathrm{I}}\sigma_i^2\cdot 2^{\hat{b}(i)}}
 \end{equation}
 \end{description}
+
+Fischer算法给出了比特和功率分配的闭式解（经有限次迭代之后一定收敛），而且算法复杂度比较低，通过在步骤1中把$LDN_k, k=0,1,\cdots,N-1$存储下来，在接下来的运算中只需要进行加减法和除法运算，尤其是当目标速率设置适当（步骤5中计算得到的$R$接近$R_{target}$）时，算法复杂度可以进一步降低，为$O(N)$量级，相对于P.S.Chow算法又有了降低。
+\subsection{仿真结果比较}
+前面介绍了三种不同的比特功率分配算法，下面通过仿真来展示其性能。仿真的信号还是使用\ref{subsection:Channel}节中的可见光信道
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/chapter-4/BERonDiffAlgo.eps}
+\caption{SNR=25 dB时不同子载波上的误比特率}
+\label{fig:berOnDiffAlgo}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/chapter-4/loadedBit.eps}
+\caption{三种算法比特分配结果比较}
+\label{fig:loadedBit}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/chapter-4/loadedPower.eps}
+\caption{三种算法功率分配结果比较}
+\label{fig:loadedPower}
+\end{figure}
+
+%\begin{figure}[htbp]
+%    \centering
+%    \subfloat[比特分配]{
+%        \label{fig:Sim_Channel_time}
+%        \includegraphics[width=0.5\textwidth]{figures/chapter-4/loadedBit.eps}
+%    }
+%    \subfloat[功率分配]{
+%        \label{fig:Sim_Channel_frequency}
+%        \includegraphics[width=0.5\textwidth]{figures/chapter-4/loadedPower.eps}
+%    }
+%    \caption{三种算法比特功率分配结果比较}
+%    \label{fig:bitPowerAlloactionComparison}
+%\end{figure}
 \section{可见光通信中的自适应方案研究}
 \section{本章小结}
 
