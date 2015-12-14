@@ -30,15 +30,18 @@ $z(t)$表示信道加性白高斯噪声（Additive White Gaussian Noise，AWGN�
 \end{figure}
 
 \subsection{可见光通信系统信道特性}\label{subsection:Channel}
-如\autoref{fig:BasebandModle}所示，可见光通信系统的信道由三部分组成，分别是电光转换信道$h_1(t)$、可见光空间自由传播信道$h_2(t)$ 和光电转换信道$h_3(t)$。因为用于可见光通信的LED具有优良的可调制性能，即存在一段线性区，而在实际设计光通信系统的时候，我力求LED 灯工作于线性区内，所以可以把$h_1(t)$当做线性信道来处理；光在自由空间传播时，光信号除了由直达径（Light of Sight, LOS）到达接收端之外，不可避免的还可以通过墙壁、家具反射径等非直达径（Non Light of Sight，Non-LOS）进入接收端，造成理论上的多径信道，并且由于光在自由空间传播的路径损耗正比于距离的四次方，及反射也会造成能量损耗，所以理论上$h_2(t)$是非线性的，但正由于路劲损耗与传播距离的四次方成正比，所以通过非直达径到达接收端的光信号能量远低于直达径的能量，考虑到这样的实际情况，故可以把光自由传播信号$h_2(t)$建模为线性信道；光电转换信道$h_3(t)$与电光转换信道$h_1(t)$类似，光电转换器件PD 也有一段线性区，只要设计系统时保证PD工作在线性区，也可以把$h_3(t)$ 建模为线性信道。由以上分析可得，组成可见光通信系统的三个组成部分都是线性的，那么整个信道也是线性的，其时域冲激响应可以表示为：
+如\autoref{fig:BasebandModle}所示，可见光通信系统的信道由三部分组成，分别是电光转换信道$h_1(t)$、可见光空间自由传播信道$h_2(t)$ 和光电转换信道$h_3(t)$。因为用于可见光通信的LED具有优良的可调制性能，即存在一段线性区，而在实际设计光通信系统的时候，力求LED 灯工作于线性区内，所以可以把$h_1(t)$当做线性信道来处理；光电转换信道$h_3(t)$与电光转换信道$h_1(t)$类似，光电转换器件PD 也有一段线性区，只要设计系统时保证PD工作在线性区，也可以把$h_3(t)$ 建模为线性信道。如图\ref{fig:ChannelClass} 所示，根据发射机和接收机的定向性（反射角与接收角的大小）及是否存在直达径（Light of Sight, LOS）可将光空间自由传播信道$h_2(t)$ 分为六种。显然可见光通信既要通信还要兼顾照明，所以发射机一定是非定向的，同样为了保证系统的鲁棒性，可见光的接收机一般也是非定向的，
+
+
+光在自由空间传播时，光信号除了由直达径（Light of Sight, LOS）到达接收端之外，不可避免的还可以通过墙壁、家具反射径等非直达径（Non Light of Sight，Non-LOS）进入接收端，造成理论上的多径信道，并且由于光在自由空间传播的路径损耗正比于距离的四次方，及反射也会造成能量损耗，所以理论上$h_2(t)$是非线性的，但正由于路劲损耗与传播距离的四次方成正比，所以通过非直达径到达接收端的光信号能量远低于直达径的能量，考虑到这样的实际情况，故可以把光自由传播信号$h_2(t)$建模为线性信道；由以上分析可得，组成可见光通信系统的三个组成部分都是线性的，那么整个信道也是线性的，其时域冲激响应可以表示为：
 \begin{equation}
 h(t)=h_1(t)\otimes h_2(t)\otimes h_3(t)
 \end{equation}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-2/BasebandModle.eps}
-\caption{光无线通信系统基带处理模型}
-\label{fig:BasebandModle}
+\includegraphics[width=0.9\textwidth]{figures/chapter-2/ChannelClass.eps}
+\caption{光通信信道分类}
+\label{fig:ChannelClass}
 \end{figure}
 \autoref{fig:ChannelResponse}所示为本课题对应硬件平台上通过发送伪随机序列（Pseudo-Noise Sequence，PN seq.）估计出来的信道响应（时钟200 MHz，PN码长度为16384），更加详细的信道估计理论将在第三章中介绍。其中图
 \ref{fig:ChannelImpulseResponse}为时域冲激响应，幅度频率响应如图
