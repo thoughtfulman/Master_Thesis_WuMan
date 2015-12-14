@@ -1,5 +1,3 @@
-% !Mode:: "TeX:UTF-8"
-
 % \documentclass[bachelor]{seuthesis} % 本科
 \documentclass[master]{seuthesis} % 硕士
 % \documentclass[doctor]{seuthesis} % 博士
@@ -55,7 +53,7 @@
     \include{chapter-1}
     \include{chapter-2}
     \include{chapter-3}
-%    \include{chapter-4}
+    \include{chapter-4}
 %    \include{chapter-5}
 %    \include{chapter-6}
 \end{Main}

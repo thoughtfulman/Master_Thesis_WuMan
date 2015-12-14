@@ -47,7 +47,12 @@ K-\frac{N_0}{|H(f)|^2},&\ |H(f)|^2\geq\frac{N_0}{K} \\
 其中K为常数，并且满足式\ref{equ:powerLimit}中的功率受限条件。
 
 式\ref{equ:water_filling}得到S(f)分布的过程也称为“注水定理”或者“注水算法”，它表示要想在传输函数为H(f)，噪声功率密度为$N_0$的信道下要达到信道容量S(f)的分布一定要满足上式。其物理含义是：当信噪比$|H(f)|^2/N_0$较大时，应该给该处的子信道分配更多的功率；反之当信噪比很小时，分配的功率也很小；甚至当信噪比过小（小于1/K）时不分配功率。
-
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/chapter-4/waterFilling.eps}
+\caption{注水定理示意图}
+\label{fig:waterFilling}
+\end{figure}
 OFDM技术的基本原理就是将整个信道划分为相互正交的并行子信道，这个与前面注水算法的推导过程很相识，只是OFDM系统中子载波的数目是有限的，调制阶数是离散的。从此可以看出注水算法很容易在OFDM系统中现实，我们将在下一节中详细介绍。
 \section{OFDM系统自适应算法研究}
 在一个有N个子载波的OFDM系统中，假设各个子载波上的信道增益$h_k=|H(k)|^2(k=0,1,\cdots,N-1)$和高斯噪声方差$\sigma^2$已知，若$b_k$和$p_k$分别表示分配到第k个子载波上比特数和功率，如设置误比特率为固定值$\text{BER}_{target}$，则香农公式$b_k$与$p_k$有如下关系：

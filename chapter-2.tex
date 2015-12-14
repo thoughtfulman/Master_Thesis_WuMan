@@ -34,7 +34,12 @@ $z(t)$表示信道加性白高斯噪声（Additive White Gaussian Noise，AWGN�
 \begin{equation}
 h(t)=h_1(t)\otimes h_2(t)\otimes h_3(t)
 \end{equation}
-
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/chapter-2/ChannelClass.eps}
+\caption{光通信信道分类}
+\label{fig:ChannelClass}
+\end{figure}
 \autoref{fig:ChannelResponse}所示为本课题对应硬件平台上通过发送伪随机序列（Pseudo-Noise Sequence，PN seq.）估计出来的信道响应（时钟200 MHz，PN码长度为16384），更加详细的信道估计理论将在第三章中介绍。其中图
 \ref{fig:ChannelImpulseResponse}为时域冲激响应，幅度频率响应如图
 \ref{fig:ChannelImpulseResponse-AmpFreqResponse}所示，相位频率响应见图

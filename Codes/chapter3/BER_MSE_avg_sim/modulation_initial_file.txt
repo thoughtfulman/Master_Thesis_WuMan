@@ -1,0 +1,19 @@
+\\input file for DCO-OFDM modulation 
+\\ note that there isn't a space between "=" and number
+nSC =128          \\ number of subcarriers
+nClt =8       \\ number of subcarriers in a cluster
+nCP =24           \\ length of CP
+nFrame =5000        \\ frames of data
+nSignal =4      \\ number of OFDM signals in a frame
+FixSeedEnable =1   \\ fix the rand generator or not    
+Seed =1           \\ seed, must be a nonzero integer.
+pilotEnable =0    \\use pilot or not 
+nIdleLF =4     \\ number of idle subcarriers in low frequency end
+nIdleHF =4     \\ number of idle subcarriers in high frequency end
+ModOrdPowerWetInputMod =1  \\modulation order and power weight input method 1->define in this .txt file 0-> define in a .xlsx file outside.
+modOrd ={256,256,256,64,64,64,16,4}  \\ {}中不要有空格
+powerWet ={1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0} \\ {}中不要有空格
+input_file_name_ModPow ="ModOrdPowerWet.xlsx"  \\ a .xlsx file that contents modulation order and power weight information.
+output_file_name_mat ="modData.mat"  \\output .mat file name
+output_file_name_h ="modData.h"  \\output .h file name
+
