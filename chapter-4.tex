@@ -70,7 +70,7 @@ p_k = \frac{\Gamma\sigma^2}{h_k}(2^{b_k}-1)
 
 OFDM自适应传输在不考虑信道编码的情况下其实就是比特和功率在各个子载波上分配问题，它可以有传输速率、发射功率和误比特率三个优化目标量，这样也就有三种优化准则，即固定误比特率和功率的速率最大化（Rate Adaptive，RA）准则、固定误比特率和速率的功率最小化（Margin Adaptive, MA）准则和固定功率和速率的误比特率最小化（BER Adaptive, BA）准则。同时需要提出的是，与前面的理论分析不同，实际系统可以选择的调制方式是离散的（$b_k \in \mathbb{N}$，$\mathbb{N}$表示整数集），也就是说OFDM自适应其实是一个整数优化问题（Integer Programming，IP），之前在推导注水算法时用到的拉格朗日乘子法不能再用到实际系统中，需要根据实际系统的需要，根据优化准则去选择合适的优化方法，下面将介绍几种经典的OFDM自适应算法。
 \subsection{Hughes-Hartogs算法}
-Hughes-Hartogs算\cite{hughes1989ensemble}法受数学中“贪婪（Greedy）优化”的启发，本质上也是一种贪婪算法，由Hughes-Hartogs于1988年提出，其描述如下：假设OFDM系统中各个子载波上的信道增益和噪声都是已知的，这样在特定的BER要求下要传输1比特所需要的功率也是可知的，Hughes-Hartogs算法就是每次遍历一次所有的子载波，选择需要功率最少的子载波放置1比特数据，如此循环迭代，知道用完所有功率（RA准则）或者达到目标速率（MA准则）。对于RA准则和MA准则，Hughes-Hartogs算法是最优的。它的具体实现步骤如下：
+Hughes-Hartogs算法\cite{hughes1989ensemble}受数学中“贪婪（Greedy）优化”的启发，本质上也是一种贪婪算法，由Hughes-Hartogs于1988年提出，其描述如下：假设OFDM系统中各个子载波上的信道增益和噪声都是已知的，这样在特定的BER要求下要传输1比特所需要的功率也是可知的，Hughes-Hartogs算法就是每次遍历一次所有的子载波，选择需要功率最少的子载波放置1比特数据，如此循环迭代，知道用完所有功率（RA准则）或者达到目标速率（MA准则）。对于RA准则和MA准则，Hughes-Hartogs算法是最优的。它的具体实现步骤如下：
 \begin{description}
 \item{\bf{步骤1：}}令$b_k(k=0,1,\cdots,N-1)$，$P=\sum_{i=0}^{N-1}p_k=0$，$R=\sum_{i=0}^{N-1}b_k=0$,$P$表示已用的功率，$R$表示已分配比特。
 \item{\bf{步骤2：}}遍历计算每个子载波上增加1比特所需要增加的功率:
@@ -118,7 +118,7 @@ k^{\star} =\arg\ \underset{0\leq k\leq N-1}{\max}diff(k)
 \item{\bf{步骤11：}}在步骤10中得到的各个子载波上的功率基础上再乘以一个比例因子，使得发射总功率$P=\sum_{k=0}{N-1}p_k=P_{total}$，$P_{total}$表示额定功率。
 \end{description}
 
-P.S.Chow 算法的思想是先通过$MaxCount$次迭代找到最优系统性能门限$\gamma_{margin}$，然后得到各个子载波上的比特分配，最后根据各子载波上的比特分配和总输出功率限制得到各子载波上各功率分配，其算法复杂度为$O(MaxCount\cdot N+2N)$，一般情况下$MaxCount$小于10次就会收敛，所以相对于Hughes-Hartogs算法，其算法复杂度下降了很多。
+P.S.Chow 算法的思想是先通过目标速率$\text{Rate}_{target}$迭代寻找最优系统性能门限$\gamma_{margin}$，迭代终止条件为分配的总速率等于目标速率，但是在某些信道条件下，总速率会在目标速率附近震荡而永远不会收敛到目标速率，因此Chow算法还设计了另一个收敛条件，即迭代次数$IterateCount$等于初始化设置的最大迭代次数$MaxCount$。如果是由迭代次数限制而终止迭代的，则通过步骤8、9来保证总速率等于目标速率，得到各个子载波上的比特分配，然后根据各子载波上的比特分配确定各个子载波上需要的功率，最后在各个子载波的功率前面乘以一个相同的系数，使得总功率满足功率限制条件，其最坏情况下算法复杂度为$O(MaxCount\cdot N+2N)$，一般情况下$MaxCount$小于10次就会收敛，所以相对于Hughes-Hartogs算法，其算法复杂度下降了很多。
 \subsection{Fischer算法}
 Fischer算法\cite{fischer1996new}也是一种固定发射功率和速率优化系统误比特率的算法（RA准则），但是它与Hughes-Hartogs算法和P.S.Chow算法不同，这两者都是从信道容量的角度出发的，而Fischer算法则是从各个子载波上的误比特率出发，算法的核心思想认为当所有被利用的子载波上的误符号率相等时，则会使得系统的误比特率最优，这个其实也比较容易理解，因为如果有某些子载波的误符号率很高的话，则这些子载波就决定了整个系统的误比特率。
 
@@ -176,14 +176,31 @@ p_k = \frac{P_{total}\cdot \sigma_k^2\cdot 2^{\hat{b}(k)}}{\sum_{i\in \mathrm{I}
 \end{description}
 
 Fischer算法给出了比特和功率分配的闭式解（经有限次迭代之后一定收敛），而且算法复杂度比较低，通过在步骤1中把$LDN_k, k=0,1,\cdots,N-1$存储下来，在接下来的运算中只需要进行加减法和除法运算，尤其是当目标速率设置适当（步骤5中计算得到的$R$接近$R_{target}$）时，算法复杂度可以进一步降低，为$O(N)$量级，相对于P.S.Chow算法又有了降低。
+
+上面介绍了三种非常经典的OFDM系统比特功率分配算法，也有研究人员对这些算法进行改良，如改进的贪婪算法不想原算法逐比特分配，而是先通过对分法搜索得到注水定理中的注水线（注水线的上下界是确定的\cite{余官定2005ofdm}），然后根据注水线得到各子载波上的比特数并向下取整，计算这些比特所需要的功率，最后用贪婪算法剩下的功率。这种改进的算法在高信噪比下可以大大降低复杂度。也有学者通过迭代的方式将注水算法应用到离散比特分配中，其基本思路是先令注水线等于其上界，然后按这个注水线分配比特并且四舍五入取整并计算所需的功率，如果功率满足限制条件则分配完毕，否则降低注水线重新注水，直到满足功率限制。
+
 \subsection{仿真结果比较}
-前面介绍了三种不同的比特功率分配算法，下面通过仿真来展示其性能。仿真的信号还是使用\ref{subsection:Channel}节中的可见光信道
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/chapter-4/BERonDiffAlgo.eps}
-\caption{SNR=25 dB时不同子载波上的误比特率}
+\caption{LOS信道下不同比特功率算法误比特率性能比较}
 \label{fig:berOnDiffAlgo}
 \end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/chapter-4/DOWBERonDiffAlgo.eps}
+\caption{DOW信道下不同比特功率算法误比特率性能比较}
+\label{fig:DOWBERonDiffAlgo}
+\end{figure}
+前面介绍了三种不同的比特功率分配算法，下面通过仿真来展示其性能。仿真的信道还是使用\ref{subsection:Channel}节中的可见光LOS信道和DOW信道，使用LOS信道更贴近本课题的硬件设计，而使用DOW信道模型可以增加信道的多样性，更能客观地比较不同算法之间的性能差别。仿真中使用QAM调制，并且在仿真中对最高调制阶数进行了限制（1024QAM），这个在实际工程中也是常见的，毕竟很少有系统用到1024QAM以上的调制。
+
+图\ref{fig:berOnDiffAlgo}给出了在LOS信道不同比特功率分配算法的误比特率随信噪比变化的性能，为了便于比较，将目标速率$\text{Rate}_{target}$设置为736 bit/OFDM signal，与表\ref{tab:modOrder}中的相等。图中可以看出，虽然在表\ref{tab:modOrder}中我们已经专门针对可见光通信的低通特意设计了比特分配，但是使用自适应算法得到比特功率分配在性能上还是有些提高的，尤其是在高信噪比的情况下。但是在固定的LOS信道下，Hughes-Hartogs算法、Chow算法和Fischer算法之间的BER性能差异很小，这也说明了Chow算法和Fischer算法在计算复杂度降低的情况下，性能损失不大。需要说明的是，Hughes-Hartogs算法在RA和MA准则下是最优的，但是这里BER性能的比较是BA准则，Hughes-Hartogs算法在BA准则下的计算过程是先使用MA准则得到各子载波的分配的比特，然后根据计算每个子载波达到目标BER所需要的功率，最后归一化使得总功率满足功率限制，所以在BA准则下Hughes-Hartogs算法也不是最优的。图\ref{fig:DOWBERonDiffAlgo}展示了各种比特功率分配算法在DOW信道模型下的性能，这里DOW信道模型采用的是\ref{subsection:Channel}节中提到的指数衰减模型和天花板反射模型混合得到信道模型，结果也LOS信道下类似，三种算法BER性能都优于表3.2中的分配方案，但是三种算法之间的性能非常接近。
+
+图\ref{fig:loadedBit}和\ref{fig:loadedPower}给出了三种算法在各个子载波上分配的比特和功率，可以看出分配的比特数随着频率（子载波系数）的增加而减少，这是因为我们的信道是低通的，给低频段高信噪比的子载波分配更多比特而在高频段低信噪比的子载波分配更少比特是合理的。各子载波上分配的功率上下波动，但是有个规律-在分配了相同比特的子载波上，功率是随着频率递增的，这还是由于低通信道，在相同阶数的调制的子载波上为了使得BER尽可能相等，高频的子载波要分配更多的比特。综上所述仿真结果是与之前的理论分析相吻合的。
+
+
+
 
 \begin{figure}[htbp]
 \centering
@@ -199,19 +216,6 @@ Fischer算法给出了比特和功率分配的闭式解（经有限次迭代之�
 \label{fig:loadedPower}
 \end{figure}
 
-%\begin{figure}[htbp]
-%    \centering
-%    \subfloat[比特分配]{
-%        \label{fig:Sim_Channel_time}
-%        \includegraphics[width=0.5\textwidth]{figures/chapter-4/loadedBit.eps}
-%    }
-%    \subfloat[功率分配]{
-%        \label{fig:Sim_Channel_frequency}
-%        \includegraphics[width=0.5\textwidth]{figures/chapter-4/loadedPower.eps}
-%    }
-%    \caption{三种算法比特功率分配结果比较}
-%    \label{fig:bitPowerAlloactionComparison}
-%\end{figure}
 \section{可见光通信中的自适应方案研究}
 \section{本章小结}
 
