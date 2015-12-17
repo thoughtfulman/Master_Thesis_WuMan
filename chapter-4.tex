@@ -212,6 +212,9 @@ Fischer算法给出了比特和功率分配的闭式解（经有限次迭代之�
 \label{fig:loadedPower}
 \end{figure}
 \section{可见光通信中的自适应方案研究}
-从前面的分析及仿真结果可以看到，可见光信道相邻子载波之间存在明显的相关性，特别是LOS信道，信噪比几乎是单调递减的，这样的信道条件非常适合用简单分组比特功率分配算法（Simple Blockwise Loading Algorithm，SBLA）
+前面提到的算法都是具有普适性的，即可以用在任何信道的自适应OFDM系统中，但是我们看到即使Chow算法和Fischer算法相对于Hughes-Hartogs算法进行了简化，但对于实际系统而言复杂度还是偏高的。我们可以充分利用可见光信道的特征，进一步简化比特和功率分配算法。
+\subsection{SBLA算法}
+从前面的分析及仿真结果可以看到，可见光信道相邻子载波之间存在明显的相关性，特别是LOS信道，信噪比几乎是随频率单调递减的，这样的信道条件非常适合用简单分组比特功率分配算法（Simple Blockwise Loading Algorithm，SBLA），
+\subsection{减少反馈信息的改进SBLA算法}
 \section{本章小结}
 
