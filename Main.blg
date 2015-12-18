@@ -1,9 +1,13 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: Main.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Main.aux
 The style file: seuthesis.bst
 A level-1 auxiliary file: chapter-1.aux
 A level-1 auxiliary file: chapter-2.aux
 A level-1 auxiliary file: chapter-3.aux
 A level-1 auxiliary file: chapter-4.aux
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: Reference.bib
 Repeated entry---line 239 of file Reference.bib
  : @article{vuvcic2010513
@@ -25,4 +29,45 @@ You can't pop an empty literal stack for entry sandell1996comparative
 while executing---line 3542 of file seuthesis.bst
 You can't pop an empty literal stack for entry hughes1989ensemble
 while executing---line 3542 of file seuthesis.bst
+You've used 61 entries,
+            6690 wiz_defined-function locations,
+            1535 strings with 19839 characters,
+and the built_in function-call counts, 20990 in all, are:
+= -- 1958
+> -- 724
+< -- 26
++ -- 404
+- -- 169
+* -- 1456
+:= -- 2987
+add.period$ -- 205
+call.type$ -- 61
+change.case$ -- 61
+chr.to.int$ -- 56
+cite$ -- 63
+duplicate$ -- 915
+empty$ -- 2420
+format.name$ -- 304
+if$ -- 4887
+int.to.chr$ -- 6
+int.to.str$ -- 62
+missing$ -- 73
+newline$ -- 335
+num.names$ -- 122
+pop$ -- 508
+preamble$ -- 1
+purify$ -- 61
+quote$ -- 0
+skip$ -- 697
+stack$ -- 0
+substring$ -- 1181
+swap$ -- 70
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 240
+warning$ -- 2
+while$ -- 147
+width$ -- 0
+write$ -- 789
 (There were 7 error messages)

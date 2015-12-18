@@ -1,4 +1,4 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{61}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -374,5 +374,11 @@ Fischer R~F, Huber J~B.
 \newblock In: Global Telecommunications Conference, 1996.
   GLOBECOM'96.'Communications: The Key to Global Prosperity.
 \newblock 1996. 1:724--728.
+
+\bibitem[Gr{\"u}nheid et al.(2000)]{grunheid2000adaptive}
+Gr{\"u}nheid R, Bolinth E, Rohling H, et al.
+\newblock Adaptive modulation for the HIPERLAN/2 air interface[C].
+\newblock In: Proceedings of the 5th International OFDM Workshop.
+\newblock 2000.
 
 \end{thebibliography}

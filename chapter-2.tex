@@ -24,7 +24,7 @@ $z(t)$表示信道加性白高斯噪声（Additive White Gaussian Noise，AWGN�
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-2/BasebandModle.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-2/BasebandModle.eps}
 \caption{光无线通信系统基带处理模型}
 \label{fig:BasebandModle}
 \end{figure}
@@ -33,7 +33,7 @@ $z(t)$表示信道加性白高斯噪声（Additive White Gaussian Noise，AWGN�
 如\autoref{fig:BasebandModle}所示，可见光通信系统的信道由三部分组成，分别是电光转换信道$h_1(t)$、可见光空间自由传播信道$h_2(t)$ 和光电转换信道$h_3(t)$。因为用于可见光通信的LED具有优良的可调制性能，即存在一段线性区，而在实际设计光通信系统的时候，力求LED 灯工作于线性区内，所以可以把$h_1(t)$当做线性信道来处理；光电转换信道$h_3(t)$与电光转换信道$h_1(t)$类似，光电转换器件PD 也有一段线性区，只要设计系统时保证PD工作在线性区，也可以把$h_3(t)$ 建模为线性信道。如图\ref{fig:ChannelClass} 所示，根据发射机和接收机的定向性（反射角与接收角的大小）及是否存在直达径（Light of Sight, LOS）可将光空间自由传播信道$h_2(t)$ 分为六种。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-2/ChannelClass.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-2/ChannelClass.eps}
 \caption{光通信信道分类}
 \label{fig:ChannelClass}
 \end{figure}
@@ -202,7 +202,7 @@ h(t)=h_1(t)\otimes h_2(t)\otimes h_3(t)
 \subsection{DCO-OFDM简介}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/chapter-2/DCO-OFDMStructure.eps}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/DCO-OFDMStructure.eps}
     \caption{DCO-OFDM流程图}
     \label{fig:DCO-OFDMStructure}
 \end{figure}
@@ -218,7 +218,7 @@ DCO-OFDM调制技术原理框图如\autoref{fig:DCO-OFDMStructure} 所示。因�
     \end{cases}
     \label{equ:HermitianSymmetry}
 \end{equation}
-其中$N$为FFT长度，“$\Re\{\cdot\}$”表示取实部，“$\Im\{\cdot\}$”为取虚部，“$(\cdot)^*$”代表做共轭运算。现在我们对满足共轭对称的信号$\tilde{X}(k),k=0,1,...,N-1$ 做$N$点IFFT运算，得到时域信号表达式为：
+其中$N$为FFT长度，“$\Re\{\cdot\}$”表示取实部，“$\Im\{\cdot\}$”为取虚部，“$(\cdot)^*$”代表做共轭运算。然后我们对满足共轭对称的信号$\tilde{X}(k),k=0,1,...,N-1$ 做$N$点IFFT运算，得到时域信号表达式为：
 \begin{equation}
     x(n) = \frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}\tilde{X}(k)e^{\frac{j2\pi kn}{N}}
     \label{equ:DCO_OFDM_Sig}
@@ -234,13 +234,20 @@ DCO-OFDM调制技术原理框图如\autoref{fig:DCO-OFDMStructure} 所示。因�
 \begin{equation}
     x(n)=\frac{1}{\sqrt{N}}(\sum \limits_{k=1}^{N/2-1}T(k)+ \Re\{X(0)\} +\Im\{X(0)\}(-1)^n)
 \end{equation}
-说明IFFT之后输出的时域信号确实为实信号。作为LED强度调制信号，还要满足正数这个条件，而共轭对称后输出的结果虽然已是实数，但是有正有负，为了使其变为正数，我们可以在改实数信号上加一个直流正偏置，但是这个偏置选择也非常讲究，如果偏置过低，则会造成下削波，而过高则会让LED进入非线性区。在实际系统设计时，要根据IFFT输出时域信号的统计情况要决定偏置大小。DCO-OFDM 加偏置后的时域信号如图\autoref{fig:DCO-OFDMSignal}所示。
+
+说明IFFT之后输出的时域信号确实为实信号。作为LED强度调制信号，还要满足正数这个条件，而共轭对称后输出的结果虽然已是实数，但是有正有负，为了使其变为正数，我们可以在改实数信号上加一个直流正偏置，但是这个偏置选择也非常讲究，如果偏置过低，则会造成下削波，而过高则会让LED进入非线性区。在实际系统设计时，要根据IFFT输出时域信号的统计情况要决定偏置大小。DCO-OFDM信号处理流程如图\autoref{fig:DCO_OFDM}所示。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/DCO_OFDM.eps}
+    \caption{ACO-OFDM信号处理时频域示意图}
+    \label{fig:DCO_OFDM}
+\end{figure}
 
 \subsection{ACO-OFDM调制}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/chapter-2/ACO-OFDMStructure.eps}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/ACO-OFDMStructure.eps}
     \caption{ACO-OFDM流程图}
     \label{fig:ACO-OFDMStructure}
 \end{figure}
@@ -290,18 +297,11 @@ X_{c}(m)=\frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}x_{c}(k)e^{-\frac{j2\pi km}{N
 \end{equation}
 式中$x_c(k)$，$X_c(m)$分别表示在不考虑任何噪声情况下接收端的时域信号和频域信号，可知接收到的频域信号为发射的频域信号的一半，也就是说成比例的，而这个比例系数可以在信道估计中很容易估计得到，所以ACO-OFDM在原理上是成立的。
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \subfloat[DCO-OFDM信号]{
-        \includegraphics[width=0.5\textwidth]{figures/chapter-2/DCO-OFDMSignal.eps}
-        \label{fig:DCO-OFDMSignal}
-    }
-    \subfloat[ACO-OFDM信号]{
-        \includegraphics[width=0.5\textwidth]{figures/chapter-2/ACO-OFDMSignal.eps}
-        \label{fig:ACO-OFDMSignal}
-    }
-    \caption{DCO-OFDM信号调与ACO-OFDM信号比较}
-    \label{fig:DCO-OFDMVSACO-OFDM}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/ACO_OFDM.eps}
+    \caption{ACO-OFDM信号处理时频域示意图}
+    \label{fig:ACO_OFDM}
 \end{figure}
 \section{本章小结}
 本章首先可见光通信的基本原理，包括系统模型、信道特征及光电元器件等，本文联系实际情况将可见光通信信道建模为线性信道，然后介绍了电光转换器件LED，详细说明了荧光激发型LED和多色混合型LED的工作原理和特性，还介绍PIN 和APD两类光电转换器件及接收端使用的滤光片。理解这些光电元器件的原理与作用有益于理解整个可见光通信系统。由于OFDM调制技术非常适应光低通信道，在可见光通信中也得到了广泛的使用，所以本章也介绍了光OFDM技术，主要说明了DCO-OFDM和ACO-OFDM的工作原理及区别。

@@ -38,7 +38,10 @@
 \BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Hughes-Hartogs算法}{section.4.3}% 38
 \BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 P.S.Chow算法}{section.4.3}% 39
 \BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Fischer算法}{section.4.3}% 40
-\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 仿真结果比较}{section.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.3.4}{4.3.4 仿真结果分析}{section.4.3}% 41
 \BOOKMARK [1][-]{section.4.4}{4.4 可见光通信中的自适应方案研究}{chapter.4}% 42
-\BOOKMARK [1][-]{section.4.5}{4.5 本章小结}{chapter.4}% 43
-\BOOKMARK [0][-]{chapter*.33}{参考文献}{}% 44
+\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 SBLA算法}{section.4.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 减少反馈信息的改进SBLA算法}{section.4.4}% 44
+\BOOKMARK [2][-]{subsection.4.4.3}{4.4.3 仿真结果分析}{section.4.4}% 45
+\BOOKMARK [1][-]{section.4.5}{4.5 本章小结}{chapter.4}% 46
+\BOOKMARK [0][-]{chapter*.39}{参考文献}{}% 47
