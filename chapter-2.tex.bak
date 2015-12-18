@@ -24,59 +24,76 @@ $z(t)$表示信道加性白高斯噪声（Additive White Gaussian Noise，AWGN�
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-2/BasebandModle.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-2/BasebandModle.eps}
 \caption{光无线通信系统基带处理模型}
 \label{fig:BasebandModle}
 \end{figure}
 
 \subsection{可见光通信系统信道特性}\label{subsection:Channel}
-如\autoref{fig:BasebandModle}所示，可见光通信系统的信道由三部分组成，分别是电光转换信道$h_1(t)$、可见光空间自由传播信道$h_2(t)$ 和光电转换信道$h_3(t)$。因为用于可见光通信的LED具有优良的可调制性能，即存在一段线性区，而在实际设计光通信系统的时候，力求LED 灯工作于线性区内，所以可以把$h_1(t)$当做线性信道来处理；光电转换信道$h_3(t)$与电光转换信道$h_1(t)$类似，光电转换器件PD 也有一段线性区，只要设计系统时保证PD工作在线性区，也可以把$h_3(t)$ 建模为线性信道。如图\ref{fig:ChannelClass} 所示，根据发射机和接收机的定向性（反射角与接收角的大小）及是否存在直达径（Light of Sight, LOS）可将光空间自由传播信道$h_2(t)$ 分为六种。显然可见光通信既要通信还要兼顾照明，所以发射机一定是非定向的，同样为了保证系统的鲁棒性，可见光的接收机一般也是非定向的，
-
-
-光在自由空间传播时，光信号除了由直达径（Light of Sight, LOS）到达接收端之外，不可避免的还可以通过墙壁、家具反射径等非直达径（Non Light of Sight，Non-LOS）进入接收端，造成理论上的多径信道，并且由于光在自由空间传播的路径损耗正比于距离的四次方，及反射也会造成能量损耗，所以理论上$h_2(t)$是非线性的，但正由于路劲损耗与传播距离的四次方成正比，所以通过非直达径到达接收端的光信号能量远低于直达径的能量，考虑到这样的实际情况，故可以把光自由传播信号$h_2(t)$建模为线性信道；由以上分析可得，组成可见光通信系统的三个组成部分都是线性的，那么整个信道也是线性的，其时域冲激响应可以表示为：
-\begin{equation}
-h(t)=h_1(t)\otimes h_2(t)\otimes h_3(t)
-\end{equation}
+如\autoref{fig:BasebandModle}所示，可见光通信系统的信道由三部分组成，分别是电光转换信道$h_1(t)$、可见光空间自由传播信道$h_2(t)$ 和光电转换信道$h_3(t)$。因为用于可见光通信的LED具有优良的可调制性能，即存在一段线性区，而在实际设计光通信系统的时候，力求LED 灯工作于线性区内，所以可以把$h_1(t)$当做线性信道来处理；光电转换信道$h_3(t)$与电光转换信道$h_1(t)$类似，光电转换器件PD 也有一段线性区，只要设计系统时保证PD工作在线性区，也可以把$h_3(t)$ 建模为线性信道。如图\ref{fig:ChannelClass} 所示，根据发射机和接收机的定向性（反射角与接收角的大小）及是否存在直达径（Light of Sight, LOS）可将光空间自由传播信道$h_2(t)$ 分为六种。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-2/ChannelClass.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-2/ChannelClass.eps}
 \caption{光通信信道分类}
 \label{fig:ChannelClass}
 \end{figure}
-\autoref{fig:ChannelResponse}所示为本课题对应硬件平台上通过发送伪随机序列（Pseudo-Noise Sequence，PN seq.）估计出来的信道响应（时钟200 MHz，PN码长度为16384），更加详细的信道估计理论将在第三章中介绍。其中图
-\ref{fig:ChannelImpulseResponse}为时域冲激响应，幅度频率响应如图
-\ref{fig:ChannelImpulseResponse-AmpFreqResponse}所示，相位频率响应见图
-\ref{fig:ChannelImpulseResponse-PhsFreqResponse}。从
-\ref{fig:ChannelImpulseResponse-AmpFreqResponse}可以看出可见光通信信道其实是一个低通系统。针对这样的信道特征，可以使用OFDM调制结合频域均衡技术来对抗频率选择性衰落，并且可以优化OFDM各子载波上的功率及比特分配，这部分内容将在第四章详细论述。
-\begin{figure}[h]
-    \centering
-    \subfloat[室内可见光信道时域冲激响应]{
-        \label{fig:ChannelImpulseResponse}
-        \begin{minipage}[t]{1\textwidth}
-            \centering
-            \includegraphics[width=0.6\textwidth]{figures/Chapter-2/ChannelImpulseResponse.eps}
-        \end{minipage}
-    }
-    \par
-    \centering
-    \subfloat[室内可见光信道幅频特性]{
-        \label{fig:ChannelImpulseResponse-AmpFreqResponse}
-        \begin{minipage}[t]{0.5\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{figures/Chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps}
-        \end{minipage}
-    }
-    \subfloat[室内可见光信道相频响应]{
-        \label{fig:ChannelImpulseResponse-PhsFreqResponse}
-        \begin{minipage}[t]{0.5\textwidth}
-            \centering
-            \includegraphics[width=0.97\textwidth]{figures/Chapter-2/ChannelImpulseResponse-PhsFreqResponse.eps}
-        \end{minipage}
-    }
-    \caption{室内可见光信道的时频域响应特性}
-    \label{fig:ChannelResponse}
-\end{figure}
+显然可见光通信既要通信还要兼顾照明，所以发射机一定是非定向的，同样为了保证系统的鲁棒性，可见光通信的接收机一般也是非定向的，因此本文中讨论信道时发射机和接收机都认为是为非定向的，只研究在这个条件下的有无直达径两种情况。对于含有直达径的LOS信道和没有直达径的漫反射信道（Diffuse Optical Channel，DOW），我们都可以建模为线性信道，其时域冲激响应可以表示为：
+\begin{equation}
+\label{equ:opticalChannelMode}
+h_2(t) = \sum_{n=0}^{N_t-1}\alpha_n \delta(t-\tau_n)
+\end{equation}
+式中$N_t$表示信道抽头数量，$\alpha_n$表示第n个抽头的衰减系数，$\tau_n$表示第n个抽头的时延。
 
+对于LOS信道，直达径占主导地位，但是信号还是通过墙壁、家具反射径等非直达径（Non Light of Sight，Non-LOS）进入接收端，如图\ref{fig:LOSChannelResponse}所示为本课题对应硬件平台上通过发送伪随机序列（Pseudo-Noise Sequence，PN seq.）估计出来的信道响应（时钟200 MHz，PN码长度为16384），其中图
+\ref{fig:ChannelImpulseResponse}为时域冲激响应，从中可以看出信道确实存在时延扩展，不过反射径增益随着时延衰减得很快。幅度频率响应如图
+\ref{fig:ChannelImpulseResponse-AmpFreqResponse}所示，从
+\ref{fig:ChannelImpulseResponse-AmpFreqResponse}可以看出可见光通信信道其实是一个低通系统。针对这样的信道特征，可以使用OFDM调制结合频域均衡技术来对抗频率选择性衰落，并且可以优化OFDM各子载波上的功率及比特分配，这部分内容将在第四章详细论述。
+\begin{figure}[htbp]
+    \centering
+    \subfloat[室内可见光LOS信道时域冲激响应]{
+        \label{fig:ChannelImpulseResponse}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-2/ChannelImpulseResponse.eps}
+    }
+    \subfloat[室内可见光LOS信道幅频特性]{
+        \label{fig:ChannelImpulseResponse-AmpFreqResponse}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps}
+    }
+    \caption{室内可见光LOS信道的时频域响应特性}
+    \label{fig:LOSChannelResponse}
+\end{figure}
+对于DOW信道，因为没有直达径，信号只能通过墙壁、家具等的反射进入接收机的，因此其信道冲激响应与房间的结构、家具布置等都密切相关。但是研究人员发现可以使用路径损耗和均方根时延扩展这两个参数来建模\cite{carruthers1997modeling}，广泛使用的有两种模型，一种是指数衰减模型（Expoential Decay Model），另一种是天花板反射模型（Ceiling Bounce Model），对于指数衰减模型有：
+\begin{equation}
+\label{equ:expModel}
+\alpha_n \propto \frac{1}{\tau_{DS}}\exp\left(-\frac{\tau_n}{\tau_{DS}}\right)
+\end{equation}
+其中$\tau_{DS}$表示参数化的时延扩展，这个量也房间的尺寸及布置有关。对于天花板反射模型而言，它的路径损耗可以表示为：
+\begin{equation}
+\label{equ:ceilingModel}
+\alpha_n \propto \frac{6a^6}{(\tau_n+a)^7}
+\end{equation}
+其中$a=12\tau_{DS}\sqrt{11/13}$，可以看到，在这两种模型中路径损耗系统$\alpha_n$都是随着时延扩展$\tau_n$的增加而减少。式\ref{equ:expModel}和\ref{equ:ceilingModel}给出的只是这两种模型的轮廓，并不是真正的信道时域冲激响应的抽头系数。因为DOW信道非常复杂，并且会随着室内人和物品的移动而变化，所以在仿真建模中一般先根据房间的具体情况确定参数化时延扩展$\tau_{DS}$，然后选择模型，最后在该模型下随机生成信道。如图\ref{fig:DOWChannelResponse}所示为DOW信道的时频域响应图，图\ref{fig:DOWChannelImpulseResponse}为时域响应情况，图中给出了三种信道模型的轮廓和一个信道的例子，其中“mixed model”是指指数衰减模型和天花板反射模型混合而成的，即在仿真建模中取得这两种信道模型的概率都是50\%的情况下得到的信道，这样做是为了提高信道的多样性。图\ref{fig:DOWChannelImpulseResponse-AmpFreqResponse}给出了DOW信道模型的幅度频率响应，不难看出信道模型轮廓还是低通的，但是对于实例而言，在高频端会有一些波动。
+
+由以上分析可得，组成可见光通信系统的三个组成部分都是线性的，那么整个信道也是线性的，其时域冲激响应可以表示为：
+\begin{equation}
+h(t)=h_1(t)\otimes h_2(t)\otimes h_3(t)
+\end{equation}
+
+
+
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[室内可见光DOW信道时域冲激响应]{
+        \label{fig:DOWChannelImpulseResponse}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-2/DOW_ImplusResponse.eps}
+    }
+    \subfloat[室内可见光DOW信道幅频特性]{
+        \label{fig:DOWChannelImpulseResponse-AmpFreqResponse}
+        \includegraphics[width=0.5\textwidth]{figures/chapter-2/DOW_AmpResponse.eps}
+    }
+    \caption{室内可见光DOW信道的时频域响应特性}
+    \label{fig:DOWChannelResponse}
+\end{figure}
 \subsection{光电元器件简介}
 如前文所述，可见光通信与传统的无线通信最大的区别在于调制与信号检测上，射频无线通信必须把基带信号通过调幅、调频或者调相技术调制到高频率的载波上，在接收端再下变频得到基带信号。但目前可见光通信器件技术还不能直接去调制光的幅度、频率或者相位，而是使用发射端强度调制和接收端直接检测技术。在发射端，需要电光转换器件将电信号转换成光信号，在室内可见光通信中用到的主要是发光二极管LED，LED就是调制器，其工作线性范围是一个非常重要的指标，因为如果输入信号的动态变化范围较大，超出LED的线性调制范围，则会发生非线性失真，将严重影响通信性能，在可见光OFDM系统中尤其要注意这点，另外，LED 的响应时间是另一个重要指标，响应时间断的LED 能够被更高频率的信号调制，也就意味着带宽增加、通信速率增高。在接收端，需要光电转换器件将光信号再变成电信号以进行解调解码，目前大量使用的是光电二极管PD，光电二极管的PN结面积相对比较大，以便接收更多的入射光，其在反向电压的作用下，没有光照时，反向电流非常小，称为暗电流；在有光照时，反向电流急速增大，并且在一定范围内反向电流功率与光照强度成正比。本节将详细介绍发光二极管和光电二极管的通信特性。
 \subsubsection{电光转换器件}
@@ -158,7 +175,7 @@ h(t)=h_1(t)\otimes h_2(t)\otimes h_3(t)
 如前所述，在使用磷光激发型LED的单色光通信系统中，我们要滤掉响应时间过长的黄光只取携带信息蓝光；在使用多色混合型LED 的多色光通信系统中，我们要在每个基色上调制信息，在接收端要把每个基色分别提取出来进行数字信号处理。这些过程要需要一个光学元件——滤光片，准确来说应该是带通滤光片。带通滤光片只允许较窄波长范围的光通过，常见的是法布里-珀罗型滤光片，它实质 上是一个法布里-珀罗标准具(见法布里-珀罗干涉仪)。具体结构为：玻璃衬底上涂一层半透明金属层，接着涂一层氟化镁隔层，再涂一层半透明金属层，两金属 层构成了法布里- 珀罗标准具的两块平行板。当两极的间隔与波长同数量级时，透射光中不同波长的干涉高峰分得很开，利用别的吸收型滤光片可把不允许透过的光 滤掉，从而得到窄通带的带通滤光片，其通频带宽度远比普通吸收型滤光片要窄\cite{OpticalFilter}。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/Chapter-2/MulticolorFilterGain.eps}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/MulticolorFilterGain.eps}
     \caption{滤色片滤色性能}
     \label{fig:MulticolorFilterGain}
 \end{figure}
@@ -167,7 +184,7 @@ h(t)=h_1(t)\otimes h_2(t)\otimes h_3(t)
 \autoref{fig:MultiColorReceiveredFilter}所示是接收端未加滤光片接收信号和由四个经滤光片提取的四个基色组合的光功率的比较，可以更清楚地看出滤光片的功能和对信号的衰减。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/Chapter-2/MultiColorReceiveredFilter.eps}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/MultiColorReceiveredFilter.eps}
     \caption{接收端滤色后光功率谱}
     \label{fig:MultiColorReceiveredFilter}
 \end{figure}
@@ -178,14 +195,14 @@ h(t)=h_1(t)\otimes h_2(t)\otimes h_3(t)
 \cite{armstrong2009ofdm}。在上世纪80年代中期，人们开始研究OFDM技术在实际通信系统中的应用，1985年，同样来自贝尔实验室的Cimini研究了OFDM用于移动通信的可能性；1987年， Lassalle 和 Alard将OFDM技术推广到无线广播系统，并且揭示了前向纠错编码和OFDM技术结合的重要性，对于广播通信工程师而言，OFDM技术也称为C-OFDM(Coded OFDM)；最先提出在有线通信中使用OFDM技术的是来自斯坦福大学的Cioffi等人，同时他们展示了OFDM可以作为数字用户线路(Digital Subscriber Line, DSL)的一种替代调制方式；如绪论所述，OFDM近年来也开始被应用于光通信中，根据在时序信号要不要加直流偏置可以把光OFDM 分为直流偏置光OFDM调制方式(DC-biased optical OFDM，DCO-OFDM)和非对称光OFDM调制方式(Asymmetrically-clipped optical OFDM, ACO-OFDM)两种，下面简要介绍这两种光OFDM 调制技术。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/Chapter-2/HistoryOfOFDM.eps}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/HistoryOfOFDM.eps}
     \caption{OFDM技术发展历程及其应用}
     \label{fig:HistoryOfOFDM}
 \end{figure}
 \subsection{DCO-OFDM简介}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/Chapter-2/DCO-OFDMStructure.eps}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/DCO-OFDMStructure.eps}
     \caption{DCO-OFDM流程图}
     \label{fig:DCO-OFDMStructure}
 \end{figure}
@@ -201,7 +218,7 @@ DCO-OFDM调制技术原理框图如\autoref{fig:DCO-OFDMStructure} 所示。因�
     \end{cases}
     \label{equ:HermitianSymmetry}
 \end{equation}
-其中$N$为FFT长度，“$\Re\{\cdot\}$”表示取实部，“$\Im\{\cdot\}$”为取虚部，“$(\cdot)^*$”代表做共轭运算。现在我们对满足共轭对称的信号$\tilde{X}(k),k=0,1,...,N-1$ 做$N$点IFFT运算，得到时域信号表达式为：
+其中$N$为FFT长度，“$\Re\{\cdot\}$”表示取实部，“$\Im\{\cdot\}$”为取虚部，“$(\cdot)^*$”代表做共轭运算。然后我们对满足共轭对称的信号$\tilde{X}(k),k=0,1,...,N-1$ 做$N$点IFFT运算，得到时域信号表达式为：
 \begin{equation}
     x(n) = \frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}\tilde{X}(k)e^{\frac{j2\pi kn}{N}}
     \label{equ:DCO_OFDM_Sig}
@@ -217,13 +234,20 @@ DCO-OFDM调制技术原理框图如\autoref{fig:DCO-OFDMStructure} 所示。因�
 \begin{equation}
     x(n)=\frac{1}{\sqrt{N}}(\sum \limits_{k=1}^{N/2-1}T(k)+ \Re\{X(0)\} +\Im\{X(0)\}(-1)^n)
 \end{equation}
-说明IFFT之后输出的时域信号确实为实信号。作为LED强度调制信号，还要满足正数这个条件，而共轭对称后输出的结果虽然已是实数，但是有正有负，为了使其变为正数，我们可以在改实数信号上加一个直流正偏置，但是这个偏置选择也非常讲究，如果偏置过低，则会造成下削波，而过高则会让LED进入非线性区。在实际系统设计时，要根据IFFT输出时域信号的统计情况要决定偏置大小。DCO-OFDM 加偏置后的时域信号如图\autoref{fig:DCO-OFDMSignal}所示。
+
+说明IFFT之后输出的时域信号确实为实信号。作为LED强度调制信号，还要满足正数这个条件，而共轭对称后输出的结果虽然已是实数，但是有正有负，为了使其变为正数，我们可以在改实数信号上加一个直流正偏置，但是这个偏置选择也非常讲究，如果偏置过低，则会造成下削波，而过高则会让LED进入非线性区。在实际系统设计时，要根据IFFT输出时域信号的统计情况要决定偏置大小。DCO-OFDM信号处理流程如图\autoref{fig:DCO_OFDM}所示。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/DCO_OFDM.eps}
+    \caption{ACO-OFDM信号处理时频域示意图}
+    \label{fig:DCO_OFDM}
+\end{figure}
 
 \subsection{ACO-OFDM调制}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/Chapter-2/ACO-OFDMStructure.eps}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/ACO-OFDMStructure.eps}
     \caption{ACO-OFDM流程图}
     \label{fig:ACO-OFDMStructure}
 \end{figure}
@@ -272,19 +296,48 @@ X_{c}(m)=\frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}x_{c}(k)e^{-\frac{j2\pi km}{N
 \label{equ:ACO_OFDM_Proof3}
 \end{equation}
 式中$x_c(k)$，$X_c(m)$分别表示在不考虑任何噪声情况下接收端的时域信号和频域信号，可知接收到的频域信号为发射的频域信号的一半，也就是说成比例的，而这个比例系数可以在信道估计中很容易估计得到，所以ACO-OFDM在原理上是成立的。
-
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \subfloat[DCO-OFDM信号]{
-        \includegraphics[width=0.5\textwidth]{figures/Chapter-2/DCO-OFDMSignal.eps}
-        \label{fig:DCO-OFDMSignal}
-    }
-    \subfloat[ACO-OFDM信号]{
-        \includegraphics[width=0.5\textwidth]{figures/Chapter-2/ACO-OFDMSignal.eps}
-        \label{fig:ACO-OFDMSignal}
-    }
-    \caption{DCO-OFDM信号调与ACO-OFDM信号比较}
-    \label{fig:DCO-OFDMVSACO-OFDM}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/ACO_OFDM.eps}
+    \caption{ACO-OFDM信号处理时频域示意图}
+    \label{fig:ACO_OFDM}
 \end{figure}
+
+
+\subsection{RoC-ACO-OFDM调制}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/RoC-ACO-OFDMStructure.eps}
+    \caption{RoC-ACO-OFDM信号处理时频域示意图}
+    \label{fig:RoC-ACO-OFDMStructure}
+\end{figure}
+峰均比过高一直是OFDM系统的主要缺点，这个问题同样存在于无线光通信的OFDM系统中，PAPR过高会使信号通过功放或LED驱动电路时进入非线性区，从而导致信号失真，这样会对系统的整体性能产生很大影响，所以有必要对无线光通信OFDM系统进行降低PAPR的优化。
+
+由于进行了非对称削波，使得ACO-OFDM系统的峰均比比传统的OFDM系统更大，为了解决这个问题，我们利用ACO-OFDM信号结构特点，提出了一个可在接收端恢复的上削波技术（Recoverable Upper Clipping ACO-OFDM，RoC-ACO-OFDM），其信号处理过程如图\ref{fig:RoC-ACO-OFDMStructure}所示，可以看到我们在发射端负值削波之后加上了一个进行上削波并搬移的模块，同样在接收端加了一个削波恢复的模块。具体的示例如图\ref{fig:SCH_data}所示，设置一个阀值$\eta_c$，当时域信号的值大于该阀值，就在阀值处进行削波。但是与传统的削波技术不同的是，削波余量不是直接丢弃，而是放在被削波符号的对称位置（图中的29 处）。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/SCH_data.eps}
+    \caption{ACO-OFDM信号处理时频域示意图}
+    \label{fig:SCH_data}
+\end{figure}
+为提高RoC-ACO-OFDM的性能，在前面提出的基本原理的基础上，我们进一步限制，削波余量$x(n)-\eta_c$不能大于$\alpha \eta_c(\alpha<1)$,即搬移量一定要少于原位置削波后的剩余量$\eta_c$。这样如图\ref{fig:HypothesisSketch}所示，根据信号幅度及位置的关系，共有6 种假设。对接收到的数据进行成对处理，先计算它们属于6 种假设的后验概率，选出后验概率最大的一种假设，并用针对这种假设的恢复算法进行数据恢复。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/HypothesisSketch.eps}
+    \caption{RoC-ACO-OFDM发射信号的六种假设}
+    \label{fig:HypothesisSketch}
+\end{figure}
+当然$\alpha$的值是可以自己去设置的，当$\alpha$等于0时，相当于没有进行削波搬移，RoC-ACO-OFDM退化为普通的削波ACO-OFDM，但是 等于甚至大于1，将会导致信号恢复时的位置反转错误，这种错误将会显著降低系统的性能。因此我们应该设置合理的$\alpha$值，在后面的仿真中，我们令$\alpha$等于0.95，仿真结果显示在一般的应用情景下，这个值是合理的。
+
+基于前面的六种假设，我们能够用MAP算法来判断哪种假设成立，然后针对这种假设来进行信号恢复，这样的算法是性能最优的。但是缺点是复杂度很高，不利用实现。为此我们提出了简化的信号检测方法，不再需要计算MAP概率，而是直接使用信号值的大小比较就能进行信号恢复。
+
+MAP算法得到的判决区域与设定的阀值(η_𝑐)之间有着密切的关系(如图6所示)，并且经分析发现把判决区域  和 合并及 和 合并只会对性能造成很微妙的影响，如得到如下简化算法。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/MAP_RoC_ACO_OFDM.eps}
+    \caption{RoC-ACO-OFDM发射信号的六种假设}
+    \label{fig:HypothesisSketch}
+\end{figure}
+
 \section{本章小结}
 本章首先可见光通信的基本原理，包括系统模型、信道特征及光电元器件等，本文联系实际情况将可见光通信信道建模为线性信道，然后介绍了电光转换器件LED，详细说明了荧光激发型LED和多色混合型LED的工作原理和特性，还介绍PIN 和APD两类光电转换器件及接收端使用的滤光片。理解这些光电元器件的原理与作用有益于理解整个可见光通信系统。由于OFDM调制技术非常适应光低通信道，在可见光通信中也得到了广泛的使用，所以本章也介绍了光OFDM技术，主要说明了DCO-OFDM和ACO-OFDM的工作原理及区别。

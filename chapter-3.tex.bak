@@ -196,6 +196,7 @@ R=\frac{\sum_{p=0}^{P_c}|\bar{Q}_M(p)|^2+\sum_{p=M-P_c}^{M-1}|\bar{Q}_M(p)|^2}{\
 \end{equation}
 式中$a$的作用是均衡M点FFT变换与N点IFFT变换之间的系数变化。
 \section{可见光通信中的信道估计}
+\label{section:Channel_Estimation}
 从上节的分析中可以看到基于导频的信道估计中导频子载波的放置有两种方式，一种是块状放置方式，另一种是梳状放置方式。梳状放置方式计算复杂度比较高，但是能够适应快速时变的通信环境，而块状放置方式结构简单，它适应于准静态的信道估计。室内可见光通信信道正是一种准静态信道，所以本课题主要研究基于块状放置的导频信道估计方法。
 \subsection{可见光通信系统帧结构}
 为了讨论实际系统中的信道估计，首先有必要介绍下可见光通信系统的OFDM帧结构及符号结构。如图\ref{fig:FrameStructure} 中所示是一个典型的DCO-OFDM 帧结构示意图，一个OFDM 帧由一个精心设计的导频符号开始，后面跟着$N$个数据符号，而在每个OFDM数据符号中，在N个可用子载波中，最低频的m个和最高频的n 个子载波被设置为虚拟子载波，即在这些子载波上置零而不放置任何数据，在高频设置虚拟子载波很容易理解，从第二章的分析中可以知道室内可见光信道时一个低通的信道，意味着高频子载波的信噪比可能不够，故不能传输数据，而在低频也要设置虚拟子载波是因为在接收端有个去掉DCO-OFDM偏置的隔直电路，其实就是一个高通滤波器，但是这个滤波器不是理想的，会对低频的几个子载波造成影响，所以也要将其设置为虚拟子载波；最后的N 个子载波是保证IFFT 结果为实数加的共轭对称子载波。在系统设计中，为了提高系统的实际传输速率，减少额外开销，选择的导频序列不但要用于信道估计，还要起到定时同步的作用。Zadoff-Chu （ZC）序列就是一种能够同时满足这两个条件的序列，下面先简要介绍下ZC序列。
@@ -294,14 +295,14 @@ e^{-\frac{2\pi r}{N}(k(k+1)/2+qk)}, &N\text{为奇数}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-3/BER_SNR_avg.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-3/BER_SNR_avg.eps}
 \caption{不同信道估计方法BER性能比较}
 \label{fig:BER_SNR_avg}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-3/MSE_SNR_avg.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-3/MSE_SNR_avg.eps}
 \caption{不同信道估计方法MSE性能比较}
 \label{fig:MSE_SNR_avg}
 \end{figure}
@@ -314,7 +315,7 @@ MSE = E\left(\frac{1}{N}\sum_{i=0}^{N-1}|H_R(i)-\hat{H}(i)|^2\right)
 为了进一步比较不同信道估计方法的性能优劣，图\ref{fig:BER_sc}展示了当信噪比设置为25 dB时每个子载波上的BER性能。从图中可以看出，在相同的调制阶数的子载波上，BER 随着子载波序号的增加而升高，这是因为低通信道的作用；在调制阶数变低时，子载波上的BER也剧降。从图中我们也可以看出，这个发射端在子载波上等功率分配的方式使得子载波上的BER方差很大，不利于整体BER性能提高，这方面的分析将在第四章详细说明。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-3/BER_sc.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-3/BER_sc.eps}
 \caption{SNR=25 dB时不同子载波上的误比特率}
 \label{fig:BER_sc}
 \end{figure}
@@ -349,5 +350,23 @@ MSE = E\left(\frac{1}{N}\sum_{i=0}^{N-1}|H_R(i)-\hat{H}(i)|^2\right)
     \label{fig:SVD_BER_MSE_SNR_avg}
 \end{figure}
 \section{实际系统中的信道估计误差}
-进行自适应传输时，不仅需要估计信道的冲激响应以用于解调，还需要估计信道的信噪比信息以选择合适的比特分配和能量分配策略，所以准确的信噪比估计是自适应传输的前提条件。
+进行自适应传输时，不仅需要估计信道的冲激响应以用于解调，还需要估计信道的信噪比信息以选择合适的比特分配和能量分配策略，所以准确的信噪比估计是自适应传输的前提条件。常用的信噪比估计有两种方法，一种是直接使用导频序列，使用式\ref{equ:chapter-3-3}，得到信噪比的表达式为：
+\begin{equation}
+SNR(i) = \frac{|X(i) \hat{H}(i)|^2}{|Y(i)-X(i) \hat{H}(i)|^2}
+\end{equation}
+其中$SNR(i)$表示第i个子载波处的信噪比，$\hat{H}(i)$表示信道频域响应的估计值，可以是\ref{section:Channel_Estimation}中任意的一种估计方法，$X(i)$表示第i 个子载波上的发射符号，$Y(i)$表示第i个子载波处的接收符号；另一种方法要使用额外的训练序列，称为误差向量幅度法（Error Vector Magnitude，EVM），EVM的定义如下：
+\begin{equation}
+EVM(i) = |\hat{X}(i)-X(i)|^2
+\end{equation}
+式中$X(i)$表示第i个子载波上的发射信号，$\hat{X}(i)$表示使用信道估计均衡后的接收信号，EVM与SNR之间的关系是\cite{shafik2006extended}：
+\begin{equation}
+SNR \approx \frac{1}{EVM^2}
+\end{equation}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/chapter-3/SNR_ZC_EVM.eps}
+\caption{SNR=25 dB时不同子载波上的误比特率}
+\label{fig:BER_sc}
+\end{figure}
 \section{本章小结}

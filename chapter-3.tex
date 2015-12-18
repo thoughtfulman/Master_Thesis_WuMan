@@ -349,12 +349,12 @@ MSE = E\left(\frac{1}{N}\sum_{i=0}^{N-1}|H_R(i)-\hat{H}(i)|^2\right)
     \caption{SVD信道估计方法不同M值下性能比较}
     \label{fig:SVD_BER_MSE_SNR_avg}
 \end{figure}
-\section{实际系统中的信道估计误差}
-进行自适应传输时，不仅需要估计信道的冲激响应以用于解调，还需要估计信道的信噪比信息以选择合适的比特分配和能量分配策略，所以准确的信噪比估计是自适应传输的前提条件。信噪比估计有两种方法，一种是直接使用导频序列，使用式\ref{equ:chapter-3-3}，得到信噪比的表达式为：
+\section{可见光通信中的信噪比估计方法}
+进行自适应传输时，不仅需要估计信道的冲激响应以用于解调，还需要估计信道的信噪比信息以选择合适的比特分配和能量分配策略，所以准确的信噪比估计是自适应传输的前提条件。常用的信噪比估计方法有两种，一种是直接使用导频序列，使用式\ref{equ:chapter-3-3}，得到信噪比的表达式为：
 \begin{equation}
 SNR(i) = \frac{|X(i) \hat{H}(i)|^2}{|Y(i)-X(i) \hat{H}(i)|^2}
 \end{equation}
-其中$SNR(i)$表示第i个子载波处的信噪比，$\hat{H}(i)$表示信道频域响应的估计值，可以是\ref{section:Channel_Estimation}中任意的一种估计方法，$X(i)$表示第i 个子载波上的发射符号，$Y(i)$表示第i个子载波处的接收符号；另一种方法要使用额外的训练序列，称为误差向量幅度法（Error Vector Magnitude，EVM），EVM的定义如下：
+其中$SNR(i)$表示第i个子载波处的信噪比，$\hat{H}(i)$表示信道频域响应的估计值在时域的平均值，可以是\ref{section:Channel_Estimation}中任意的一种估计方法，$X(i)$表示第i 个子载波上的发射符号，$Y(i)$表示第i个子载波处的接收符号；另一种方法要使用额外的训练序列，称为误差向量幅度法（Error Vector Magnitude，EVM），EVM的定义如下：
 \begin{equation}
 EVM(i) = |\hat{X}(i)-X(i)|^2
 \end{equation}
@@ -363,10 +363,12 @@ EVM(i) = |\hat{X}(i)-X(i)|^2
 SNR \approx \frac{1}{EVM^2}
 \end{equation}
 
+图\ref{fig:SNR_ZC_EVM}给出了在本课题硬件平台中使用上述两种方法估计的信噪比结果，其中ZC表示使用ZC序列作为导频使用第一种方法估计出来的信道，从中可以看出使用EVM的估计值明显低于使用导频的估计值，但是与测得的硬件平台的BER比较，发现EVM方法的估计值更加吻合。这个也不难解释，因为实际信号传输的过程中，不仅会受到噪声的影响，还会受到信道估计误差的影响。但是第一种方法并没有考虑到信道估计误差的因素，所以估计值更大；而EVM方法考虑了这两个因素，所以信噪比的估计值小，但是更加准确。虽然EVM估计需要额外的开销，但为了能够更好的估计信噪比，为后面自适应算法提供可靠的参数，这点开销是值得的，所以在实际系统设计中，推荐使用这个信噪比估计的方法。
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/chapter-3/SNR_ZC_EVM.eps}
-\caption{SNR=25 dB时不同子载波上的误比特率}
-\label{fig:BER_sc}
+\caption{两种信噪比估计方法比较}
+\label{fig:SNR_ZC_EVM}
 \end{figure}
 \section{本章小结}
+本章主要分析了OFDM信道估计方法的基本原理及其在可见光通信中的应用，首先探讨了OFDM信道估计的常用方法，重点放在基于导频的方法中，系统研究了基于最小二乘法的LS信号估计方法、基于最小均方误差的MMSE方法及其基于MMSE两个改进方法LMMSE和SVD分解方法；然后结合可见光通信系统设计的实例，使用ZC序列作为导频，通过仿真的方法比较了上述方法在可见光信道下的性能，发现LS算法虽然简单，但是性能最差，而基于MMSE的LMMSE和SVD方法性能差异不大；最后讨论了OFDM系统中信噪比的估计方法，分析了基于导频的估计方法和EVM方法，得出了EVM方法虽然需要额外的开销，但是其估计值更加吻合实际系统，推荐在可见光自适应传输系统中使用该方法。
