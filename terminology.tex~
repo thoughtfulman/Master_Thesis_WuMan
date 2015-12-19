@@ -35,7 +35,7 @@
 \bf{PAPR}	&	Peak to Average Power Ratio	&	峰均比	\\
 \bf{PD}	&	Photo Diode	&	光电二极管	\\
 \bf{PN Seq.}	&	Pseudo-Noise Sequence	&	伪随机序列	\\
-\bf{QAM}	&	Quadrature amplitude modulation	&	正交幅度调制	\\
+\bf{QAM}	&	Quadrature amplitude modulation		正交幅度调制	\\
 \bf{RA}	&	Rate Adaptive	&	最大速率准则	\\
 \bf{SBLA}	&	Simple Blockwise Loading Algorithm	&	简单分组分配算法	\\
 \bf{SNR}	&	Signal Noise Ratio	&	信噪比	\\
