@@ -61,28 +61,20 @@ DAC选用美国TI公司生成的八通道高速数模转换芯片，型号为DAC
 软解调得到的软件被送入LDPC码解码模块进行解码，软解调的输出位宽因调制阶数不同不同，如使用4QAM调制的子载波软解调输出位宽为16（$8\times 2$）bit、16QAM为32 （$8\times 4$）bit、64QAM为48（$8\times 6$）bit、256QAM对应为64（$8\times 8$）bit，而解码器的输入位宽为$256=8\times 32$ bit，所以这里也存在数据位宽变换的问题，可以先将各阶调制得到的软量存在各自的RAM中，然后统一以64 bit位宽读出到一个FIFO中，再以256 bit位宽读出送入LDPC解码器解码。如接收端基带处理时序图\ref{fig:TransmitterSchematic}所示，解码过程所需要的时间也迭代次数成正比，具体为迭代次数加1再乘以227，本系统设置迭代次数为20，故整个解码过程为4767 clk。解码器输出位宽为48 bit，经位宽变换为8 bit 之后送入CRC模块进行校验，以统计误帧率，这是系统QoS一个重要的指标。如果通过CRC校验帧正确，则通过以太网接口送入接收端计算机，否则丢弃该帧。
 
 
-\section{自适应模块方案设计}
-上节从硬件参数到基带设计对整个硬件平台进行了简略的介绍，我们已经对整个系统有了一定的认识。在原来的系统上实现自适应传输功能只需就行几个模块的改造，而发射端编码器及之前、接收端译码器及之后等部分都不要变。下面详细介绍这几个涉及到自适应传输的模块。
+\section{自适应模块FPGA方案设计}
 \subsection{自适应调制模块}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/chapter-5/AdaptiveModulation.eps}
-\caption{自适应调制模块示意图}
-\label{fig:AdaptiveModulation}
+\caption{接收端基带处理时序图}
+\label{fig:TransmitterSchematic}
 \end{figure}
-发射端的自适应调制模块设计如图\ref{fig:AdaptiveModulation}所示，已完成信道编码的数据放在一个位宽为8 bit的RAM中，现在要将这些数据分配到各个子载波上，本系统设计中我们的调制方式限定为4QAM、16QAM、64QAM和256QAM，而每种不同的调制每个符号能够携带的信息比特数也不同，每个M-QAM
 \subsection{信噪比估计与自适应参数计算}
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-5/AdaptiveParameterGenerator.eps}
-\caption{自适应参数生成模块示意图}
-\label{fig:AdaptiveParameterGenerator}
-\end{figure}
 \subsection{自适应软解调模块}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/chapter-5/AdaptiveDemodulation.eps}
-\caption{自适应软解调模块示意图}
-\label{fig:AdaptiveDemodulation}
+\caption{接收端基带处理时序图}
+\label{fig:TransmitterSchematic}
 \end{figure}
 \section{本章小结}
