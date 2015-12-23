@@ -1,7 +1,35 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Main.aux
 The style file: seuthesis.bst
+A level-1 auxiliary file: abstract-cn.aux
+A level-1 auxiliary file: abstract-en.aux
 A level-1 auxiliary file: terminology.aux
+A level-1 auxiliary file: chapter-1.aux
+A level-1 auxiliary file: chapter-2.aux
+A level-1 auxiliary file: chapter-3.aux
+A level-1 auxiliary file: chapter-4.aux
 A level-1 auxiliary file: chapter-5.aux
-I found no \bibdata command---while reading file Main.aux
-Warning--I didn't find a database entry for "FPGAIntroduciton"
-(There was 1 error message)
+A level-1 auxiliary file: chapter-6.aux
+A level-1 auxiliary file: Resume.aux
+A level-1 auxiliary file: Acknowledgement.aux
+Database file #1: Reference.bib
+Repeated entry---line 239 of file Reference.bib
+ : @article{vuvcic2010513
+ :                       ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 521 of file Reference.bib
+ :   address={重庆}
+ :                   ，
+I'm skipping whatever remains of this entry
+Warning--empty year in afgani2006visible
+You can't pop an empty literal stack for entry afgani2006visible
+while executing---line 3542 of file seuthesis.bst
+Warning--there's a number but no volume in 付可2015lte
+You can't pop an empty literal stack for entry 付可2015lte
+while executing---line 3542 of file seuthesis.bst
+You can't pop an empty literal stack for entry 付可2015lte
+while executing---line 3542 of file seuthesis.bst
+You can't pop an empty literal stack for entry sandell1996comparative
+while executing---line 3542 of file seuthesis.bst
+You can't pop an empty literal stack for entry hughes1989ensemble
+while executing---line 3542 of file seuthesis.bst
+(There were 7 error messages)

@@ -1,7 +1,8 @@
 % !Mode:: "TeX:UTF-8"
 
 \chapter{绪论}\label{chap:introduction}
-随着移动互联网的发展，其提供的各种方便快捷的功能已经深刻的改变了人们的生活方式。同时物联网、智能家居等相关产业也正处于快速发展阶段，如何为多种多样的智能设备提供安全可靠而又绿色经济的无线接入方式显得格外重要，虽然目前使用的蜂窝网及WIFI接入能解决大部分的接入问题，但是由于频谱资源的限制迫使人们寻找新的接入方式。同时发光二极管(Light Emitting Diode, LED) 作为新一代绿色高效的光源在照明市场上高歌猛进,预计到2021年，其市场占有率将超过52\%\cite{陈特2013 可见光通信的研究}。以LED为基础的室内可见光(Visible Light Communication, VLC）迎来了前所未有的发展机遇。
+随着移动互联网的发展，其提供的各种方便快捷的功能已经深刻的改变了人们的生活方式。同时物联网、智能家居等相关产业也正处于快速发展阶段，如何为多种多样的智能设备提供安全可靠而又绿色经济的无线接入方式显得格外重要，虽然目前使用的蜂窝网及WIFI接入能解决大部分的接入问题，但是由于频谱资源的限制迫使人们寻找新的接入方式。同时发光二极管(Light Emitting Diode, LED) 作为新一代绿色高效的光源在照明市场上高歌猛进,预计到2021年，其市场占有率将超过52\%
+\cite{陈特2013可见光通信的研究}。以LED为基础的室内可见光通信(Visible Light Communication, VLC）迎来了前所未有的发展机遇。
 
 \section{论文研究背景及意义}\label{sec:background}
 \subsection{研究背景}
@@ -22,7 +23,7 @@
 
 2000年，来自日本庆应义塾大学的Tanaka团队首次提出使用白光LED作为光源的室内可见光通信模型\
 \cite{tanaka2000wireless}，并且进行了简单的数学分析及仿真实验指出了多径产生的符号间干扰(Inter Symbol Interference, ISI)和接收机视场
-角(Field of View, FOV)是影响通信性能的两个主要因素。2001 年，他们研究了正交频分复用调制(Orthogonal frequency division modulation, OFDM)和归零开关键控(On-Off Keying Return-to-Zero, OOK-RZ) 在白光LED多灯情况下的通信性能\cite{tanaka2001indoor}，通过仿真表明在多灯的场景下，不同发射端到达接收端的路程差造成的多径对系统性能影响显著，同时指出OOK-RZ能够胜任较为低速的情况(100 Mbps)，而带有保护间隔的OFDM能够很好的抵抗多径引起的时延扩展，适应高速环境(400 Mbps)。2004年，Toshihiko Komine进一步指出ISI取决于传输速率和FOV两个因素，并且预言可见光通信的速率可以达到10 Gb/s\cite{komine2004fundamental}。21世纪初，日本一直走在可见光通信研究的前列，并且于2003年成立了可见光通信协议(Visible Light
+角(Field of View, FOV)是影响通信性能的两个主要因素。2001 年，他们研究了正交频分复用调制(Orthogonal Frequency Division Modulation, OFDM)和归零开关键控(On-Off Keying Return-to-Zero, OOK-RZ) 在白光LED多灯情况下的通信性能\cite{tanaka2001indoor}，通过仿真表明在多灯的场景下，不同发射端到达接收端的路程差造成的多径对系统性能影响显著，同时指出OOK-RZ能够胜任较为低速的情况(100 Mbps)，而带有保护间隔的OFDM能够很好的抵抗多径引起的时延扩展，适应高速环境(400 Mbps)。2004年，Toshihiko Komine进一步指出ISI取决于传输速率和FOV两个因素，并且预言可见光通信的速率可以达到10 Gb/s\cite{komine2004fundamental}。21世纪初，日本一直走在可见光通信研究的前列，并且于2003年成立了可见光通信协会(Visible Light
 communication consortium，VLCC)，积极推进可见光的研究和技术标准化，夏普、松下、东芝、三星、NEC和卡西欧等公司都是其成员。
 
 在欧洲，由二十多家国际知名大学和公司联合确立了OMEGA计划，以最终形成亿兆家庭网络标准为目的，其中室内光通信是其主要的研究对象，该计划在可见光点对点传输系统设计领域了取得了不错的研究成果\cite{vuvcic2009125,vuvcic2009white,vuvcic2010513,vucic2011803}。 来自爱丁堡大学的Harald Haas教授团队也对可见光通信进行了广泛的研究，包括调制方式
@@ -30,12 +31,12 @@ communication consortium，VLCC)，积极推进可见光的研究和技术标准
 \cite{stefan2011optical,chun2014demonstration,manousiadis2015demonstration} 及室内可见光混合组网
 \cite{wang2015dynamic,stefan2014hybrid,basnayaka2015hybrid} 等。在2011 年，Hass教授以可见光通信为主题在TED(Technology, Entertainment, Design) 上做过一次演讲，该演讲视频在网络上播放超过150万次，使得无线光通信被人们熟知。
 
-美国同样重视可见光通信的发展，在2008年10月美国国家科学基金会(National science foundation, NSF)出资1.85亿美元，提出了志在推动基于LED的可见光通信技术的“智慧照明(Smart lighting)” 项目，希望能在LED照明系统中嵌入可见光通信技术以提供更多的无线接入点。2009 年，美国电子电气工程师协会（Institute of Electrical and Electronics Engineers，IEEE）
+美国同样重视可见光通信的发展，在2008年10月美国国家科学基金会(National Science Foundation, NSF)出资1.85亿美元，提出了志在推动基于LED的可见光通信技术的“智慧照明(Smart lighting)” 项目，希望能在LED照明系统中嵌入可见光通信技术以提供更多的无线接入点。2009 年，美国电子电气工程师协会（Institute of Electrical and Electronics Engineers，IEEE）
 标准化组织将无线光通信技术列入无线私域网（Wireless Personal Area Network, WPAN）的实现范畴内，同时制定了无线光通信技术标准——IEEE 802.15.7，大力推动无线光通信技术的标准化。
 
 从2008年开始，各国的研究人员设计出了很多基于白光LED的无线可见光通信演示系统，在传输速率上也是你追我赶。2008年，来自英国诺森比亚大学的Hoa Le Minh等人采用多共振均衡方法将白光LED的3 dB带宽由2.5 MHz提升到了25 MHz，并且基于OOK调试实现了通信速率达40 Mbps的系统\cite{minh2008high}，2009年，他们又通过在接收端加入一个一阶均衡器将3 dB带宽扩展到了50 MHz，也在OOK调制下设计了速率为100 Mbps的通信系统\cite{le2009100}，Hoa Le Minh等人的工作为可见光高速通信系统的设计奠定了基础。2010年，Jelena Vu{\v{c}}i{\'c}等人使用波分复用(Wavelength Division Multiplexing, WDM) 和离散多音调制((Discrete Multi-Tone, DMT)技术将通信速率提高到513 Mbps\cite{vuvcic2010513}。2012年，A.M.Khalid采用DMT自适应调制实现了通信速率达 1 Gbps的系统，再次刷新了可见光系统速率记录。
 
-自2012年以来，研究人员开始使用基于RGB LED来进一步提升可见光通信系统的速率。2012年，Giulio Cossu等人采用DMT调制在RGB LED灯下实现了将可见光通信系统的速率提高到3.4 Gbps\cite{cossu20123}。2015 年，已经有研究人员讨论了使用角度分集(Angle Diversity)、图形接收器(Imaging Receivers)和中继点(Relay Node)在RGB LED通信速率达到10 Gbps 系统\cite{hussein201510}。
+自2012年以来，研究人员开始使用基于RGB LED来进一步提升可见光通信系统的速率。2012年，Giulio Cossu等人采用DMT调制在RGB LED灯下实现了将可见光通信系统的速率提高到3.4 Gbps\cite{cossu20123}。2015 年，已经有研究人员讨论了使用角度分集(Angle Diversity)、图形接收器(Imaging Receivers)和中继点(Relay Node)在RGB LED 通信速率达到10 Gbps 系统\cite{hussein201510}。
 
 
 
@@ -44,7 +45,14 @@ communication consortium，VLCC)，积极推进可见光的研究和技术标准
 \cite{wang2013demonstration,wang2013875,chi2014ultra}。目前正在向10 Gbps量级通信速率的系统努力\cite{wang2014integrated}。
 
 \section{论文主要研究工作和章节安排}\label{sec:concept}
-本人在硕士研究生阶段主要室内可见光领域的研究。研一时，重点放在专业课程及可见光理论方面的学习，特别关注了OFDM技术在可见光系统中的应用，并且改进了非对称削波光正交频分复用(Asymmetrically Clipped Optical OFDM, ACO-OFDM)调制技术，针对ACO-OFDM系统时域信号的特征，提出了一种能够明显改善ACO-OFDM 系统峰均比(Peak to Average Power Ratio, PAPR)性能的结构，即在发射端削波而在接收端能恢复的非对称削波光正交频分复用(Recoverable Upper Clipping ACO-OFDM, RoC-ACO-OFDM)\cite{xu2014aco}。研二研三主要进行了可见光通信点对点系统设计实现及自适应传输相关技术的研究。与另外两位同学基于现场可编程门阵列(Field－Programmable Gate Array, FPAG)设计了一套传输参数可配置的可见光通信演示系统，该系统已有自适应传输的雏形。与对与自适应传输相关的信道估计、能量分配及比特分配等相关内容进行了学习研究。限于毕业论文课题范围，本文仅关注可见光通信自适应传输技术，主要内容安排如下：
+本人在硕士研究生阶段主要室内可见光领域的研究。研一时，重点放在专业课程及可见光理论方面的学习，特别关注了OFDM技术在可见光系统中的应用，并且改进了非对称削波光正交频分复用(Asymmetrically Clipped Optical OFDM, ACO-OFDM)调制技术，针对ACO-OFDM系统时域信号的特征，提出了一种能够明显改善ACO-OFDM 系统峰均比(Peak to Average Power Ratio, PAPR)性能的结构，即在发射端削波而在接收端能恢复的非对称削波光正交频分复用(Recoverable Upper Clipping ACO-OFDM, RoC-ACO-OFDM)\cite{xu2014aco}。研二研三主要进行了可见光通信点对点系统设计实现及自适应传输相关技术的研究。与另外两位同学基于现场可编程门阵列(Field Programmable Gate Array, FPAG)设计了一套传输参数可配置的可见光通信演示系统，该系统已有自适应传输的雏形。并对与自适应传输相关的信道估计、比特功率分配等相关内容进行了学习研究。限于毕业论文课题范围，本文仅关注可见光通信自适应传输技术，主要内容安排如下：
 
-第一章主要介绍可见光通信的研究背景，包括其基本原理及与传统通信方式相比的优势，同时也对可见光通信在国内外的发展历程进行了概述。
+第一章主要介绍了本课题关注的可见光通信的研究背景，包括其应用场景及与传统通信方式相比的优势，同时也对可见光通信在国内外的发展历程进行了概述。
 
+第二章是可见光通信系统的概述。首先介绍可见光通信的基本原理，包括系统模型、信道特征及光电元器件等，并联系实际情况将可见光通信信道建模为线性信道；然后介绍了电光转换器件LED，比较荧光激发型LED和多色混合型LED的工作原理和特性，还对PIN 和APD两类光电转换器件及接收端使用的滤光片进行了简要说明。由于OFDM调制技术非常适应光低通信道，在可见光通信中也得到了广泛的使用，所以本章还将概述光OFDM技术，主要说明了DCO-OFDM和ACO-OFDM的工作原理及区别，在此基础上提出了一种改善ACO-OFDM 系统PAPR 性能的RoC-ACO-OFDM方案，并将在理论和数值仿真的角度论证该方案的有效性。
+
+第三章主要研究信道估计方法。首先分析了OFDM信道估计方法的基本原理及其在可见光通信中的应用，研究了OFDM信道估计的常用方法，重点放在基于导频的方法中，将系统研究基于最小二乘法的LS信号估计方法、基于最小均方误差的MMSE方法及其基于MMSE两个改进方法LMMSE和SVD分解方法；然后结合可见光通信系统设计的实例，使用ZC序列作为导频，通过仿真的方法比较了上述方法在可见光信道下的性能；最后讨论了OFDM系统中信噪比的估计方法。
+
+第四章介绍OFDM系统的比特和功率分配算法，研究其在可见光通信中的应用。首先阐述自适应传输的理论基础—香农信息论和注水定理；然后说明自适应传输的三种优化准则，即固定目标误比特率和发射功率的最大速率准则（Rate Adaptive，RA）、固定目标误比特率和速率的最小发射功率准则（Margin Adaptive，MA）及固定发射功率和速率的最小误比特率准则（BER Adaptive，BA），在此基础上介绍OFDM自适应传输领域三个最经典的算法，分别是在RA和MA准则下最优的Hughes-Hartogs算法、BA准则下Chow算法和Fischer算法，详细说明了这些算法的推导和实现步骤，并且通过仿真比较了它们的性能差异，发现在可见光通信信道下它们在BA准则下BER性能相差不大；最后分析了适合子载波SNR相关性较大的SBLA算法，因此可见光信道本身就是低通的，天然合适SBLA算法的应用，并且进一步利用可见光通信信道特征，提出了适应线性插值来进行功率分配的Improved-SBLA算法，通过仿真发现改进的算法在减少了反馈量就运算复杂度的基础上，BER性能与SBLA相当，说明改进算法是合理可行的。
+
+第五章在前面几章讲解可见光通信原理及其自适应传输理论的基础上，介绍了本课题对应的硬件平台。首先对整个硬件平台进行了概述，包括各种器件的参数及其选择依据，并且简述了发射端和接收端的基带处理处理过程；然后重点描述了基带处理中与自适应技术密切相关的调制器、自适应参数生成、软解调三个模块；最后展示了整个硬件平台实物图。
