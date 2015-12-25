@@ -1,41 +1,16 @@
 % !Mode:: "TeX:UTF-8"
 
 % English Abstract
-\begin{englishabstract}{Visible Light Communications\quad{}Networking Technology\quad{}Optimization\quad{}LED Scheduling\quad{}Incremental Scheduling}
+\begin{englishabstract}{Visible Light Communication\quad{}OFDM\quad{}Channel Estimation\quad{}Adaptive Transmission\quad{}FPGA}
 
-In recent years, the development of wireless communication has encountered many restrictions,
-such as the scarcity of spectrum resources, the radio frequency (RF) radiation hazards to human body.
-With the continuous development of light emitting diode (LED) technology and the continuous application of LED in the modern family,
-the corresponding indoor visible light communication (VLC) technology, which uses the LED lights for data transmission,
-has attracted a great attention and was carried out in-depth research.
-For VLC has great advantages in rich spectrum resources, green and safe use, high energy conversion rate and other aspects,
-it has important research value for achieving green high-speed indoor communication.
-This paper mainly focuses on networking technology of indoor VLC systems to efficiently solve the multi-user communication problem in typical indoor networking scenarios.
+With the development of mobile Internet, which provides a variety of convenient features and has profoundly changed people's life. Meanwhile, Internet of things, smart home and other related industries are also in rapid development stage, how to provide reliable and secure wireless access to these intelligent devices in a green economy way is particularly important, although the use of cellular and WIFI can solve most of the access problem, but due to spectrum limitation and potential health problem caused by radiation forcing people to look for new technology. At the same time as a new generation of green efficient light source, LED is very popular in the lighting market,  its market share is expected be more than 52 \% in 2021. LED-based indoor visible light communication meets an unprecedented development opportunity. In this paper, adaptive transmission in the field of VLC based on OFDM modulation techniques are studied, including channel estimation, adaptive algorithms and so on.
 
-Firstly, the paper introduces the research background and research progress of VLC and networking technology of VLC.
-Since the concept of VLC was proposed, studies of VLC have been widely carried out in the world, but most researches focus on physical layer of VLC to achieve a higher rate of data transmission.
-However, the paper focus on the theoretical research in networking technology of VLC systems. In addition, the paper also introduces the related basis theories of VLC,
- such as optical communication link mode, channel analysis, and the paper describes some technical issues in networking terms we may encounter.
+At first, This paper introduces the research background and summarizes the development history of visible light communication. Then briefly introduces the basic principles of visible light communication, including system model, the channel characteristics, electro-optical and optical-electro conversion device, etc. According to the actual situation, visible communication channel is modeled as a linear channel in this paper. The optical OFDM is also studied, including the DC-biased optical OFDM(DCO-OFDM) and Asymmetrically clipped optical OFDM(ACO-OFDM). Then, a peak to average power ratio(PAPR) reduction technology for ACO-OFDM called RoC-ACO-OFDM is proposed. 
 
-Secondly, the layout optimization problem of LED lights of VLC systems has been studied.
-For this problem, the paper is not simply considering the uniformity of coverage,
-but establishes a multi-objective optimization model with light intensity and light uniformity of the received power as a target, with the average power value of the receiving plane as another target,
-with the other aspects as constraint conditions. And the multi-objective optimization model can be transformed into a single-objective optimization model to solve.
-Simulation results show that the model can be configured through the weighting coefficients to adjust the LED layout for the different needs and achieve a reasonable optimization layout results.
+Subsequently, the common OFDM channel estimation methods are discussed, including LS, MMSE, LMMSE and SVD. Then, we compares the performance of these estimation algorithms using ZC sequence as pilot,  the same as in our demo system. The result shows that the performance of LS method is slightly inferior to LMMSE and SVD algorithm, but its implementation is much more simple. The SNR estimation methods are discussed at last. Pilot-based and EVM methods are analyzed. we find that EVM is much more accurate and suggest this approach in our real system design.
 
-Thirdly, the paper studied scheduling problem of VLC systems with distributed LED lights.
-Distributed LED lights mean that all the lights are connected to a scheduler, and controlled by the scheduler.
-In the framework, we propose a user-direction based collaborative LED scheduling scheme.
-As the scheme shows, user's uplink power can be measured by the LED arrays through data communication of user and LED arrays, thus the user's direction information can be calculated by a period time of power measurement.
-Considering the direction informations above, LED arrays can be scheduled to fit the user movements, thus to ensure the reliable communication when user moves in the indoor environment.
-Simulation results show that the proposed scheme has better performance than the scheduling scheme without using collaborative LED lights and simple cooperative LED lights scheduling algorithm in data retransmission aspects.
-The proposed scheme can also meet the system requirements for reliable communications.
+Then, this thesis discusses the bit and power allocation algorithm for OFDM systems. The Shannon information theory and water filling algorithm are given at first as fundamental knowledge of adaptive transmission. Then introduces three most classic allocation algorithms, they are optimal Hughes- Hartogs algorithm, Chow algorithm and Fischer algorithm. The performance of these algorithms is examined through simulation under wireless optical channel. The result reveals that they have a similar performance. At last, simple block loading algorithm(SBLA) is analysed , which is very appropriate for wireless optical channel. A improved algorithm based on SBLA is proposed aiming to reduce feedback information from receiver to transmitter.
 
-Finally, the paper also studied scheduling problem of VLC system with independent LED lights.
-Independent LED lights mean that lights can independently send data to user without affecting other LED arrays.
-We propose an incremental scheduling scheme in this framework. The incremental scheduling scheme can be divided into two phases, namely the long-term global scheduling and short-term local scheduling.
-The long-term global scheduling, which is scheduled for all users, is used to eliminate inter-user interference and maximize system capacity,
-while short-term local scheduling, which is scheduled only for moving users by low complexity scheme, can eliminate the inter-user interference caused by user movements and reduce the computation.
-The simulation results show that the incremental scheduling scheme can work efficiently in the multi-user motion scenarios, and can achieve near-optimal performance, but with low complexity.
+Finally, based on the visible light communication principle and adaptive transmission theory explained in the previous chapters, we introduces our  hardware demo platform. First, an overview is given to the entire hardware platform, including the parameters of a variety of devices and the reason why choose them. Then, the baseband processing at both transmitter and receiver end is described. Subsequently, the modules which are related to adaptive transmission is analyzed in detail, including modulation module at transmitter end and demodulation module and adaptive parameter generator module at receiver end. A presentation of our demo system is given out at last.
 
 \end{englishabstract}

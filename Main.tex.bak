@@ -9,58 +9,58 @@
 \usepackage{algorithmic}
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%以下内容先一键注释掉，等到成文之后再加入编译%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\categorynumber{TN92} % 分类采用《中国图书资料分类法》
-%\UDC{621.3}            %《国际十进分类法UDC》 的类号
-%\secretlevel{公开}    %学位论文密级分为"公开"、"内部"、"秘密"和"机密"四种
-%\studentid{130657}   %学号要完整，前面的零不能省略。
-%\title{可见光多波段通信系统自适应传输\ \ 技术研究}{}{Research On Adaptive Transmission Technology Of Multi Visible Light Communication System}{}
-%\author{吴满}{Man Wu}
-%%\author{}{~}
-%\advisor{赵春明}{教授}{Chunming Zhao}{Prof.}
-%%\advisor{}{}{~}{~}
-%%\coadvisor{张\quad{}华}{副教授}{Hua Zhang}{Associate Prof.}  % 没有可以不填
-%
-%\degree{工学硕士} % 详细学位名称
-%\major{信息与通信工程}
-%\submajor{通信与信息系统}
-%\defenddate{2016年1月24日}
-%%\defenddate{}
-%%\authorizedate{2015年3月20日}
-%\authorizedate{}
-%\department{信息科学与工程学院}{School of Information Science and Engineering}
-%\duration{2013.09—2016.01}
-%\address{东南大学四牌楼校区李文正楼}
-%% \address{~}
-%\thanks{本论文获国家973项目“宽光谱通信多维资源联合优化研究（2013CB329204）”的资助。}
-%\maketitle
-%
+\categorynumber{TN92} % 分类采用《中国图书资料分类法》
+\UDC{621.3}            %《国际十进分类法UDC》 的类号
+\secretlevel{公开}    %学位论文密级分为"公开"、"内部"、"秘密"和"机密"四种
+\studentid{130657}   %学号要完整，前面的零不能省略。
+\title{可见光多波段通信系统自适应传输\ \ 技术研究}{}{Research On Adaptive Transmission Technology Of Multi Visible Light Communication System}{}
+\author{吴满}{Man Wu}
+%\author{}{~}
+\advisor{赵春明}{教授}{Chunming Zhao}{Prof.}
+%\advisor{}{}{~}{~}
+%\coadvisor{张\quad{}华}{副教授}{Hua Zhang}{Associate Prof.}  % 没有可以不填
+
+\degree{工学硕士} % 详细学位名称
+\major{信息与通信工程}
+\submajor{通信与信息系统}
+\defenddate{2016年1月24日}
+%\defenddate{}
+%\authorizedate{2015年3月20日}
+\authorizedate{}
+\department{信息科学与工程学院}{School of Information Science and Engineering}
+\duration{2013.09—2016.01}
+\address{东南大学四牌楼校区李文正楼}
+% \address{~}
+\thanks{本论文获国家973项目“宽光谱通信多维资源联合优化研究（2013CB329204）”的资助。}
+\maketitle
+
 % 中文摘要
-%\include{abstract-cn}
+\include{abstract-cn}
 % 英文摘要
-%\include{abstract-en}
-%
-%% 内容目录
-%\tableofcontents
-%% 插图目录
-%\listoffigures
-%% 表格目录
-%\listoftables
-%% 缩略词目录
+\include{abstract-en}
+
+% 内容目录
+\tableofcontents
+% 插图目录
+\listoffigures
+% 表格目录
+\listoftables
+% 缩略词目录
 \include{terminology}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 开始正文
 \begin{Main}
-   \include{chapter-1}
-   \include{chapter-2}
-   \include{chapter-3}
-   \include{chapter-4}
-   \include{chapter-5}
-    \include{chapter-6}
+%   \include{chapter-1}
+%   \include{chapter-2}
+%   \include{chapter-3}
+%   \include{chapter-4}
+%   \include{chapter-5}
+%   \include{chapter-6}
 \end{Main}
 % 结束正文
 
 % 参考文献
-%\bibliography{Reference}
+\bibliography{Reference}
 
 % 附录
 %\include{Appendix}
@@ -68,9 +68,9 @@
 %\newpage
 %\printindex % 索引
 %
-%\include{Resume} % 个人简介
+\include{Resume} % 个人简介
 %
-%\include{Acknowledgement} % 致谢
+\include{Acknowledgement} % 致谢
 %%%%%%%%%%%%%%%%%%%% End of 论文结尾%%%%%%%%%%%%%%%
 
 \end{document}

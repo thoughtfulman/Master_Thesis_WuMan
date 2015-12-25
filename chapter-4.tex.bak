@@ -49,13 +49,13 @@ K-\frac{N_0}{|H(f)|^2},&\ |H(f)|^2\geq\frac{N_0}{K} \\
 式\ref{equ:water_filling}得到S(f)分布的过程也称为“注水定理”或者“注水算法”，它表示要想在传输函数为H(f)，噪声功率密度为$N_0$的信道下要达到信道容量S(f)的分布一定要满足上式。其物理含义是：当信噪比$|H(f)|^2/N_0$较大时，应该给该处的子信道分配更多的功率；反之当信噪比很小时，分配的功率也很小；甚至当信噪比过小（小于1/K）时不分配功率。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-4/waterFilling.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-4/waterFilling.eps}
 \caption{注水定理示意图}
 \label{fig:waterFilling}
 \end{figure}
 OFDM技术的基本原理就是将整个信道划分为相互正交的并行子信道，这个与前面注水算法的推导过程很相识，只是OFDM系统中子载波的数目是有限的，调制阶数是离散的。从此可以看出注水算法很容易在OFDM系统中现实，我们将在下一节中详细介绍。
 \section{OFDM系统自适应算法研究}
-在一个有N个子载波的OFDM系统中，假设各个子载波上的信道增益$h_k=|H(k)|^2(k=0,1,\cdots,N-1)$和高斯噪声方差$\sigma^2$已知，若$b_k$ 和$p_k$分别表示分配到第k个子载波上比特数和功率，如设置误比特率为固定值$\text{BER}_{target}$，则香农公式$b_k$与$p_k$有如下关系：
+在一个有N个子载波的OFDM系统中，假设各个子载波上的信道增益$h_k=|H(k)|^2(k=0,1,\cdots,N-1)$和高斯噪声方差$\sigma^2$已知，若$b_k$ 和$p_k$分别表示分配到第k 个子载波上比特数和功率，如设置误比特率为固定值$\text{BER}_{target}$，则香农公式$b_k$与$p_k$有如下关系：
 \begin{equation}
 b_k = \log_2(1+\frac{h_kp_k}{\Gamma\sigma^2})
 \end{equation}
@@ -115,7 +115,7 @@ k^{\star} =\arg\ \underset{0\leq k\leq N-1}{\max}diff(k)
 \end{equation}
 令$\hat{b}(k^{\star})=\hat{b}(k^{\star})+1$，$diff(k^{\star})=diff(k^{\star})-1$，重复执行\textbf{步骤9}直到$R=R_{target}$
 \item{\bf{步骤10：}}根据前面得到各子载波上分配的比特$\hat{b}(k), k=0,1,\cdots,N-1$，计算各个子载波上应该分配的功率$p_k$使得各个子载波上的误比特率$P_e(k)=P_{e,target}, \forall k$成立。这样就会改变了步骤1中的等功率分配了。
-\item{\bf{步骤11：}}在步骤10中得到的各个子载波上的功率基础上再乘以一个比例因子，使得发射总功率$P=\sum_{k=0}{N-1}p_k=P_{total}$，$P_{total}$表示额定功率。
+\item{\bf{步骤11：}}在步骤10中得到的各个子载波上的功率基础上再乘以一个比例因子，使得发射总功率$P=\sum_{k=0}^{N-1}p_k=P_{total}$，$P_{total}$表示额定功率。
 \end{description}
 
 P.S.Chow 算法的思想是先通过目标速率$\text{Rate}_{target}$迭代寻找最优系统性能门限$\gamma_{margin}$，迭代终止条件为分配的总速率等于目标速率，但是在某些信道条件下，总速率会在目标速率附近震荡而永远不会收敛到目标速率，因此Chow算法还设计了另一个收敛条件，即迭代次数$IterateCount$等于初始化设置的最大迭代次数$MaxCount$。如果是由迭代次数限制而终止迭代的，则通过步骤8、9来保证总速率等于目标速率，得到各个子载波上的比特分配，然后根据各子载波上的比特分配确定各个子载波上需要的功率，最后在各个子载波的功率前面乘以一个相同的系数，使得总功率满足功率限制条件，其最坏情况下算法复杂度为$O(MaxCount\cdot N+2N)$，一般情况下$MaxCount$小于10 次就会收敛，所以相对于Hughes-Hartogs算法，其算法复杂度下降了很多。
@@ -163,7 +163,7 @@ p_k = \frac{P_{total}}{N^\prime}, \forall k \in \mathrm{I}
 \begin{equation}
 b(k) = \frac{R_{target}+\sum_{i\in \mathrm{I}}LDN_i}{N^\prime}-LDN_k
 \end{equation}
-\item{\bf{步骤3：}}在集合$\mathrm{I}$中去掉所有$b_k\leq 0$的$k$，并且更新$N^\prime$，跳转到\textbf{步骤2}执行，直到$b_k>0, \forall k\in \mathrm{I}$。
+\item{\bf{步骤3：}}在集合$\mathrm{I}$中去掉所有$b(k)\leq 0$的$k$，并且更新$N^\prime$，跳转到\textbf{步骤2}执行，直到$b(k)>0, \forall k\in \mathrm{I}$。
 \item{\bf{步骤4：}}量化分配的比特，$\hat{b}(k)=round(b(k))$，记录量化误差$diff(k)=b(k)-\hat{b}(k)$。
 \item{\bf{步骤5：}}计算总比特数$R=\sum_{k\in \mathrm{i}}\hat{b}(k)$
 \item{\bf{步骤6：}}若$R=R_{target}$，则跳转到\textbf{步骤7}，否则：\\
@@ -179,39 +179,119 @@ Fischer算法给出了比特和功率分配的闭式解（经有限次迭代之�
 
 上面介绍了三种非常经典的OFDM系统比特功率分配算法，也有研究人员对这些算法进行改良，如改进的贪婪算法不想原算法逐比特分配，而是先通过对分法搜索得到注水定理中的注水线（注水线的上下界是确定的\cite{余官定2005ofdm}），然后根据注水线得到各子载波上的比特数并向下取整，计算这些比特所需要的功率，最后用贪婪算法剩下的功率。这种改进的算法在高信噪比下可以大大降低复杂度。也有学者通过迭代的方式将注水算法应用到离散比特分配中，其基本思路是先令注水线等于其上界，然后按这个注水线分配比特并且四舍五入取整并计算所需的功率，如果功率满足限制条件则分配完毕，否则降低注水线重新注水，直到满足功率限制。
 
-\subsection{仿真结果比较}
+\subsection{仿真结果分析}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-4/BERonDiffAlgo.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-4/BERonDiffAlgo.eps}
 \caption{LOS信道下不同比特功率算法误比特率性能比较}
 \label{fig:berOnDiffAlgo}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-4/DOWBERonDiffAlgo.eps}
+\includegraphics[width=0.8\textwidth]{figures/chapter-4/DOWBERonDiffAlgo.eps}
 \caption{DOW信道下不同比特功率算法误比特率性能比较}
 \label{fig:DOWBERonDiffAlgo}
 \end{figure}
 前面介绍了三种不同的比特功率分配算法，下面通过仿真来展示其性能。仿真的信道还是使用\ref{subsection:Channel}节中的可见光LOS信道和DOW信道，使用LOS信道更贴近本课题的硬件设计，而使用DOW信道模型可以增加信道的多样性，更能客观地比较不同算法之间的性能差别。仿真中使用QAM调制，并且在仿真中对最高调制阶数进行了限制（1024QAM），这个在实际工程中也是常见的，毕竟很少有系统用到1024QAM以上的调制。
 
-图\ref{fig:berOnDiffAlgo}给出了在LOS信道不同比特功率分配算法的误比特率随信噪比变化的性能，为了便于比较，将目标速率$\text{Rate}_{target}$设置为736 bit/OFDM signal，与表\ref{tab:modOrder}中的相等。图中可以看出，虽然在表\ref{tab:modOrder}中我们已经专门针对可见光通信的低通特意设计了比特分配，但是使用自适应算法得到比特功率分配在性能上还是有些提高的，尤其是在高信噪比的情况下。但是在固定的LOS信道下，Hughes-Hartogs算法、Chow算法和Fischer算法之间的BER性能差异很小，这也说明了Chow算法和Fischer算法在计算复杂度降低的情况下，性能损失不大。需要说明的是，Hughes-Hartogs算法在RA和MA准则下是最优的，但是这里BER性能的比较是BA准则，Hughes-Hartogs算法在BA准则下的计算过程是先使用MA准则得到各子载波的分配的比特，然后根据计算每个子载波达到目标BER所需要的功率，最后归一化使得总功率满足功率限制，所以在BA准则下Hughes-Hartogs算法也不是最优的。图\ref{fig:DOWBERonDiffAlgo}展示了各种比特功率分配算法在DOW信道模型下的性能，这里DOW信道模型采用的是\ref{subsection:Channel}节中提到的指数衰减模型和天花板反射模型混合得到信道模型，结果也LOS信道下类似，三种算法BER性能都优于表3.2中的分配方案，但是三种算法之间的性能非常接近。
+图\ref{fig:berOnDiffAlgo}给出了在LOS信道不同比特功率分配算法的误比特率随信噪比变化的性能，为了便于比较，将目标速率$\text{Rate}_{target}$设置为736 bit/OFDM signal，与表\ref{tab:modOrder}中的相等。图中可以看出，虽然在表\ref{tab:modOrder}中我们已经专门针对可见光通信的低通特意设计了比特分配，但是使用自适应算法得到比特功率分配在性能上还是有些提高的，尤其是在高信噪比的情况下。但是在固定的LOS信道下，Hughes-Hartogs算法、Chow算法和Fischer算法之间的BER性能差异很小，这也说明了Chow算法和Fischer算法在计算复杂度降低的情况下，性能损失不大。需要说明的是，Hughes-Hartogs算法在RA和MA准则下是最优的，但是这里BER 性能的比较是BA准则，Hughes-Hartogs算法在BA准则下的计算过程是先使用MA准则得到各子载波的分配的比特，然后根据计算每个子载波达到目标BER所需要的功率，最后归一化使得总功率满足功率限制，所以在BA准则下Hughes-Hartogs算法也不是最优的。图\ref{fig:DOWBERonDiffAlgo}展示了各种比特功率分配算法在DOW信道模型下的性能，这里DOW信道模型采用的是\ref{subsection:Channel}节中提到的指数衰减模型和天花板反射模型混合得到信道模型，结果也LOS信道下类似，三种算法BER性能都优于表3.2 中的分配方案，但是三种算法之间的性能非常接近。
 
-图\ref{fig:loadedBit}和\ref{fig:loadedPower}给出了三种算法在各个子载波上分配的比特和功率，可以看出分配的比特数随着频率（子载波系数）的增加而减少，这是因为我们的信道是低通的，给低频段高信噪比的子载波分配更多比特而在高频段低信噪比的子载波分配更少比特是合理的。各子载波上分配的功率上下波动，但是有个规律-在分配了相同比特的子载波上，功率是随着频率递增的，这还是由于低通信道，在相同阶数的调制的子载波上为了使得BER尽可能相等，高频的子载波要分配更多的比特。综上所述仿真结果是与之前的理论分析相吻合的。
+图\ref{fig:loadedBit}和\ref{fig:loadedPower}给出了三种算法在各个子载波上分配的比特和功率，可以看出分配的比特数随着频率（子载波系数）的增加而减少，这是因为我们的信道是低通的，给低频段高信噪比的子载波分配更多比特而在高频段低信噪比的子载波分配更少比特是合理的。各子载波上分配的功率上下波动，但是有个规律- 在分配了相同比特的子载波上，功率是随着频率递增的，这还是由于低通信道，在相同阶数的调制的子载波上为了使得BER尽可能相等，高频的子载波要分配更多的比特。综上所述仿真结果是与之前的理论分析相吻合的。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-4/loadedBit.eps}
-\caption{三种算法比特分配结果比较}
+\includegraphics[width=0.8\textwidth]{figures/chapter-4/loadedBit.eps}
+\caption{LOS信道下三种算法比特分配结果比较}
 \label{fig:loadedBit}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/chapter-4/loadedPower.eps}
-\caption{三种算法功率分配结果比较}
+\includegraphics[width=0.8\textwidth]{figures/chapter-4/loadedPower.eps}
+\caption{LOS信道下三种算法功率分配结果比较}
 \label{fig:loadedPower}
 \end{figure}
 \section{可见光通信中的自适应方案研究}
-从前面的分析及仿真结果可以看到，可见光信道相邻子载波之间存在明显的相关性，
-\section{本章小结}
+前面提到的算法都是具有普适性的，即可以用在任何信道的自适应OFDM系统中，但是我们看到即使Chow算法和Fischer算法相对于Hughes-Hartogs算法进行了简化，但对于实际系统而言复杂度还是偏高的。我们可以充分利用可见光信道的特征，进一步简化比特和功率分配算法。
+\subsection{SBLA算法}
+从前面的分析及仿真结果可以看到，可见光信道相邻子载波之间存在明显的相关性，特别是LOS信道，信噪比几乎是随频率单调递减的，而不会出现非常明显的起伏，使得相邻子载波之间可支持的调制阶数差别很大。这样的信道条件非常适合用简单分组比特功率分配算法（Simple Blockwise Loading Algorithm，SBLA）\cite{grunheid2000adaptive}，该算法的核心思想就是将所有可用的子载波划分为若干个子载波组，每个子载波组使用相同的调制阶数，不同组之间的调制阶数可以不同。这样可以带来两个方面的好处，一是降低了算法复杂度，二是减少了发射端与接收端之间交换的用于协商自适应参数的信令信息。
+\begin{table}[ht]
+    \caption{各阶QAM调制的门限SNR}
+    \label{tab:thresholdSNR}
+    \centering
+    \begin{tabular}{lllllllllll}
+        \toprule
+        M-QAM      & 2 &4 &8  &16  &32 &64 &128 &256 &512 &1024 \\
+        \midrule
+        门限SNR (dB) & 6.9& 10.0&14.5 &16.1 &19.5&22.5&25.4&28.0&31.5&34.5   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/chapter-4/theoreticalBER.eps}
+\caption{AWGN信道下QAM调制的理论BER曲线}
+\label{fig:theoreticalBER}
+\end{figure}
+SBLA算法首先根据目标误比特率和AWGN下QAM各阶调制的BER与SNR之间的关系得到各阶调制的SNR门限，如图\ref{fig:theoreticalBER}所示，我们把目标BER设置为$10^{-3}$，则可以得到如表\ref{tab:thresholdSNR}所示的门限信噪比$SNR_{th}$，有了这组门限值之后可以让每个子载波组的平时信噪比$SNR_{mean}$与这组门限比较，找到满足满足门限的最大调制阶数，这样就可以得到每个子载波组的初始比特分配即总速率，如果总速率$R$等于目标速率速率$R_{target}$则比特分配结束，否则使用类似与Fischer算法步骤6的方法进行调整，下面给出SBLA算法实现的具体步骤：
+\begin{description}
+\item{\bf{步骤1：}}根据总子载波数量确定分组数$N_B$及每组中包含的子载波数$M$，计算各组的平均信噪比：
+\begin{equation}
+SNR_{mean}(i) = \frac{1}{M}\sum_{k=1}^M SNR(k), i=1,2,\cdots,N_B
+\end{equation}
+其中$SNR(k)$表示第i个子载波组中的第k个子载波。
+\item{\bf{步骤2：}}根据各子载波组的平均信噪比及信噪比门限，假设第i各子载波组中分配的比特数为$B(i)$，使用条件$SNR_{th}[B(i)]\leq SNR_{mean}(i) < SNR_{th}[B(i)+1]$找到各子载波组的初始比特分配，然后计算并存储平均信噪比与该调制阶数对应的门限信噪比余量$SNR_{diff}(i)$，其定义如下：
+\begin{equation}
+SNR_{diff}(i) = SNR_{mean}(i) - SNR_{th}[B(i)]
+\end{equation}
+\item{\bf{步骤3：}}计算初始分配的总速率：
+\begin{equation}
+R = \sum_{i=1}^{N_B} M \cdot B(i)
+\end{equation}
+如果$R=R_{target}$，可跳到步骤4，否则进行调整：\\
+若 $R>R_{target}$，则找到信噪比余量最小的子载波组，假设其序号为$i^\star$，调整$B(i^\star)=B(i^\star)-1$，$diffSNR(i^\star)=SNR_{mean}-SNR_{th}[B(i^\star)]$，$R=R-M$，继续步骤3直到$R=R_{target}$；\\
+如果$R=R_{target}$，可跳到步骤4，否则进行调整：\\
+若 $R<R_{target}$，则找到信噪比余量最大的子载波组，假设其序号为$i^\star$，调整$B(i^\star)=B(i^\star)+1$，$diffSNR(i^\star)=SNR_{mean}-SNR_{th}[B(i^\star)]$，$R=R+M$，继续步骤3直到$R=R_{target}$。\\
+\item{\bf{步骤4：}}最后根据各个子载波上分配的比特数，按下式计算各子载波上应该分配的功率：
+\begin{equation}
+\label{equ:calcSLABPower}
+p(k) = \frac{P_{total}\cdot \sigma_k^2\cdot 2^{{b}(k)}}{\sum_{i\in \mathrm{I}}\sigma_i^2\cdot 2^{{b}(i)}}
+\end{equation}
+其中$p(k)$即为所求的第k个子载波上的功率，$b(k)$是表示步骤3中得到的各个子载波上分配比特数，$\sigma_k^2$是Fischer算法中的等效噪声方差，等于实际噪声方差除以信道增益，也就是本算法步骤1中信噪比SNR的倒数。
+\end{description}
+
+SBLA算法在初始比特分配和后面的比特调整中都是以子载波组为最小单位的，故在比特分配过程中其算法度是Fischer算法的1/M，M为每组中子载波数，并且在分配过程中不要进行对数运算，而其性能只是略低于Fischer等算法，其仿真结果将在后面给出。
+\subsection{减少反馈信息的改进SBLA算法}
+SBLA通过每组的方式进行比特分配，降低了这个过程的计算复杂度，并且减少自适应信令信息，除此之外，我们也可以针对可以光信道的特性进一步优化功率分配过程。在前面的SBLA算法中得到了比特分配之后，还是按照类似于Fischer算法对每个子载波进行功率分配，并且接收端要反馈所有子载波的功率值到发射端（假设自适应算法在接收端执行）。但是对于可见光低通信道信道的特点，在每个子载波组中，正常情况下功率分配总是随着频率增加而增加的，因为要想获得低误比特率，要尽量使得每组中各个子载波上的误比特率相等。所以基于这一特点，可以只根据式\ref{equ:calcSLABPower}计算反馈每组子载波中第一个和最后一个子载波的功率，而其他子载波的功率可以使用线性插值得到：
+\begin{equation}
+p_B(i) = \frac{p_B(M)-p_B(1)}{M-1}*i+p_B(1)\ \ i=2,3,\cdots,M-1
+\end{equation}
+其中$p_B(i)$表示一个子载波组中第i个子载波的功率，$p_B(1)$、$p_B(M)$是反馈回来的每组中第一个和最后一个子载波功率。根据上式得到各个子载波功率之后再乘以一个系数使得总功率满足发射功率限制即可，我们称这种改进于SLAB的比特功率分配算法为Improved-SLAB算法。
+
+\subsection{仿真结果分析}
+图\ref{fig:SBLABERonDiffAlgo}展示了SBLA、Improved-SBLA算法的BER性能。仿真中使用的信道是\ref{subsection:Channel}中的LOS信道，设置子载波总数为128，IFFT点数为256（还有128各共轭对此子载波），并且将0~3及124~127号共8个子载波人为设置为虚拟子载波，不传输数据，所以可用子载波为120个。在SBLA、ImprovedSBLA算法中将这120个子载波分为8组，每组含有15个子载波，目标速率为720 bit/OFDM signal，总功率设为128（与子载波总数相等）。从图\ref{fig:SBLABERonDiffAlgo}可以看到SBLA、Improved-SBLA算法的BER性能相近，并且略劣于Fischer算法，但是较固定比特功率调制和人为挑选的\ref{tab:modOrder}而言，BER还是有较大的提高，这说明了Improved-SBLA算法对SBLA算法的改进是合理的，同时也充分体现了自适应相对于固定调制的优势。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/chapter-4/SBLABERonDiffAlgo.eps}
+\caption{SBLA算法及ImprovedSBLA算法BER性能}
+\label{fig:SBLABERonDiffAlgo}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/chapter-4/SBLAloadedBit.eps}
+\caption{SBLA算法及ImprovedSBLA算法比特分配}
+\label{fig:SBLAloadedBit}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/chapter-4/SBLAloadedPower.eps}
+\caption{SBLA算法及ImprovedSBLA算法功率分配}
+\label{fig:SBLAloadedPower}
+\end{figure}
+图\ref{fig:SBLAloadedBit}和图\ref{fig:SBLAloadedPower}给出了设置信噪比为25 dB时在LOS信道下SBLA、Improved-SBLA算法比特和功率在各个子载波上的分配，并且也Fischer算法的结果进行了比较，可以发现SBLA、Improved-SBLA算法因为人为规定了分组，SBLA、Improved-SBLA算法的调制阶数变化只能发生在特定的子载波处，在比特分配上也Fischer算法存在较大的区别，但是还是有一些共性，即低频子载波分配了高阶调制而低频子载波分配低阶调制。从图\ref{fig:SBLAloadedPower}中可以看到SBLA算法在每个子载波组上的是单调递增的，而Improved-SBLA则是利用了这一特性，使用了线性插值来得到功率分配，在图中也可以看出其功率分配在每个子载波组上是呈线性的，并且与SBLA功率分配的结果很接近，这也充分说明了Improved-SBLA算法的合理性。
+
+\section{本章小结}
+本章主要介绍了OFDM系统的比特和功率分配算法，研究其在可见光通信中的应用，选出了适合可见光通信的SBLA分配算法，并且在此算法的基础上进行了改进。首先阐述了自适应传输的理论基础—香农信息论和注水定理；然后说明了自适应传输的三种优化准则，即固定目标误比特率和发射功率的最大速率准则（RA）、固定目标误比特率和速率的最小发射功率准则（MA）及固定发射功率和速率的最小误比特率准则（BA），再次基础上介绍了OFDM自适应传输领域三个最经典的算法，分别是在RA和MA准则下最优的Hughes-Hartogs算法、BA准则下Chow算法和Fischer算法，详细说明了这些算法的推导和实现步骤，并且通过仿真比较了它们的性能差异，发现在可见光通信信道下它们在BA准则下BER性能相差不大；最后分析了适合子载波SNR相关性较大的SBLA算法，因为可见光信道本身就是低通的，天然合适SBLA算法的应用，并且进一步利用可见光通信信道特征，提出了适应线性插值来进行功率分配的Improved-SBLA算法，通过仿真发现改进的算法在减少了反馈量就运算复杂度的基础上，BER性能与SBLA相当，说明改进算法是合理可行的。
