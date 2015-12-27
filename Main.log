@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  27 DEC 2015 10:06
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.11.11)  27 DEC 2015 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1877,27 +1877,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-Package natbib Warning: Citation `陈特2013可见光通信的研究' on page 1 undefined on input 
-line 5.
-
-
-Package natbib Warning: Citation `tanaka2001indoor' on page 1 undefined on inpu
-t line 14.
-
-
-Package natbib Warning: Citation `fan2002effect' on page 1 undefined on input l
-ine 14.
-
-
-Package natbib Warning: Citation `komine2003integrated' on page 1 undefined on 
-input line 14.
-
-
-Package natbib Warning: Citation `komine2004fundamental' on page 1 undefined on
- input line 14.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
@@ -1907,155 +1886,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-
-Package natbib Warning: Citation `gfeller1979wireless' on page 2 undefined on i
-nput line 22.
-
-
-Package natbib Warning: Citation `tanaka2000wireless' on page 2 undefined on in
-put line 25.
-
-
-Package natbib Warning: Citation `tanaka2001indoor' on page 2 undefined on inpu
-t line 26.
-
-
-Package natbib Warning: Citation `komine2004fundamental' on page 2 undefined on
- input line 26.
-
-
-Package natbib Warning: Citation `vuvcic2009125' on page 2 undefined on input l
-ine 29.
-
-
-Package natbib Warning: Citation `vuvcic2009white' on page 2 undefined on input
- line 29.
-
-
-Package natbib Warning: Citation `vuvcic2010513' on page 2 undefined on input l
-ine 29.
-
-
-Package natbib Warning: Citation `vucic2011803' on page 2 undefined on input li
-ne 29.
-
-
-Package natbib Warning: Citation `afgani2006visible' on page 2 undefined on inp
-ut line 30.
-
-
-Package natbib Warning: Citation `elgala2009indoor' on page 2 undefined on inpu
-t line 30.
-
-
-Package natbib Warning: Citation `mesleh2010indoor' on page 2 undefined on inpu
-t line 30.
-
-
-Package natbib Warning: Citation `mesleh2011optical' on page 2 undefined on inp
-ut line 30.
-
-
-Package natbib Warning: Citation `elgala2009study' on page 2 undefined on input
- line 30.
-
-
-Package natbib Warning: Citation `elgala2009non' on page 2 undefined on input l
-ine 30.
-
-
-Package natbib Warning: Citation `stefan2011optical' on page 2 undefined on inp
-ut line 31.
-
-
-Package natbib Warning: Citation `chun2014demonstration' on page 2 undefined on
- input line 31.
-
-
-Package natbib Warning: Citation `manousiadis2015demonstration' on page 2 undef
-ined on input line 31.
-
-
-Package natbib Warning: Citation `wang2015dynamic' on page 2 undefined on input
- line 32.
-
-
-Package natbib Warning: Citation `stefan2014hybrid' on page 2 undefined on inpu
-t line 32.
-
-
-Package natbib Warning: Citation `basnayaka2015hybrid' on page 2 undefined on i
-nput line 32.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-
-Package natbib Warning: Citation `minh2008high' on page 3 undefined on input li
-ne 37.
-
-
-Package natbib Warning: Citation `le2009100' on page 3 undefined on input line 
-37.
-
-
-Package natbib Warning: Citation `vuvcic2010513' on page 3 undefined on input l
-ine 37.
-
-
-Package natbib Warning: Citation `cossu20123' on page 3 undefined on input line
- 39.
-
-
-Package natbib Warning: Citation `hussein201510' on page 3 undefined on input l
-ine 39.
-
-
-Package natbib Warning: Citation `丁德强2006可见光通信及其关键技术研究' on page 3 undefined on 
-input line 44.
-
-
-Package natbib Warning: Citation `于志刚2008白光' on page 3 undefined on input line 
-44.
-
-
-Package natbib Warning: Citation `张立2010室内' on page 3 undefined on input line 4
-4.
-
-
-Package natbib Warning: Citation `ma2012effects' on page 3 undefined on input l
-ine 44.
-
-
-Package natbib Warning: Citation `zhang2012capacity' on page 3 undefined on inp
-ut line 44.
-
-
-Package natbib Warning: Citation `ma2012distributions' on page 3 undefined on i
-nput line 44.
-
-
-Package natbib Warning: Citation `wang2013demonstration' on page 3 undefined on
- input line 45.
-
-
-Package natbib Warning: Citation `wang2013875' on page 3 undefined on input lin
-e 45.
-
-
-Package natbib Warning: Citation `chi2014ultra' on page 3 undefined on input li
-ne 45.
-
-
-Package natbib Warning: Citation `wang2014integrated' on page 3 undefined on in
-put line 45.
-
-
-Package natbib Warning: Citation `xu2014aco' on page 3 undefined on input line 
-48.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2116,42 +1949,20 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-File: figures/chapter-2/BasicOpticalSystem.eps Graphic file (type eps)
-<figures/chapter-2/BasicOpticalSystem.eps>
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package natbib Warning: Citation `Yangxuecheng2015' on page 8 undefined on inpu
-t line 20.
+ [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Package natbib Warning: Citation `Chenchunyan2014' on page 8 undefined on input
- line 22.
-
-File: figures/chapter-2/BasebandModle.eps Graphic file (type eps)
-<figures/chapter-2/BasebandModle.eps>
-File: figures/chapter-2/ChannelClass.eps Graphic file (type eps)
- <figures/chapter-2/ChannelClass.eps>
-[8]
-File: figures/chapter-2/ChannelImpulseResponse.eps Graphic file (type eps)
- <figures/chapter-2/ChannelImpulseResponse.eps>
-File: figures/chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps Graphic file
- (type eps)
-
-<figures/chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 56--61
- [][][][] 
- []
-
-
-Package natbib Warning: Citation `carruthers1997modeling' on page 9 undefined o
-n input line 64.
 
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
-l.75 
+l.44 
      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2160,59 +1971,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [9]
-File: figures/chapter-2/DOW_ImplusResponse.eps Graphic file (type eps)
- <figures/chapter-2/DOW_ImplusResponse.eps>
-File: figures/chapter-2/DOW_AmpResponse.eps Graphic file (type eps)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<figures/chapter-2/DOW_AmpResponse.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 89--94
- [][][][] 
- []
-
-[10]
-Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
-File: figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps Graphic file (typ
-e eps)
- <figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps>
-Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
-File: figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps Graphic file 
-(type eps)
-
-<figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 109--114
- [][][][] 
- []
-
-
-Package natbib Warning: Citation `LE2011' on page 11 undefined on input line 11
-8.
-
-
-Package natbib Warning: Citation `LRTB2011' on page 11 undefined on input line 
-118.
-
-
+ [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
-l.119 
-      
+l.66 \subsection{DCO-OFDM简介}
+                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2220,214 +1989,27 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [11]
-File: figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps Graphic file (type ep
-s)
- <figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps>
-Invalid UTF-8 byte or sequence at line 131 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 131 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 131 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 131 replaced by U+FFFD.
-File: figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps Graphic file (type ep
-s)
-
-<figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 127--132
- [][][][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package natbib Warning: Citation `LZC2013' on page 12 undefined on input line 1
-36.
-
-File: figures/chapter-2/LED_Temperature_Light_Output.eps Graphic file (type eps
-)
-<figures/chapter-2/LED_Temperature_Light_Output.eps>
-File: figures/chapter-2/LED_Temperature_Wavelength_Shift.eps Graphic file (type
- eps)
-
-<figures/chapter-2/LED_Temperature_Wavelength_Shift.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 142--147
- [][][][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.172 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[13]
-
-Package natbib Warning: Citation `OpticalFilter' on page 14 undefined on input 
-line 175.
-
-File: figures/chapter-2/MulticolorFilterGain.eps Graphic file (type eps)
-<figures/chapter-2/MulticolorFilterGain.eps>
-File: figures/chapter-2/MultiColorReceiveredFilter.eps Graphic file (type eps)
-
-<figures/chapter-2/MultiColorReceiveredFilter.eps>
-Underfull \vbox (badness 4569) has occurred while \output is active []
-
- [14]
-
-Package natbib Warning: Citation `armstrong2009ofdm' on page 15 undefined on in
-put line 195.
-
-File: figures/chapter-2/HistoryOfOFDM.eps Graphic file (type eps)
-<figures/chapter-2/HistoryOfOFDM.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
-l.202 \subsection{DCO-OFDM简介}
-                                 
+l.96 
+     
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[15]
-File: figures/chapter-2/DCO-OFDMStructure.eps Graphic file (type eps)
- <figures/chapter-2/DCO-OFDMStructure.eps>
-
-Package natbib Warning: Citation `proakisdigital' on page 16 undefined on input
- line 210.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16]
-File: figures/chapter-2/DCO_OFDM.eps Graphic file (type eps)
-
-<figures/chapter-2/DCO_OFDM.eps>
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.245 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[17]
-File: figures/chapter-2/ACO-OFDMStructure.eps Graphic file (type eps)
- <figures/chapter-2/ACO-OFDMStructure.eps> [18]
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.292 \end{equation}
-                    
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[19]
-File: figures/chapter-2/ACO_OFDM.eps Graphic file (type eps)
- <figures/chapter-2/ACO_OFDM.eps>
-File: figures/chapter-2/RoC-ACO-OFDMStructure.eps Graphic file (type eps)
-
-<figures/chapter-2/RoC-ACO-OFDMStructure.eps>
-
-Package natbib Warning: Citation `xu2014aco' on page 20 undefined on input line
- 316.
-
-File: figures/chapter-2/SCH_data.eps Graphic file (type eps)
-<figures/chapter-2/SCH_data.eps>
-File: figures/chapter-2/HypothesisSketch.eps Graphic file (type eps)
- <figures/chapter-2/HypothesisSketch.eps>
-[20]
-File: figures/chapter-2/MAP_RoC_ACO_OFDM.eps Graphic file (type eps)
- <figures/chapter-2/MAP_RoC_ACO_OFDM.eps>
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 334.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 334.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 334.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 334.
-
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.338 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[21]
-Underfull \vbox (badness 6173) has occurred while \output is active []
-
- [22]
-File: figures/chapter-2/CCDF.eps Graphic file (type eps)
-
-<figures/chapter-2/CCDF.eps>
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.389 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[23]
-File: figures/chapter-2/BER_1.eps Graphic file (type eps)
- <figures/chapter-2/BER_1.eps>)
-Underfull \vbox (badness 1005) has occurred while \output is active []
-
- [24]
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.54    \include{chapter-2}
-                           
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[25]
+[13]) [14]
 \openout2 = `chapter-3.aux'.
 
- (./chapter-3.tex [26
-
-
-
-]
+ (./chapter-3.tex
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
@@ -2452,188 +2034,41 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Package natbib Warning: Citation `石钧2012ofdm' on page 27 undefined on input lin
-e 7.
-
-File: figures/chapter-3/BlockTypePilot.eps Graphic file (type eps)
-<figures/chapter-3/BlockTypePilot.eps>
-File: figures/chapter-3/CombTypePilot.eps Graphic file (type eps)
- <figures/chapter-3/CombTypePilot.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 13--18
- [][][][] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\mathbf ' on input line 29.
+ [15
 
 
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\mathbf ' on input line 34.
 
-[28]
+]
+Underfull \vbox (badness 6708) has occurred while \output is active []
 
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\mathbf ' on input line 66.
+ [16]
+Underfull \vbox (badness 6708) has occurred while \output is active []
 
-
-Package natbib Warning: Citation `Kay1993FSS' on page 29 undefined on input lin
-e 76.
 
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
-l.95 \subsubsection{LMMSE估计算法}
-                                      
+l.58 \subsubsection{变换域插值}
+                                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[29]
+[17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package natbib Warning: Citation `付可2015lte' on page 30 undefined on input line
- 96.
+ [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Package natbib Warning: Citation `张乃元2010lte' on page 30 undefined on input lin
-e 105.
-
-[30]
-
-Package natbib Warning: Citation `sandell1996comparative' on page 31 undefined 
-on input line 148.
 
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
-l.162 \subsubsection{二阶多项式插值}
-                                           
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[31]
-
-Package natbib Warning: Citation `garcia2000pilot' on page 32 undefined on inpu
-t line 163.
-
-
-Package natbib Warning: Citation `zhao1997novel' undefined on input line 173.
-
-
-Package natbib Warning: Citation `zhao1997novel' on page 32 undefined on input 
-line 173.
-
-[32]
-File: figures/chapter-3/FrameStructure.eps Graphic file (type eps)
- <figures/chapter-3/FrameStructure.eps>
-File: figures/chapter-3/ZC_frequency.eps Graphic file (type eps)
-
-<figures/chapter-3/ZC_frequency.eps>
-File: figures/chapter-3/ZC_time.eps Graphic file (type eps)
- <figures/chapter-3/ZC_time.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 226--231
- [][][][] 
- []
-
-File: figures/chapter-3/Sim_Channel_time.eps Graphic file (type eps)
-<figures/chapter-3/Sim_Channel_time.eps>
-File: figures/chapter-3/Sim_Channel_frequency.eps Graphic file (type eps)
-
-<figures/chapter-3/Sim_Channel_frequency.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 242--247
- [][][][] 
- []
-
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.273 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[33]
-Underfull \vbox (badness 3039) has occurred while \output is active []
-
- [34]
-File: figures/chapter-3/BER_SNR_avg.eps Graphic file (type eps)
-
-<figures/chapter-3/BER_SNR_avg.eps>
-File: figures/chapter-3/MSE_SNR_avg.eps Graphic file (type eps)
- <figures/chapter-3/MSE_SNR_avg.eps>
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.314 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[35] [36]
-File: figures/chapter-3/BER_sc.eps Graphic file (type eps)
- <figures/chapter-3/BER_sc.eps>
-
-LaTeX Warning: Reference `SVD_BER_MSE_SNR_avg' on page 37 undefined on input li
-ne 324.
-
-File: figures/chapter-3/SVD_BER_SNR_avg.eps Graphic file (type eps)
-<figures/chapter-3/SVD_BER_SNR_avg.eps>
-File: figures/chapter-3/SVD_MSE_SNR_avg.eps Graphic file (type eps)
-
-<figures/chapter-3/SVD_MSE_SNR_avg.eps>
-Overfull \hbox (10.95001pt too wide) in paragraph at lines 344--349
- [][][][] 
- []
-
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.352 ...�见光通信中的信噪比估计方法}
+l.91 ...��见光通信中的信噪比估计方法}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2641,32 +2076,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[37]
-
-Package natbib Warning: Citation `shafik2006extended' on page 38 undefined on i
-nput line 361.
-
-File: figures/chapter-3/SNR_ZC_EVM.eps Graphic file (type eps)
-<figures/chapter-3/SNR_ZC_EVM.eps> [38])
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.55    \include{chapter-3}
-                           
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[39]
+[19]) [20]
 \openout2 = `chapter-4.aux'.
 
- (./chapter-4.tex [40
-
-
-
-]
+ (./chapter-4.tex
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
@@ -2691,36 +2104,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Package natbib Warning: Citation `徐凌峰2007ofdm' on page 41 undefined on input li
-ne 4.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
-[42]
-File: figures/chapter-4/waterFilling.eps Graphic file (type eps)
- <figures/chapter-4/waterFilling.eps>
+ [21
 
-Package natbib Warning: Citation `余官定2005ofdm' on page 43 undefined on input li
-ne 66.
 
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.69 \end{equation}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-[43]
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package natbib Warning: Citation `hughes1989ensemble' on page 44 undefined on i
-nput line 73.
-
+ [22]
 *************************************************
 * xeCJK warning: "CJKfamily-Unknown"
 * 
@@ -2740,7 +2133,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 75.
+(scrbook)              by `\normalfont \bfseries ' on input line 31.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -2754,7 +2147,230 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 76.
+(scrbook)              by `\normalfont \bfseries ' on input line 32.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 33.
+
+! Undefined control sequence.
+\chaptername ->第\CJKnumber 
+                             {\thechapter }章
+l.39 \begin{description}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[23]
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 40.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 41.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 42.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 49.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 50.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 52.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 53.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 54.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 56.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 58.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 59.
+
+[24]
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 77.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 78.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 79.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -2770,10 +2386,19 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 80.
 
-[44]
 
-Package natbib Warning: Citation `chow1995practical' on page 45 undefined on in
-put line 88.
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 81.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -2787,7 +2412,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 90.
+(scrbook)              by `\normalfont \bfseries ' on input line 82.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -2801,78 +2426,23 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 91.
+(scrbook)              by `\normalfont \bfseries ' on input line 85.
 
+! Undefined control sequence.
+\chaptername ->第\CJKnumber 
+                             {\thechapter }章
+l.91 
+     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 92.
+[25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 99.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 100.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 105.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 106.
-
+ [26]
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              You should note, that in 1994 font command `\bf' has
@@ -2887,18 +2457,6 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 107.
 
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.112 \item{
-            \bf{步骤9：}}若$R<R_{target}$，则选择:
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[45]
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              You should note, that in 1994 font command `\bf' has
@@ -2911,7 +2469,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 112.
+(scrbook)              by `\normalfont \bfseries ' on input line 109.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -2925,227 +2483,10 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 117.
+(scrbook)              by `\normalfont \bfseries ' on input line 110.
 
 
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 118.
-
-
-Package natbib Warning: Citation `fischer1996new' on page 46 undefined on input
- line 123.
-
-[46]
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 161.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 162.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 166.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 167.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 168.
-
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.169 \item{
-            \bf{步骤6：}}若$R=R_{target}$，则跳转到\textbf{步骤7}...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[47]
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 169.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 172.
-
-
-Package natbib Warning: Citation `余官定2005ofdm' on page 48 undefined on input li
-ne 180.
-
-File: figures/chapter-4/BERonDiffAlgo.eps Graphic file (type eps)
-<figures/chapter-4/BERonDiffAlgo.eps>
-File: figures/chapter-4/DOWBERonDiffAlgo.eps Graphic file (type eps)
- <figures/chapter-4/DOWBERonDiffAlgo.eps>
-[48]
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.199 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[49]
-File: figures/chapter-4/loadedBit.eps Graphic file (type eps)
- <figures/chapter-4/loadedBit.eps>
-File: figures/chapter-4/loadedPower.eps Graphic file (type eps)
- <figures/chapter-4/loadedPower.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [50]
-
-Package natbib Warning: Citation `grunheid2000adaptive' on page 51 undefined on
- input line 217.
-
-File: figures/chapter-4/theoreticalBER.eps Graphic file (type eps)
-<figures/chapter-4/theoreticalBER.eps>
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.238 \begin{description}
-                         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[51]
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 239.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 244.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 248.
-
-[52]
-Underfull \hbox (badness 10000) in paragraph at lines 251--256
+Underfull \hbox (badness 10000) in paragraph at lines 110--115
 
  []
 
@@ -3161,43 +2502,42 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 256.
+(scrbook)              by `\normalfont \bfseries ' on input line 115.
 
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
-l.272 \subsection{仿真结果分析}
-                                     
+l.120 ...on{减少反馈信息的改进SBLA算法}
+                                                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[53]
-File: figures/chapter-4/SBLABERonDiffAlgo.eps Graphic file (type eps)
- <figures/chapter-4/SBLABERonDiffAlgo.eps>
-File: figures/chapter-4/SBLAloadedBit.eps Graphic file (type eps)
+[27])
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<figures/chapter-4/SBLAloadedBit.eps>
-File: figures/chapter-4/SBLAloadedPower.eps Graphic file (type eps)
- <figures/chapter-4/SBLAloadedPower.eps>
-[54]
+ [28]
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
-l.295 
-      
+l.56    \include{chapter-4}
+                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[55]) [56]
+[29]
 \openout2 = `chapter-5.aux'.
 
- (./chapter-5.tex
+ (./chapter-5.tex [30
+
+
+
+]
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
@@ -3221,72 +2561,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-File: figures/chapter-5/Hardware_Structure.eps Graphic file (type eps)
-<figures/chapter-5/Hardware_Structure.eps> [57
+
+Underfull \vbox (badness 2080) has occurred while \output is active []
+
+ [31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-
-]
-
-Package natbib Warning: Citation `FPGAIntroduciton' on page 58 undefined on inp
-ut line 15.
-
-File: figures/chapter-5/TransmitterSchematic.eps Graphic file (type eps)
-<figures/chapter-5/TransmitterSchematic.eps> [58]
-File: figures/chapter-5/TimeSchemeTrans.eps Graphic file (type eps)
-
-<figures/chapter-5/TimeSchemeTrans.eps>
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
-l.42 
-     
+l.34 \section{自适应模块方案设计}
+                                          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[59]
-File: figures/chapter-5/ReciverSchematic.eps Graphic file (type eps)
- <figures/chapter-5/ReciverSchematic.eps>
-File: figures/chapter-5/TimeSchemeRece.eps Graphic file (type eps)
-
-<figures/chapter-5/TimeSchemeRece.eps> [60]
-File: figures/chapter-5/AdaptiveModulation.eps Graphic file (type eps)
-
-<figures/chapter-5/AdaptiveModulation.eps>
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.90 
-     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[61]
-File: figures/chapter-5/AdaptiveParameterGenerator.eps Graphic file (type eps)
- <figures/chapter-5/AdaptiveParameterGenerator.eps> [62]
-File: figures/chapter-5/AdaptiveDemodulation.eps Graphic file (type eps)
-
-<figures/chapter-5/AdaptiveDemodulation.eps>
-! Undefined control sequence.
-\chaptername ->第\CJKnumber 
-                             {\thechapter }章
-l.113 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[63]
-File: figures/chapter-5/Demo.jpg Graphic file (type QTm)
- <use  "figures/chapter-5/Demo.jpg" >) [64]
+[33] [34])
 ! Undefined control sequence.
 \chaptername ->第\CJKnumber 
                              {\thechapter }章
@@ -3298,10 +2594,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[65]
+[35]
 \openout2 = `chapter-6.aux'.
 
- (./chapter-6.tex [66
+ (./chapter-6.tex [36
 
 
 
@@ -3332,8 +2628,8 @@ and I'll forget about whatever was undefined.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67])
-[68] (./Main.bbl [69
+ [37])
+[38] (./Main.bbl [39
 
 
 
@@ -3347,7 +2643,7 @@ LaTeX Font Info:    Font shape `EU1/SimSun(0)/m/sl' in size <10.95> not availab
 le
 (Font)              Font shape `EU1/SimSun(0)/m/it' tried instead on input line
  193.
- [70]
+ [40]
 *************************************************
 * xeCJK warning: "CJKfamily-Unknown"
 * 
@@ -3359,26 +2655,33 @@ LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 288
 .
 (/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [71] [72]) [73]
+)
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 288.
 
-Package natbib Warning: There were undefined citations.
 
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 288.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 288.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 288.
+
+[41] [42]) [43]
 File: figures/back-cover.png Graphic file (type QTm)
-<use  "figures/back-cover.png" >
+ <use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
- [74
+ [44
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
- (./Main.aux (./chapter-1.aux)
-(./chapter-2.aux) (./chapter-3.aux) (./chapter-4.aux) (./chapter-5.aux)
-(./chapter-6.aux)
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+ (./Main.aux
+(./chapter-1.aux) (./chapter-2.aux) (./chapter-3.aux) (./chapter-4.aux)
+(./chapter-5.aux) (./chapter-6.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 76.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 76.
 
@@ -3387,20 +2690,17 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
  ) 
 Here is how much of TeX's memory you used:
- 30738 strings out of 493727
- 569836 string characters out of 6147889
- 692309 words of memory out of 5000000
- 33626 multiletter control sequences out of 15000+600000
- 12500 words of font info for 96 fonts, out of 8000000 for 9000
+ 30588 strings out of 493727
+ 565603 string characters out of 6147889
+ 695344 words of memory out of 5000000
+ 33548 multiletter control sequences out of 15000+600000
+ 11804 words of font info for 85 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 73i,22n,89p,10424b,892s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,11n,89p,10424b,865s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Main.pdf (74 pages).
+Output written on Main.pdf (44 pages).
