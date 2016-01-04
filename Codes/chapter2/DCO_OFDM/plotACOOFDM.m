@@ -41,6 +41,10 @@ hold on;
 stem(3,tb(4),'^b');
 stem(5,tb(6),'ob');
 stem(6,tb(7),'sb');
+stem(1,0,'ob');
+stem(2,0,'sb');
+stem(4,0,'*b');
+stem(7,0,'^b');
 axis([-1,8,0,0.8]);
 
 xlabel('(c) n (time domain samples)');

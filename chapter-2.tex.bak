@@ -11,7 +11,7 @@
     \caption{光无线通信系统模型}
     \label{fig:BasicOpticalSystem}
 \end{figure}
-如\autoref{fig:BasicOpticalSystem}所示，在电信号域（Electrisity domain）发射端输出电压信号$x(t)$经过发光二极管后变成LED的电流$i_{TX}(t)$信号，接收端光敏二极管PD输出电流$i_{RX}(t)$，其最后转换成接收信号$y(t)$ ，在光信号域（Light Domain），首先在发射端发光二极管LED的电流信号$i_{TX}(t)$ 转变为发光强度$s(t)$，经过光信道后，在接收端光电二极管PD收到的光强信号为$r(t)$，经过光电转换，得到电流$i_{RX}(t)$。
+如\autoref{fig:BasicOpticalSystem}所示，在电信号域（Electrisity domain）发射端输入信源经过发射端基础处理后变成LED的电流$i_{TX}(t)$信号，接收端光敏二极管PD输出电流$i_{RX}(t)$，其最后转换成接收信号$y(t)$ ，在光信号域（Light Domain），首先在发射端发光二极管LED的电流信号$i_{TX}(t)$ 转变为发光强度$s(t)$，经过光信道后，在接收端光电二极管PD收到的光强信号为$r(t)$，经过光电转换，得到电流$i_{RX}(t)$。
 所以在实际可见光通信系统中，信号传输由电光变换，光通道传输及光电变换三个过程组成，如\autoref{fig:BasebandModle}所示，接收端信号$y(t)$ 可以表示为：
 \begin{equation}
     y(t)=x(t)\otimes h_1(t)\otimes h_2(t)\otimes h_3(t)+z(t)
@@ -37,7 +37,7 @@ $z(t)$表示信道加性白高斯噪声（Additive White Gaussian Noise，AWGN�
 \caption{光通信信道分类}
 \label{fig:ChannelClass}
 \end{figure}
-显然可见光通信既要通信还要兼顾照明，所以发射机一定是非定向的，同样为了保证系统的鲁棒性，可见光通信的接收机一般也是非定向的，因此本文中讨论信道时发射机和接收机都认为是为非定向的，只研究在这个条件下的有无直达径两种情况。对于含有直达径的LOS信道和没有直达径的漫反射信道（Diffuse Optical Channel，DOW），我们都可以建模为线性信道，其时域冲激响应可以表示为：
+显然可见光通信既要通信还要兼顾照明，所以发射机一定是非定向的，同样为了保证系统的鲁棒性，可见光通信的接收机一般也是非定向的，因此本文中讨论信道时发射机和接收机都认为是为非定向的，只研究在这个条件下的有无直达径两种情况。对于含有直达径的LOS信道和没有直达径的漫反射光信道（Diffuse Optical Channel，DOW），我们都可以建模为线性信道，其时域冲激响应可以表示为：
 \begin{equation}
 \label{equ:opticalChannelMode}
 h_2(t) = \sum_{n=0}^{N_t-1}\alpha_n \delta(t-\tau_n)
@@ -168,7 +168,7 @@ h(t)=h_1(t)\otimes h_2(t)\otimes h_3(t)
     \end{tabular}
 \end{table}
 
-目前在可见光通信中应用的光电二极管有PIN型和雪崩型(Avalanche photodiode,APD)两种，PIN型光电二极管就是在普通的光电二极管的P区和N区之间加入了低掺杂度的I 区，使得耗尽区变厚了，从而缩短了其响应时间，并且提高了截止频率，其调制带宽可达数百兆赫兹，能够适应高速通信系统的要求。同时PIN 型二极管还有线性范围宽、制作工艺简单及价格低等优点。雪崩型光电二极管比较特殊，它的工作原理是在其P区和N 区两端加了反向高电压，当有光照射耗尽区产出自由电子和空穴时，在反向高压的作用下，电子和空穴高速碰撞晶格原子，产生更多的电子和空穴，此过程像“雪崩”一样继续下去，从而产生了很大的反向电流。雪崩型光电二极管的优点是灵敏度高、增益高及带宽高，但是制造工艺复杂，价格较贵。PIN型和雪崩型光电二极管的比较如下表\ref{tab:PIN_APD_Comparsion}所示。
+目前在可见光通信中应用的光电二极管有PIN型和雪崩型(Avalanche Photo Diode,APD)两种，PIN型光电二极管就是在普通的光电二极管的P区和N区之间加入了低掺杂度的I 区，使得耗尽区变厚了，从而缩短了其响应时间，并且提高了截止频率，其调制带宽可达数百兆赫兹，能够适应高速通信系统的要求。同时PIN 型二极管还有线性范围宽、制作工艺简单及价格低等优点。雪崩型光电二极管比较特殊，它的工作原理是在其P区和N 区两端加了反向高电压，当有光照射耗尽区产出自由电子和空穴时，在反向高压的作用下，电子和空穴高速碰撞晶格原子，产生更多的电子和空穴，此过程像“雪崩”一样继续下去，从而产生了很大的反向电流。雪崩型光电二极管的优点是灵敏度高、增益高及带宽高，但是制造工艺复杂，价格较贵。PIN型和雪崩型光电二极管的比较如下表\ref{tab:PIN_APD_Comparsion}所示。
 
 
 \subsection{滤光片}
@@ -311,9 +311,9 @@ X_{c}(m)=\frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}x_{c}(k)e^{-\frac{j2\pi km}{N
     \caption{RoC-ACO-OFDM信号处理时频域示意图}
     \label{fig:RoC-ACO-OFDMStructure}
 \end{figure}
-峰均比过高一直是OFDM系统的主要缺点，这个问题同样存在于无线光通信的OFDM系统中，PAPR过高会使信号通过功放或LED驱动电路时进入非线性区，从而导致信号失真，这样会对系统的整体性能产生很大影响，所以有必要对无线光通信OFDM系统进行降低PAPR的优化。
+时域信号峰均比过高是影响OFDM系统性能的主要问题，这同样存在于无线光通信的OFDM 系统中，PAPR过高会使信号通过功放或LED驱动电路时进入非线性区，从而导致信号失真，这样会对系统的整体性能产生很大影响，所以有必要对无线光通信OFDM 系统进行降低PAPR的优化。
 
-由于进行了非对称削波，使得ACO-OFDM系统的峰均比比传统的OFDM系统更大，为了解决这个问题，我们利用ACO-OFDM信号结构特点，提出了一个可在接收端恢复的上削波技术（Recoverable Upper Clipping ACO-OFDM，RoC-ACO-OFDM），其信号处理过程如图\ref{fig:RoC-ACO-OFDMStructure}所示，可以看到我们在发射端负值削波之后加上了一个进行上削波并搬移的模块，同样在接收端加了一个削波恢复的模块。具体的示例如图\ref{fig:SCH_data}所示，设置一个阀值$\eta_c$，当时域信号的值大于该阀值，就在阀值处进行削波。但是与传统的削波技术不同的是，削波余量不是直接丢弃，而是放在被削波符号的对称位置（图中的29 处）。
+由于进行了非对称削波，使得ACO-OFDM系统的峰均比比传统的OFDM系统更大，为了解决这个问题，我们利用ACO-OFDM信号结构特点，提出了一个可在接收端恢复的上削波技术（Recoverable Upper Clipping ACO-OFDM，RoC-ACO-OFDM）\cite{xu2014aco}，其信号处理过程如图\ref{fig:RoC-ACO-OFDMStructure}所示，可以看到我们在发射端负值削波之后加上了一个进行上削波并搬移的模块，同样在接收端加了一个削波恢复的模块。具体的示例如图\ref{fig:SCH_data}所示，设置一个阀值$\eta_c$，当时域信号的值大于该阀值，就在阀值处进行削波。但是与传统的削波技术不同的是，削波余量不是直接丢弃，而是放在被削波符号的对称位置（图中的29 处）。
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/chapter-2/SCH_data.eps}
@@ -327,17 +327,73 @@ X_{c}(m)=\frac{1}{\sqrt{N}}\sum \limits_{k=0}^{N-1}x_{c}(k)e^{-\frac{j2\pi km}{N
     \caption{RoC-ACO-OFDM发射信号的六种假设}
     \label{fig:HypothesisSketch}
 \end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/MAP_RoC_ACO_OFDM.eps}
+    \caption{MAP算法判决区域与$\eta_c$的关系}
+    \label{fig:MAP_RoC_ACO_OFDM}
+\end{figure}
 当然$\alpha$的值是可以自己去设置的，当$\alpha$等于0时，相当于没有进行削波搬移，RoC-ACO-OFDM退化为普通的削波ACO-OFDM，但是 等于甚至大于1，将会导致信号恢复时的位置反转错误，这种错误将会显著降低系统的性能。因此我们应该设置合理的$\alpha$值，在后面的仿真中，我们令$\alpha$等于0.95，仿真结果显示在一般的应用情景下，这个值是合理的。
 
 基于前面的六种假设，我们能够用MAP算法来判断哪种假设成立，然后针对这种假设来进行信号恢复，这样的算法是性能最优的。但是缺点是复杂度很高，不利用实现。为此我们提出了简化的信号检测方法，不再需要计算MAP概率，而是直接使用信号值的大小比较就能进行信号恢复。
 
-MAP算法得到的判决区域与设定的阀值(η_𝑐)之间有着密切的关系(如图6所示)，并且经分析发现把判决区域  和 合并及 和 合并只会对性能造成很微妙的影响，如得到如下简化算法。
+MAP算法的判决划分见图\ref{fig:MAP_RoC_ACO_OFDM}，图中$(y_1,y_2)$为接收到的成对信号，$\hat{H}_1,\hat{H}_2,\cdots,\hat{H}_6$为上面六种假设对应的判决区域。可以看到MAP算法得到的判决区域与设定的阀值$\eta_c$之间有着密切的关系，并且经分析发现把判决区域$\hat{H}_4$ 和$\hat{H}_6$合并及$\hat{H}_3$ 和$\hat{H}_5$合并只会对性能造成很微妙的影响，如得到如下简化算法。判决区域化为：
+\begin{equation}
+\begin{aligned}
+\hat{D}_1:
+\begin{cases}
+y_1 > y_2 \\
+y_1 + y_2 \leq \eta_c,\\
+\end{cases}
+\qquad
+\hat{D}_2:
+\begin{cases}
+y_1 \leq y_2 \\
+y_1 + y_2 < \eta_c,\\
+\end{cases}\\
+\hat{D}_3:
+\begin{cases}
+y_1 > y_2 \\
+y_1 + y_2 > \eta_c,\\
+\end{cases}
+\qquad
+\hat{D}_4:
+\begin{cases}
+y_1 \leq y_2 \\
+y_1 + y_2 > \eta_c.  \label{Eq_simp_decision}
+\end{cases}\\
+\end{aligned}
+\end{equation}
+信号恢复算法简化为：
+\begin{equation}
+\begin{split}
+(y[n],\hat{y}[n])=
+\begin{cases}
+(y_{uc}[n],0),     & \qquad (y_1, y_2) \in \hat{D}_1  \\
+(0,\hat{y}_{uc}[n]), & \qquad (y_1, y_2) \in  \hat{D}_2 \\
+(\eta_c+\hat{y}_{uc}[n],0),  & \qquad (y_1, y_2) \in  \hat{D}_3   \\
+(0,\eta_c+\hat{y}_{uc}[n]), & \qquad (y_1, y_2) \in  \hat{D}_4.      \label{Eq_simp_recover}
+\end{cases}
+\end{split}
+\end{equation}
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/chapter-2/MAP_RoC_ACO_OFDM.eps}
-    \caption{RoC-ACO-OFDM发射信号的六种假设}
-    \label{fig:HypothesisSketch}
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/CCDF.eps}
+    \caption{PAPR性能比较}
+    \label{fig:CCDF}
 \end{figure}
 
+为验证RoC-ACO-OFDM的性能，进行了必要的数值仿真，比较的对象选为不削波的ACO-OFDM技术和直接削波的ACO-OFDM技术。仿真中设置子载波数为256，使用64QAM调制，仿真结果如图\ref{fig:CCDF}所示，图中横轴$\text{PAPR}_0$表示峰均比的基准，纵轴是互补累积分布函数（Complementary Cumulative Distribution Function，CCDF），表示信号大于横轴基准的概率，CR 表示削波系数，以分贝为单位，定义为CR$= 20 \log \left( \eta_c / \sqrt{\mathbb{E} \left\{ |x_c[n]|^2 \right\} } \right)$，其中$\mathbb{E} \left\{ |x_c[n]|^2 \right\}$表示发射信号的平均功率。从图中可以看到，削波系数的越大，PAPR的性能越好，如在理想的ACO-OFDM中在$\text{PAPR}_0$=17.0 dB时CCDF为$10^{-4}$，而当CR= 7dB时，RoC-ACO-OFDM 在$\text{PAPR}_0$=11.4 dB时CCDF就能达到，提升5.6 dB，几乎媲美直接削波。
+
+同时也考察了RoC-ACO-OFDM的误比特率性能，这个才是通信中最关心的问题。我们仿真比较了理想ACO-OFDM、直接削波ACO-OFDM 及RoC-ACO-OFDM 的在AWGN信道下的BER 性能，仿真中同样设置子载波数为256，使用64QAM调制，如图\ref{fig:BER_1}所示，BER 随着设定的阀值$\eta_c$变大而减少，当CR=10 dB 时，RoC-ACO-OFDM几乎接近理想ACO-OFDM，并且一直优于直接削波的方法；同时在图中也可以看出，我们提出的简化的接收端信号检测并恢复的方式是非常有效的，在大大降低了计算复杂度的前提下，误比特率性能几乎和MAP算法一样。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/chapter-2/BER_1.eps}
+    \caption{BER性能比较}
+    \label{fig:BER_1}
+\end{figure}
 \section{本章小结}
-本章首先可见光通信的基本原理，包括系统模型、信道特征及光电元器件等，本文联系实际情况将可见光通信信道建模为线性信道，然后介绍了电光转换器件LED，详细说明了荧光激发型LED和多色混合型LED的工作原理和特性，还介绍PIN 和APD两类光电转换器件及接收端使用的滤光片。理解这些光电元器件的原理与作用有益于理解整个可见光通信系统。由于OFDM调制技术非常适应光低通信道，在可见光通信中也得到了广泛的使用，所以本章也介绍了光OFDM技术，主要说明了DCO-OFDM和ACO-OFDM的工作原理及区别。
+本章首先可见光通信的基本原理，包括系统模型、信道特征及光电元器件等，本文联系实际情况将可见光通信信道建模为线性信道，然后介绍了电光转换器件LED，详细说明了荧光激发型LED和多色混合型LED的工作原理和特性，还介绍PIN 和APD两类光电转换器件及接收端使用的滤光片。理解这些光电元器件的原理与作用有益于理解整个可见光通信系统。由于OFDM调制技术非常适应光低通信道，在可见光通信中也得到了广泛的使用，所以本章也介绍了光OFDM技术，主要说明了DCO-OFDM和ACO-OFDM的工作原理及区别，在此基础上提出了一种改善ACO-OFDM 系统PAPR 性能的RoC-ACO-OFDM方案，并且在理论和数值仿真的角度论证了该方案的有效性。

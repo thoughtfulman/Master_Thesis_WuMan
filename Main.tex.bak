@@ -23,7 +23,7 @@
 \degree{工学硕士} % 详细学位名称
 \major{信息与通信工程}
 \submajor{通信与信息系统}
-\defenddate{2016年1月24日}
+\defenddate{2016年1月日}
 %\defenddate{}
 %\authorizedate{2015年3月20日}
 \authorizedate{}
@@ -50,12 +50,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 开始正文
 \begin{Main}
-%   \include{chapter-1}
-%   \include{chapter-2}
-%   \include{chapter-3}
-%   \include{chapter-4}
-%   \include{chapter-5}
-%   \include{chapter-6}
+   \include{chapter-1}
+   \include{chapter-2}
+   \include{chapter-3}
+   \include{chapter-4}
+   \include{chapter-5}
+   \include{chapter-6}
 \end{Main}
 % 结束正文
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  25 DEC 2015 10:27
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  28 DEC 2015 10:57
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1857,10 +1857,7 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+[1
 
 
 
@@ -2061,16 +2058,19 @@ File: figures/chapter-2/SCH_data.eps Graphic file (type eps)
  <figures/chapter-2/SCH_data.eps>
 File: figures/chapter-2/HypothesisSketch.eps Graphic file (type eps)
 
-<figures/chapter-2/HypothesisSketch.eps> [20] [21]
+<figures/chapter-2/HypothesisSketch.eps> [20]
 File: figures/chapter-2/MAP_RoC_ACO_OFDM.eps Graphic file (type eps)
 
-<figures/chapter-2/MAP_RoC_ACO_OFDM.eps> [22]
-File: figures/chapter-2/CCDF.eps Graphic file (type eps)
- <figures/chapter-2/CCDF.eps>
-File: figures/chapter-2/BER_1.eps Graphic file (type eps)
+<figures/chapter-2/MAP_RoC_ACO_OFDM.eps> [21]
+Underfull \vbox (badness 6173) has occurred while \output is active []
 
-<figures/chapter-2/BER_1.eps>)
-Underfull \vbox (badness 4391) has occurred while \output is active []
+ [22]
+File: figures/chapter-2/CCDF.eps Graphic file (type eps)
+
+<figures/chapter-2/CCDF.eps>
+File: figures/chapter-2/BER_1.eps Graphic file (type eps)
+ <figures/chapter-2/BER_1.eps>)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
 [24] [25] (E:\WuMan\Master_Thesis_WuMan\chapter-3.tex [26
