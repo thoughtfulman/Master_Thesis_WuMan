@@ -11,7 +11,7 @@
     \caption{光无线通信系统模型}
     \label{fig:BasicOpticalSystem}
 \end{figure}
-如\autoref{fig:BasicOpticalSystem}所示，在电信号域（Electrisity domain）发射端输入信源经过发射端基础处理后变成LED的电流$i_{TX}(t)$信号，接收端光敏二极管PD输出电流$i_{RX}(t)$，其最后转换成接收信号$y(t)$ ，在光信号域（Light Domain），首先在发射端发光二极管LED的电流信号$i_{TX}(t)$ 转变为发光强度$s(t)$，经过光信道后，在接收端光电二极管PD收到的光强信号为$r(t)$，经过光电转换，得到电流$i_{RX}(t)$。
+如\autoref{fig:BasicOpticalSystem}所示，在电信号域（Electrisity domain）发射端输出电压信号$x(t)$经发射端模拟电路后变成LED的电流$i_{TX}(t)$ 信号，接收端光敏二极管PD输出电流$i_{RX}(t)$，其最后转换成接收信号$y(t)$ ，在光信号域（Light Domain），首先在发射端发光二极管LED的电流信号$i_{TX}(t)$ 转变为发光强度$s(t)$，经过光信道后，在接收端光电二极管PD 收到的光强信号为$r(t)$，经过光电转换，得到电流$i_{RX}(t)$。
 所以在实际可见光通信系统中，信号传输由电光变换，光通道传输及光电变换三个过程组成，如\autoref{fig:BasebandModle}所示，接收端信号$y(t)$ 可以表示为：
 \begin{equation}
     y(t)=x(t)\otimes h_1(t)\otimes h_2(t)\otimes h_3(t)+z(t)
@@ -239,7 +239,7 @@ DCO-OFDM调制技术原理框图如\autoref{fig:DCO-OFDMStructure} 所示。因�
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/chapter-2/DCO_OFDM.eps}
-    \caption{ACO-OFDM信号处理时频域示意图}
+    \caption{DCO-OFDM信号处理时频域示意图}
     \label{fig:DCO_OFDM}
 \end{figure}
 
@@ -396,4 +396,4 @@ y_1 + y_2 > \eta_c.  \label{Eq_simp_decision}
     \label{fig:BER_1}
 \end{figure}
 \section{本章小结}
-本章首先可见光通信的基本原理，包括系统模型、信道特征及光电元器件等，本文联系实际情况将可见光通信信道建模为线性信道，然后介绍了电光转换器件LED，详细说明了荧光激发型LED和多色混合型LED的工作原理和特性，还介绍PIN 和APD两类光电转换器件及接收端使用的滤光片。理解这些光电元器件的原理与作用有益于理解整个可见光通信系统。由于OFDM调制技术非常适应光低通信道，在可见光通信中也得到了广泛的使用，所以本章也介绍了光OFDM技术，主要说明了DCO-OFDM和ACO-OFDM的工作原理及区别，在此基础上提出了一种改善ACO-OFDM 系统PAPR 性能的RoC-ACO-OFDM方案，并且在理论和数值仿真的角度论证了该方案的有效性。
+本章首先介绍了可见光通信的基本原理，包括系统模型、信道特征及光电元器件等，本文联系实际情况将可见光通信信道建模为线性信道，然后介绍了电光转换器件LED，详细说明了荧光激发型LED和多色混合型LED的工作原理和特性，还介绍PIN 和APD两类光电转换器件及接收端使用的滤光片。理解这些光电元器件的原理与作用有益于理解整个可见光通信系统。由于OFDM调制技术非常适应光低通信道，在可见光通信中也得到了广泛的使用，所以本章也介绍了光OFDM技术，主要说明了DCO-OFDM和ACO-OFDM的工作原理及区别，在此基础上提出了一种改善ACO-OFDM 系统PAPR 性能的RoC-ACO-OFDM方案，并且在理论和数值仿真的角度论证了该方案的有效性。
