@@ -121,17 +121,22 @@ EVM序列频域符号在接收端也是已知的，所以得到已经均衡过�
 \label{fig:Demo}
 \end{figure}
 
+表\ref{tab:ExprimentModOrd}给出了我们系统在发射端LED与接收端PD之间的距离为100 cm、采样频率为150 MHz时使用自适应算法得到的一组调制方式，其中OFDM 子载波总数为128，分为8组，每个子载波组放置16 个子载波，并且将0~3,112~127 号子载波设置为虚拟子载波。可以看到各个波段上的BER都小于0.01满足我们系统的要求。 每路的空间接口速率为291Mbps，三个波段总速率873 Mbps。
 \begin{table}
+\caption{收发机距离100 cm采样频率为150 MHz下各色光的调制及BER}
+\label{tab:ExprimentModOrd}
 \centering
-\begin{tabular}{l|ccc}
- \hline
- \diagbox{色光}{子载波组} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
- \hline
-Red &  \\
-
- \hline
- \end{tabular}
+\begin{tabular}{c|ccccccccc}
+\toprule
+\diagbox{波段}{子载波组} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 &BER\\
+\midrule
+Red & 256 & 64 & 64 & 64 & 16 & 16 & 4 & - & 0.0043  \\
+Green & 256 & 64 & 64 & 64 & 16 & 16 & 4 & - & 0.0041  \\
+Blue & 256 & 256 & 256 & 64 & 64 & 16 & 4 & - & 0.0029  \\
+\bottomrule
+\end{tabular}
 \end{table}
+
 
 \section{本章小结}
 本章在前面几章讲解可见光通信原理及其自适应传输理论的基础上，介绍了本课题对应的硬件平台。首先对整个硬件平台进行了概述，包括各种器件的参数及其选择依据，并且简述了发射端和接收端的基带处理处理过程；然后重点描述了基带处理中与自适应技术密切相关的调制器、自适应参数生成、软解调三个模块；最后展示了整个硬件平台实物图。

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  8 JAN 2016 09:33
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  8 JAN 2016 14:17
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1199,11 +1199,44 @@ LaTeX Warning: Unused global option(s):
 (E:\WuMan\Master_Thesis_WuMan\abstract-cn.aux)
 (E:\WuMan\Master_Thesis_WuMan\abstract-en.aux)
 (E:\WuMan\Master_Thesis_WuMan\terminology.aux)
+(E:\WuMan\Master_Thesis_WuMan\chapter-1.aux)
+(E:\WuMan\Master_Thesis_WuMan\chapter-2.aux)
+(E:\WuMan\Master_Thesis_WuMan\chapter-3.aux
+
+LaTeX Warning: Label `fig:LZC_wavelengthShift' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:LZC_wavelengthShift' multiply defined.
+
+
+LaTeX Warning: Label `fig:ZC_frequency_time' multiply defined.
+
+
+LaTeX Warning: Label `tab:modOrder' multiply defined.
+
+
+LaTeX Warning: Label `fig:Sim_Channel_time' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:Sim_Channel_time' multiply defined.
+
+
+LaTeX Warning: Label `fig:Sim_Channel_frequency' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:Sim_Channel_frequency' multiply defined.
+
+) (E:\WuMan\Master_Thesis_WuMan\chapter-4.aux)
 (E:\WuMan\Master_Thesis_WuMan\chapter-5.aux
 
 LaTeX Warning: Label `fig:TransmitterSchematic' multiply defined.
 
-) (E:\WuMan\Master_Thesis_WuMan\Resume.aux)
+
+LaTeX Warning: Label `tab:Signle Color Channel Estimation Paramters' multiply d
+efined.
+
+) (E:\WuMan\Master_Thesis_WuMan\chapter-6.aux)
+(E:\WuMan\Master_Thesis_WuMan\Resume.aux)
 (E:\WuMan\Master_Thesis_WuMan\Acknowledgement.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -1839,23 +1872,27 @@ Overfull \hbox (2.50583pt too wide) detected at line 3
  \EU1/TimesNewRoman(0)/bx/n/12 VII
  []
 
-)
-\tf@toc=\write5
+
+Underfull \vbox (badness 2229) has occurred while \output is active []
+
  [5
 
 
 
-] [6
+])
+\tf@toc=\write5
+
+[6] (E:\WuMan\Master_Thesis_WuMan\Main.lof [7
 
 
-] (E:\WuMan\Master_Thesis_WuMan\Main.lof)
+])
 \tf@lof=\write6
- [7] [8
-
-]
+ [8]
 (E:\WuMan\Master_Thesis_WuMan\Main.lot)
 \tf@lot=\write7
- [9]
+ [9
+
+]
 (E:\WuMan\Master_Thesis_WuMan\terminology.tex [10
 
 
@@ -1876,7 +1913,7 @@ Overfull \hbox (23.0508pt too wide) in alignment at lines 46--59
 
 [11
 
-]) [12] (E:\WuMan\Master_Thesis_WuMan\chapter-5.tex
+]) [12] (E:\WuMan\Master_Thesis_WuMan\chapter-1.tex
 第\CJKnumber {1}章 1.
 
 Class scrbook Warning: \float@addtolists detected!
@@ -1900,8 +1937,30 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
-File: figures/chapter-5/Hardware_Structure.eps Graphic file (type eps)
-<figures/chapter-5/Hardware_Structure.eps>
+[1
+
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4])
+[5] (E:\WuMan\Master_Thesis_WuMan\chapter-2.tex [6
+
+
+
+]
+第\CJKnumber {2}章 2.
+File: figures/chapter-2/BasicOpticalSystem.eps Graphic file (type eps)
+<figures/chapter-2/BasicOpticalSystem.eps>
 .................................................
 . fontspec info: "no-scripts"
 . 
@@ -1917,75 +1976,381 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . 
 . This font family consists of the following shapes:
 .................................................
- [1
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+File: figures/chapter-2/BasebandModle.eps Graphic file (type eps)
+
+<figures/chapter-2/BasebandModle.eps>
+File: figures/chapter-2/ChannelClass.eps Graphic file (type eps)
+ <figures/chapter-2/ChannelClass.eps>
+Underfull \vbox (badness 1546) has occurred while \output is active []
+
+ [8]
+File: figures/chapter-2/ChannelImpulseResponse.eps Graphic file (type eps)
+
+<figures/chapter-2/ChannelImpulseResponse.eps>
+File: figures/chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps Graphic file
+ (type eps)
+
+<figures/chapter-2/ChannelImpulseResponse-AmpFreqResponse.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 56--61
+ [][][][] 
+ []
+
+[9]
+File: figures/chapter-2/DOW_ImplusResponse.eps Graphic file (type eps)
+ <figures/chapter-2/DOW_ImplusResponse.eps>
+File: figures/chapter-2/DOW_AmpResponse.eps Graphic file (type eps)
+
+<figures/chapter-2/DOW_AmpResponse.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 89--94
+ [][][][] 
+ []
+
+[10]
+Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 109 replaced by U+FFFD.
+File: figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps Graphic file (typ
+e eps)
+ <figures/chapter-2/LEUWS2LN-RelativeSpectralEmission.eps>
+Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 113 replaced by U+FFFD.
+File: figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps Graphic file 
+(type eps)
+
+<figures/chapter-2/LRTBR98G-RGB-RelativeSpectralEmission.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 109--114
+ [][][][] 
+ []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+File: figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps Graphic file (type ep
+s)
+
+<figures/chapter-2/LED_LZ4_relativeSputrcalPower.eps>
+Invalid UTF-8 byte or sequence at line 131 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 131 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 131 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 131 replaced by U+FFFD.
+File: figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps Graphic file (type ep
+s)
+
+<figures/chapter-2/LED_LZ4_absoluteSputrcalPower.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 127--132
+ [][][][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/chapter-2/LED_Temperature_Light_Output.eps Graphic file (type eps
+)
+<figures/chapter-2/LED_Temperature_Light_Output.eps>
+File: figures/chapter-2/LED_Temperature_Wavelength_Shift.eps Graphic file (type
+ eps)
+
+<figures/chapter-2/LED_Temperature_Wavelength_Shift.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 142--147
+ [][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+[13]
+File: figures/chapter-2/MulticolorFilterGain.eps Graphic file (type eps)
+ <figures/chapter-2/MulticolorFilterGain.eps>
+File: figures/chapter-2/MultiColorReceiveredFilter.eps Graphic file (type eps)
+
+<figures/chapter-2/MultiColorReceiveredFilter.eps> [14]
+File: figures/chapter-2/HistoryOfOFDM.eps Graphic file (type eps)
+
+<figures/chapter-2/HistoryOfOFDM.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+File: figures/chapter-2/DCO-OFDMStructure.eps Graphic file (type eps)
+
+<figures/chapter-2/DCO-OFDMStructure.eps> [16]
+Underfull \vbox (badness 2080) has occurred while \output is active []
+
+ [17]
+File: figures/chapter-2/DCO_OFDM.eps Graphic file (type eps)
+
+<figures/chapter-2/DCO_OFDM.eps>
+File: figures/chapter-2/ACO-OFDMStructure.eps Graphic file (type eps)
+ <figures/chapter-2/ACO-OFDMStructure.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18]
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [19]
+File: figures/chapter-2/ACO_OFDM.eps Graphic file (type eps)
+ <figures/chapter-2/ACO_OFDM.eps>
+File: figures/chapter-2/RoC-ACO-OFDMStructure.eps Graphic file (type eps)
+
+<figures/chapter-2/RoC-ACO-OFDMStructure.eps> [20]
+File: figures/chapter-2/SCH_data.eps Graphic file (type eps)
+
+<figures/chapter-2/SCH_data.eps>
+File: figures/chapter-2/HypothesisSketch.eps Graphic file (type eps)
+ <figures/chapter-2/HypothesisSketch.eps>
+File: figures/chapter-2/MAP_RoC_ACO_OFDM.eps Graphic file (type eps)
+
+<figures/chapter-2/MAP_RoC_ACO_OFDM.eps> [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+File: figures/chapter-2/CCDF.eps Graphic file (type eps)
+
+<figures/chapter-2/CCDF.eps> [23]
+File: figures/chapter-2/BER_1.eps Graphic file (type eps)
+ <figures/chapter-2/BER_1.eps>) [24] [25]
+(E:\WuMan\Master_Thesis_WuMan\chapter-3.tex [26
 
 
 
 ]
+第\CJKnumber {3}章 3.
+File: figures/chapter-3/BlockTypePilot.eps Graphic file (type eps)
+<figures/chapter-3/BlockTypePilot.eps>
+File: figures/chapter-3/CombTypePilot.eps Graphic file (type eps)
+ <figures/chapter-3/CombTypePilot.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 13--18
+ [][][][] 
+ []
 
-LaTeX Warning: Reference `fig:LED_LZ4_relativeSputrcalPower' on page 2 undefine
-d on input line 19.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+[28] [29] [30] [31] [32]
+File: figures/chapter-3/FrameStructure.eps Graphic file (type eps)
+ <figures/chapter-3/FrameStructure.eps>
+File: figures/chapter-3/ZC_frequency.eps Graphic file (type eps)
+
+<figures/chapter-3/ZC_frequency.eps>
+File: figures/chapter-3/ZC_time.eps Graphic file (type eps)
+ <figures/chapter-3/ZC_time.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 226--231
+ [][][][] 
+ []
+
+[33]
+File: figures/chapter-3/Sim_Channel_time.eps Graphic file (type eps)
+ <figures/chapter-3/Sim_Channel_time.eps>
+File: figures/chapter-3/Sim_Channel_frequency.eps Graphic file (type eps)
+
+<figures/chapter-3/Sim_Channel_frequency.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 242--247
+ [][][][] 
+ []
+
+[34]
+File: figures/chapter-3/BER_SNR_avg.eps Graphic file (type eps)
+ <figures/chapter-3/BER_SNR_avg.eps>
+File: figures/chapter-3/MSE_SNR_avg.eps Graphic file (type eps)
+ <figures/chapter-3/MSE_SNR_avg.eps>
+[35] [36]
+File: figures/chapter-3/BER_sc.eps Graphic file (type eps)
+ <figures/chapter-3/BER_sc.eps>
+
+LaTeX Warning: Reference `SVD_BER_MSE_SNR_avg' on page 37 undefined on input li
+ne 324.
+
+File: figures/chapter-3/SVD_BER_SNR_avg.eps Graphic file (type eps)
+<figures/chapter-3/SVD_BER_SNR_avg.eps>
+File: figures/chapter-3/SVD_MSE_SNR_avg.eps Graphic file (type eps)
+
+<figures/chapter-3/SVD_MSE_SNR_avg.eps>
+Overfull \hbox (10.95001pt too wide) in paragraph at lines 344--349
+ [][][][] 
+ []
+
+[37] [38]
+File: figures/chapter-3/SNR_ZC_EVM.eps Graphic file (type eps)
+ <figures/chapter-3/SNR_ZC_EVM.eps>) [39] [40]
+(E:\WuMan\Master_Thesis_WuMan\chapter-4.tex
+第\CJKnumber {4}章 4.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41
+
+
+
+]
+[42]
+File: figures/chapter-4/waterFilling.eps Graphic file (type eps)
+ <figures/chapter-4/waterFilling.eps> [43]
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font SimSun does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Mapping=tex-text,BoldFont={SimSun},BoldFeatures={RawFeature={embolden=4}},It
+alicFont={SimSun},ItalicFeatures={RawFeature={slant=0.17}},BoldItalicFont={SimS
+un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [44] [45] [46] [47]
+File: figures/chapter-4/BERonDiffAlgo.eps Graphic file (type eps)
+
+<figures/chapter-4/BERonDiffAlgo.eps>
+File: figures/chapter-4/DOWBERonDiffAlgo.eps Graphic file (type eps)
+ <figures/chapter-4/DOWBERonDiffAlgo.eps>
+[48] [49]
+File: figures/chapter-4/loadedBit.eps Graphic file (type eps)
+ <figures/chapter-4/loadedBit.eps>
+File: figures/chapter-4/loadedPower.eps Graphic file (type eps)
+
+<figures/chapter-4/loadedPower.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+File: figures/chapter-4/theoreticalBER.eps Graphic file (type eps)
+
+<figures/chapter-4/theoreticalBER.eps> [51] [52]
+Underfull \hbox (badness 10000) in paragraph at lines 251--256
+
+ []
+
+[53]
+File: figures/chapter-4/SBLABERonDiffAlgo.eps Graphic file (type eps)
+ <figures/chapter-4/SBLABERonDiffAlgo.eps>
+File: figures/chapter-4/SBLAloadedBit.eps Graphic file (type eps)
+
+<figures/chapter-4/SBLAloadedBit.eps>
+File: figures/chapter-4/SBLAloadedPower.eps Graphic file (type eps)
+ <figures/chapter-4/SBLAloadedPower.eps>
+[54] [55]) [56] (E:\WuMan\Master_Thesis_WuMan\chapter-5.tex
+第\CJKnumber {5}章 5.
+File: figures/chapter-5/Hardware_Structure.eps Graphic file (type eps)
+<figures/chapter-5/Hardware_Structure.eps> [57
+
+
+
+]
 File: figures/chapter-5/TransmitterSchematic.eps Graphic file (type eps)
-<figures/chapter-5/TransmitterSchematic.eps> [2]
+
+<figures/chapter-5/TransmitterSchematic.eps> [58]
 File: figures/chapter-5/TimeSchemeTrans.eps Graphic file (type eps)
 
-<figures/chapter-5/TimeSchemeTrans.eps> [3]
+<figures/chapter-5/TimeSchemeTrans.eps> [59]
 File: figures/chapter-5/ReciverSchematic.eps Graphic file (type eps)
 
 <figures/chapter-5/ReciverSchematic.eps>
 File: figures/chapter-5/TimeSchemeRece.eps Graphic file (type eps)
 
-<figures/chapter-5/TimeSchemeRece.eps> [4]
+<figures/chapter-5/TimeSchemeRece.eps> [60]
 File: figures/chapter-5/AdaptiveModulation.eps Graphic file (type eps)
 
-<figures/chapter-5/AdaptiveModulation.eps> [5]
+<figures/chapter-5/AdaptiveModulation.eps> [61]
 File: figures/chapter-5/AdaptiveParameterGenerator.eps Graphic file (type eps)
 
-<figures/chapter-5/AdaptiveParameterGenerator.eps> [6]
+<figures/chapter-5/AdaptiveParameterGenerator.eps> [62]
 File: figures/chapter-5/AdaptiveDemodulation.eps Graphic file (type eps)
 
-<figures/chapter-5/AdaptiveDemodulation.eps> [7]
+<figures/chapter-5/AdaptiveDemodulation.eps> [63]
 File: figures/chapter-5/Demo.jpg Graphic file (type QTm)
 
-<use  "figures/chapter-5/Demo.jpg" > [8]) [9] [10
+<use  "figures/chapter-5/Demo.jpg" > [64]) [65]
+(E:\WuMan\Master_Thesis_WuMan\chapter-6.tex [66
 
 
 
 ]
-(E:\WuMan\Master_Thesis_WuMan\Main.bbl
+第\CJKnumber {6}章 6.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67])
+[68] (E:\WuMan\Master_Thesis_WuMan\Main.bbl [69
+
+
+
+
+] [70]
 
 Package xeCJK Warning: Unknown CJK family `tt' is ignored.
-Use \setCJKfamilyfont to define a CJK family. on input line 12.
+Use \setCJKfamilyfont to define a CJK family. on input line 288.
 
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 12.
-
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 288
+.
 (d:\CTEX\MiKTeX\tex\latex\euenc\eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [11
+) [71] [72]) [73]
+(E:\WuMan\Master_Thesis_WuMan\Resume.tex [74
+
+
+
+]) [75
 
 ]
-(E:\WuMan\Master_Thesis_WuMan\Resume.tex [12
+(E:\WuMan\Master_Thesis_WuMan\Acknowledgement.tex [76
 
 
 
-]) [13
-
-]
-(E:\WuMan\Master_Thesis_WuMan\Acknowledgement.tex [14
-
-
-
-]) [15
+]) [77
 
 ]
 File: figures/back-cover.png Graphic file (type QTm)
 
 <use  "figures/back-cover.png" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
- [16
+ [78
 
 
 ]
@@ -1994,7 +2359,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
 (E:\WuMan\Master_Thesis_WuMan\abstract-cn.aux)
 (E:\WuMan\Master_Thesis_WuMan\abstract-en.aux)
 (E:\WuMan\Master_Thesis_WuMan\terminology.aux)
+(E:\WuMan\Master_Thesis_WuMan\chapter-1.aux)
+(E:\WuMan\Master_Thesis_WuMan\chapter-2.aux)
+(E:\WuMan\Master_Thesis_WuMan\chapter-3.aux)
+(E:\WuMan\Master_Thesis_WuMan\chapter-4.aux)
 (E:\WuMan\Master_Thesis_WuMan\chapter-5.aux)
+(E:\WuMan\Master_Thesis_WuMan\chapter-6.aux)
 (E:\WuMan\Master_Thesis_WuMan\Resume.aux)
 (E:\WuMan\Master_Thesis_WuMan\Acknowledgement.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 79.
@@ -2012,12 +2382,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26899 strings out of 430478
- 484925 string characters out of 3191501
- 597719 words of memory out of 3000000
- 29540 multiletter control sequences out of 15000+200000
- 19257 words of font info for 146 fonts, out of 3000000 for 9000
+ 27422 strings out of 430478
+ 497327 string characters out of 3191501
+ 614016 words of memory out of 3000000
+ 29963 multiletter control sequences out of 15000+200000
+ 19361 words of font info for 159 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,17n,61p,1028b,682s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,22n,77p,1028b,902s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Main.pdf (36 pages).
+Output written on Main.pdf (98 pages).
