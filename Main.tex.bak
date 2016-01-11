@@ -17,9 +17,9 @@
 \secretlevel{公开}    %学位论文密级分为"公开"、"内部"、"秘密"和"机密"四种
 \studentid{130657}   %学号要完整，前面的零不能省略。
 \title{可见光多波段通信系统自适应传输\ \ 技术研究}{}{Research On Adaptive Transmission Technology Of Multi Visible Light Communication System}{}
-\author{吴满}{Man Wu}
+\author{}{}
 %\author{}{~}
-\advisor{赵春明}{教授}{Chunming Zhao}{Prof.}
+\advisor{}{}{}{}
 %\advisor{}{}{~}{~}
 %\coadvisor{张\quad{}华}{副教授}{Hua Zhang}{Associate Prof.}  % 没有可以不填
 
@@ -53,12 +53,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 开始正文
 \begin{Main}
-%   \include{chapter-1}
-%   \include{chapter-2}
-%   \include{chapter-3}
-%   \include{chapter-4}
+   \include{chapter-1}
+   \include{chapter-2}
+   \include{chapter-3}
+   \include{chapter-4}
    \include{chapter-5}
-%   \include{chapter-6}
+   \include{chapter-6}
 \end{Main}
 % 结束正文
 

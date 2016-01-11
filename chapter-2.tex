@@ -11,7 +11,7 @@
     \caption{光无线通信系统模型}
     \label{fig:BasicOpticalSystem}
 \end{figure}
-如\autoref{fig:BasicOpticalSystem}所示，在电信号域（Electrisity domain）发射端输出电压信号$x(t)$经发射端模拟电路后变成LED的电流$i_{TX}(t)$ 信号，接收端光敏二极管PD输出电流$i_{RX}(t)$，其最后转换成接收信号$y(t)$ ，在光信号域（Light Domain），首先在发射端发光二极管LED的电流信号$i_{TX}(t)$ 转变为发光强度$s(t)$，经过光信道后，在接收端光电二极管PD 收到的光强信号为$r(t)$，经过光电转换，得到电流$i_{RX}(t)$。
+如\autoref{fig:BasicOpticalSystem}所示，在电信号域（Electrisity domain）发射端输出电压信号$x(t)$经发射端模拟电路后变成LED的电流$i_{TX}(t)$ 信号，接收端光敏二极管PD输出电流$i_{RX}(t)$，其最后转换成接收信号$y(t)$ ，在光信号域（Light Domain），首先在发射端发光二极管LED 的电流信号$i_{TX}(t)$ 转变为发光强度$s(t)$，经过光信道后，在接收端光电二极管PD 收到的光强信号为$r(t)$，经过光电转换，得到电流$i_{RX}(t)$。
 所以在实际可见光通信系统中，信号传输由电光变换，光通道传输及光电变换三个过程组成，如\autoref{fig:BasebandModle}所示，接收端信号$y(t)$ 可以表示为：
 \begin{equation}
     y(t)=x(t)\otimes h_1(t)\otimes h_2(t)\otimes h_3(t)+z(t)
@@ -42,7 +42,7 @@ $z(t)$表示信道加性白高斯噪声（Additive White Gaussian Noise，AWGN�
 \label{equ:opticalChannelMode}
 h_2(t) = \sum_{n=0}^{N_t-1}\alpha_n \delta(t-\tau_n)
 \end{equation}
-式中$N_t$表示信道抽头数量，$\alpha_n$表示第n个抽头的衰减系数，$\tau_n$表示第n个抽头的时延。
+式中$N_t$表示信道抽头数量，$\alpha_n$表示第n个抽头的衰减系数，$\tau_n$ 表示第n个抽头的时延。
 
 对于LOS信道，直达径占主导地位，但是信号还是通过墙壁、家具反射径等非直达径（Non Light of Sight，Non-LOS）进入接收端，如图\ref{fig:LOSChannelResponse}所示为本课题对应硬件平台上通过发送伪随机序列（Pseudo-Noise Sequence，PN seq.）估计出来的信道响应（时钟200 MHz，PN码长度为16384），其中图
 \ref{fig:ChannelImpulseResponse}为时域冲激响应，从中可以看出信道确实存在时延扩展，不过反射径增益随着时延衰减得很快。幅度频率响应如图
@@ -71,7 +71,7 @@ h_2(t) = \sum_{n=0}^{N_t-1}\alpha_n \delta(t-\tau_n)
 \label{equ:ceilingModel}
 \alpha_n \propto \frac{6a^6}{(\tau_n+a)^7}
 \end{equation}
-其中$a=12\tau_{DS}\sqrt{11/13}$，可以看到，在这两种模型中路径损耗系统$\alpha_n$都是随着时延扩展$\tau_n$的增加而减少。式\ref{equ:expModel}和\ref{equ:ceilingModel}给出的只是这两种模型的轮廓，并不是真正的信道时域冲激响应的抽头系数。因为DOW信道非常复杂，并且会随着室内人和物品的移动而变化，所以在仿真建模中一般先根据房间的具体情况确定参数化时延扩展$\tau_{DS}$，然后选择模型，最后在该模型下随机生成信道。如图\ref{fig:DOWChannelResponse}所示为DOW信道的时频域响应图，图\ref{fig:DOWChannelImpulseResponse}为时域响应情况，图中给出了三种信道模型的轮廓和一个信道的例子，其中“mixed model”是指指数衰减模型和天花板反射模型混合而成的，即在仿真建模中取得这两种信道模型的概率都是50\%的情况下得到的信道，这样做是为了提高信道的多样性。图\ref{fig:DOWChannelImpulseResponse-AmpFreqResponse}给出了DOW信道模型的幅度频率响应，不难看出信道模型轮廓还是低通的，但是对于实例而言，在高频端会有一些波动。
+其中$a=12\tau_{DS}\sqrt{11/13}$，可以看到，在这两种模型中路径损耗系统$\alpha_n$都是随着时延扩展$\tau_n$的增加而减少。式\ref{equ:expModel} 和\ref{equ:ceilingModel}给出的只是这两种模型的轮廓，并不是真正的信道时域冲激响应的抽头系数。因为DOW信道非常复杂，并且会随着室内人和物品的移动而变化，所以在仿真建模中一般先根据房间的具体情况确定参数化时延扩展$\tau_{DS}$，然后选择模型，最后在该模型下随机生成信道。如图\ref{fig:DOWChannelResponse}所示为DOW信道的时频域响应图，图\ref{fig:DOWChannelImpulseResponse}为时域响应情况，图中给出了三种信道模型的轮廓和一个信道的例子，其中“mixed model”是指指数衰减模型和天花板反射模型混合而成的，即在仿真建模中取得这两种信道模型的概率都是50\%的情况下得到的信道，这样做是为了提高信道的多样性。图\ref{fig:DOWChannelImpulseResponse-AmpFreqResponse}给出了DOW信道模型的幅度频率响应，不难看出信道模型轮廓还是低通的，但是对于实例而言，在高频端会有一些波动。
 
 由以上分析可得，组成可见光通信系统的三个组成部分都是线性的，那么整个信道也是线性的，其时域冲激响应可以表示为：
 \begin{equation}
@@ -385,9 +385,6 @@ y_1 + y_2 > \eta_c.  \label{Eq_simp_decision}
     \label{fig:CCDF}
 \end{figure}
 
-为验证RoC-ACO-OFDM的性能，进行了必要的数值仿真，比较的对象选为不削波的ACO-OFDM技术和直接削波的ACO-OFDM技术。仿真中设置子载波数为256，使用64QAM调制，仿真结果如图\ref{fig:CCDF}所示，图中横轴$\text{PAPR}_0$表示峰均比的基准，纵轴是互补累积分布函数（Complementary Cumulative Distribution Function，CCDF），表示信号大于横轴基准的概率，CR 表示削波系数，以分贝为单位，定义为CR$= 20 \log \left( \eta_c / \sqrt{\mathbb{E} \left\{ |x_c[n]|^2 \right\} } \right)$，其中$\mathbb{E} \left\{ |x_c[n]|^2 \right\}$表示发射信号的平均功率。从图中可以看到，削波系数的越大，PAPR的性能越好，如在理想的ACO-OFDM中在$\text{PAPR}_0$=17.0 dB时CCDF为$10^{-4}$，而当CR= 7dB时，RoC-ACO-OFDM 在$\text{PAPR}_0$=11.4 dB时CCDF就能达到，提升5.6 dB，几乎媲美直接削波。
-
-同时也考察了RoC-ACO-OFDM的误比特率性能，这个才是通信中最关心的问题。我们仿真比较了理想ACO-OFDM、直接削波ACO-OFDM 及RoC-ACO-OFDM 的在AWGN信道下的BER 性能，仿真中同样设置子载波数为256，使用64QAM调制，如图\ref{fig:BER_1}所示，BER 随着设定的阀值$\eta_c$变大而减少，当CR=10 dB 时，RoC-ACO-OFDM几乎接近理想ACO-OFDM，并且一直优于直接削波的方法；同时在图中也可以看出，我们提出的简化的接收端信号检测并恢复的方式是非常有效的，在大大降低了计算复杂度的前提下，误比特率性能几乎和MAP算法一样。
 
 \begin{figure}[htbp]
     \centering
@@ -395,5 +392,8 @@ y_1 + y_2 > \eta_c.  \label{Eq_simp_decision}
     \caption{BER性能比较}
     \label{fig:BER_1}
 \end{figure}
+为验证RoC-ACO-OFDM的性能，进行了必要的数值仿真，比较的对象选为不削波的ACO-OFDM技术和直接削波的ACO-OFDM技术。仿真中设置子载波数为256，使用64QAM调制，仿真结果如图\ref{fig:CCDF}所示，图中横轴$\text{PAPR}_0$表示峰均比的基准，纵轴是互补累积分布函数（Complementary Cumulative Distribution Function，CCDF），表示信号大于横轴基准的概率，CR 表示削波系数，以分贝为单位，定义为CR$= 20 \log \left( \eta_c / \sqrt{\mathbb{E} \left\{ |x_c[n]|^2 \right\} } \right)$，其中$\mathbb{E} \left\{ |x_c[n]|^2 \right\}$表示发射信号的平均功率。从图中可以看到，削波系数的越大，PAPR的性能越好，如在理想的ACO-OFDM中在$\text{PAPR}_0$=17.0 dB时CCDF为$10^{-4}$，而当CR= 7dB时，RoC-ACO-OFDM 在$\text{PAPR}_0$=11.4 dB时CCDF就能达到，提升5.6 dB，几乎媲美直接削波。
+
+同时也考察了RoC-ACO-OFDM的误比特率性能，这个才是通信中最关心的问题。我们仿真比较了理想ACO-OFDM、直接削波ACO-OFDM 及RoC-ACO-OFDM 的在AWGN信道下的BER 性能，仿真中同样设置子载波数为256，使用64QAM调制，如图\ref{fig:BER_1}所示，BER 随着设定的阀值$\eta_c$变大而减少，当CR=10 dB 时，RoC-ACO-OFDM几乎接近理想ACO-OFDM，并且一直优于直接削波的方法；同时在图中也可以看出，我们提出的简化的接收端信号检测并恢复的方式是非常有效的，在大大降低了计算复杂度的前提下，误比特率性能几乎和MAP算法一样。
 \section{本章小结}
 本章首先简述了可见光通信的基本原理，包括系统模型、信道特征及光电元器件等，本文联系实际情况将可见光通信信道建模为线性信道，然后介绍了电光转换器件LED，详细说明了荧光激发型LED和多色混合型LED的工作原理和特性，还介绍PIN 和APD两类光电转换器件及接收端使用的滤光片。理解这些光电元器件的原理与作用有益于理解整个可见光通信系统。由于OFDM调制技术非常适应光低通信道，在可见光通信中也得到了广泛的使用，所以本章也介绍了光OFDM技术，主要说明了DCO-OFDM和ACO-OFDM的工作原理及区别，在此基础上提出了一种改善ACO-OFDM 系统PAPR 性能的RoC-ACO-OFDM方案，并且在理论和数值仿真的角度论证了该方案的有效性。
