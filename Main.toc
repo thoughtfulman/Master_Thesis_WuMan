@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {2.3.2}DCO-OFDM简介}{16}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}ACO-OFDM调制}{18}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}RoC-ACO-OFDM调制}{21}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}本章小结}{24}{section.2.4}
+\contentsline {section}{\numberline {2.4}本章小结}{25}{section.2.4}
 \contentsline {chapter}{\numberline {3}可见光多波段OFDM系统的信道估计}{27}{chapter.3}
 \contentsline {section}{\numberline {3.1}引言}{27}{section.3.1}
 \contentsline {section}{\numberline {3.2}OFDM信道估计常用方法}{27}{section.3.2}
