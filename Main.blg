@@ -16,10 +16,8 @@ Repeated entry---line 239 of file Reference.bib
  : @article{vuvcic2010513
  :                       ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 521 of file Reference.bib
- :   address={重庆}
- :                   ，
-I'm skipping whatever remains of this entry
+Warning--entry type for "hughes1989ensemble" isn't style-file defined
+--line 534 of file Reference.bib
 Warning--empty year in afgani2006visible
 You can't pop an empty literal stack for entry afgani2006visible
 while executing---line 3542 of file seuthesis.bst
@@ -32,4 +30,4 @@ You can't pop an empty literal stack for entry sandell1996comparative
 while executing---line 3542 of file seuthesis.bst
 You can't pop an empty literal stack for entry hughes1989ensemble
 while executing---line 3542 of file seuthesis.bst
-(There were 7 error messages)
+(There were 6 error messages)

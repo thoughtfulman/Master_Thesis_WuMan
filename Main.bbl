@@ -315,7 +315,7 @@ Kay S~M.
 
 \bibitem[张乃元(2010)]{张乃元2010lte}
 张乃元.
-\newblock LTE 系统中的信道估计技术研究[D]:[硕士学位论文].
+\newblock LTE系统中的信道估计技术研究[D]:[硕士学位论文].
 \newblock 北京: 北京邮电大学, 2010.
 
 \bibitem[Sandell and Edfors(1996)]{sandell1996comparative}
@@ -346,9 +346,9 @@ Shafik R~A, Rahman M~S, Islam A.
 
 \bibitem[徐凌峰(2007)]{徐凌峰2007ofdm}
 徐凌峰.
-\newblock OFDM 系统中的自适应比特分配算法研究[D]:[Master's
-  Thesis].
-\newblock 重庆: [s.n.] , 2007.
+\newblock OFDM
+  系统中的自适应比特分配算法研究[D]:[硕士学位论文].
+\newblock 重庆: 重庆大学, 2007.
 
 \bibitem[余官定 et al.(2005)]{余官定2005ofdm}
 余官定, 张朝阳, 仇佩亮.
@@ -358,8 +358,8 @@ Shafik R~A, Rahman M~S, Islam A.
 \bibitem[Hughes-Hartogs(1989)]{hughes1989ensemble}
 Hughes-Hartogs D.
 \newblock
-\newblock Ensemble modem structure for imperfect transmission
-  media[缺文献类型标志代码].[S.l.]: Google Patents, 1989.
+\newblock Ensemble modem structure for imperfect transmission media[M].[S.l.]:
+  Google Patents, 1989.
 \newblock US Patent 4,833,706.
 
 \bibitem[Chow et al.(1995)]{chow1995practical}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  18 JAN 2016 16:10
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  22 JAN 2016 22:01
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -2088,19 +2088,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [15]
 File: figures/chapter-2/DCO-OFDMStructure.eps Graphic file (type eps)
 
-<figures/chapter-2/DCO-OFDMStructure.eps> [16]
-Underfull \vbox (badness 2080) has occurred while \output is active []
+<figures/chapter-2/DCO-OFDMStructure.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+ [16]
+[17]
 File: figures/chapter-2/DCO_OFDM.eps Graphic file (type eps)
-
-<figures/chapter-2/DCO_OFDM.eps>
+ <figures/chapter-2/DCO_OFDM.eps>
 File: figures/chapter-2/ACO-OFDMStructure.eps Graphic file (type eps)
- <figures/chapter-2/ACO-OFDMStructure.eps>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[18]
+<figures/chapter-2/ACO-OFDMStructure.eps> [18]
 .................................................
 . fontspec info: "no-scripts"
 . 
@@ -2133,18 +2130,18 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 .................................................
  [19]
 File: figures/chapter-2/ACO_OFDM.eps Graphic file (type eps)
- <figures/chapter-2/ACO_OFDM.eps>
-File: figures/chapter-2/RoC-ACO-OFDMStructure.eps Graphic file (type eps)
 
-<figures/chapter-2/RoC-ACO-OFDMStructure.eps> [20]
+<figures/chapter-2/ACO_OFDM.eps>
+File: figures/chapter-2/RoC-ACO-OFDMStructure.eps Graphic file (type eps)
+ <figures/chapter-2/RoC-ACO-OFDMStructure.eps>
 File: figures/chapter-2/SCH_data.eps Graphic file (type eps)
 
 <figures/chapter-2/SCH_data.eps>
 File: figures/chapter-2/HypothesisSketch.eps Graphic file (type eps)
  <figures/chapter-2/HypothesisSketch.eps>
+[20]
 File: figures/chapter-2/MAP_RoC_ACO_OFDM.eps Graphic file (type eps)
-
-<figures/chapter-2/MAP_RoC_ACO_OFDM.eps> [21]
+ <figures/chapter-2/MAP_RoC_ACO_OFDM.eps> [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
@@ -2183,9 +2180,8 @@ Overfull \hbox (10.95001pt too wide) in paragraph at lines 226--231
  [][][][] 
  []
 
-[33]
 File: figures/chapter-3/Sim_Channel_time.eps Graphic file (type eps)
- <figures/chapter-3/Sim_Channel_time.eps>
+<figures/chapter-3/Sim_Channel_time.eps>
 File: figures/chapter-3/Sim_Channel_frequency.eps Graphic file (type eps)
 
 <figures/chapter-3/Sim_Channel_frequency.eps>
@@ -2193,19 +2189,20 @@ Overfull \hbox (10.95001pt too wide) in paragraph at lines 242--247
  [][][][] 
  []
 
-[34]
+[33]
+Underfull \vbox (badness 3039) has occurred while \output is active []
+
+ [34]
 File: figures/chapter-3/BER_SNR_avg.eps Graphic file (type eps)
- <figures/chapter-3/BER_SNR_avg.eps>
+
+<figures/chapter-3/BER_SNR_avg.eps>
 File: figures/chapter-3/MSE_SNR_avg.eps Graphic file (type eps)
  <figures/chapter-3/MSE_SNR_avg.eps>
 [35] [36]
 File: figures/chapter-3/BER_sc.eps Graphic file (type eps)
  <figures/chapter-3/BER_sc.eps>
-
-LaTeX Warning: Reference `SVD_BER_MSE_SNR_avg' on page 37 undefined on input li
-ne 324.
-
 File: figures/chapter-3/SVD_BER_SNR_avg.eps Graphic file (type eps)
+
 <figures/chapter-3/SVD_BER_SNR_avg.eps>
 File: figures/chapter-3/SVD_MSE_SNR_avg.eps Graphic file (type eps)
 
@@ -2214,9 +2211,9 @@ Overfull \hbox (10.95001pt too wide) in paragraph at lines 344--349
  [][][][] 
  []
 
-[37] [38]
+[37]
 File: figures/chapter-3/SNR_ZC_EVM.eps Graphic file (type eps)
- <figures/chapter-3/SNR_ZC_EVM.eps>) [39] [40]
+ <figures/chapter-3/SNR_ZC_EVM.eps> [38]) [39] [40]
 (E:\WuMan\Master_Thesis_WuMan\chapter-4.tex
 第\CJKnumber {4}章 4.
 
@@ -2375,19 +2372,16 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 3.12pt have occurred.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27422 strings out of 430478
- 497327 string characters out of 3191501
+ 27420 strings out of 430478
+ 497283 string characters out of 3191501
  614016 words of memory out of 3000000
- 29963 multiletter control sequences out of 15000+200000
+ 29961 multiletter control sequences out of 15000+200000
  19361 words of font info for 159 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,22n,77p,1028b,902s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,22n,77p,1028b,901s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on Main.pdf (98 pages).
