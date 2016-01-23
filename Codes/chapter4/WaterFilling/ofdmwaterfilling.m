@@ -93,7 +93,7 @@ function [shanonCapacity powerAllocated] = ofdmwaterfilling(...
 f1 = figure(1);
     clf;
     set(f1,'Color',[1 1 1]);
-    bar((initPowerAllo + 1./carrierToNoiseRatio),1,'r')
+    bar((initPowerAllo + 1./carrierToNoiseRatio),1,'y')
     hold on;    
     bar(1./carrierToNoiseRatio,1);
     xlabel('Subchannel Index');

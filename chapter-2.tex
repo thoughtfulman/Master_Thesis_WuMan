@@ -393,6 +393,6 @@ y_1 + y_2 > \eta_c.  \label{Eq_simp_decision}
 \end{figure}
 为验证RoC-ACO-OFDM的性能，进行了必要的数值仿真，比较的对象选为不削波的ACO-OFDM技术和直接削波的ACO-OFDM技术。仿真中设置子载波数为256，使用64QAM调制，仿真结果如图\ref{fig:CCDF}所示，图中横轴$\text{PAPR}_0$表示峰均比的基准，纵轴是互补累积分布函数（Complementary Cumulative Distribution Function，CCDF），表示信号大于横轴基准的概率，CR 表示削波系数，以分贝为单位，定义为CR$= 20 \log \left( \eta_c / \sqrt{\mathbb{E} \left\{ |x_c[n]|^2 \right\} } \right)$，其中$\mathbb{E} \left\{ |x_c[n]|^2 \right\}$表示发射信号的平均功率。从图中可以看到，削波系数的越大，PAPR的性能越好，如在理想的ACO-OFDM中在$\text{PAPR}_0$=17.0 dB时CCDF为$10^{-4}$，而当CR= 7dB时，RoC-ACO-OFDM 在$\text{PAPR}_0$=11.4 dB时CCDF就能达到，提升5.6 dB，几乎媲美直接削波。
 
-同时也考察了RoC-ACO-OFDM的误比特率性能，这个才是通信中最关心的问题。我们仿真比较了理想ACO-OFDM、直接削波ACO-OFDM 及RoC-ACO-OFDM 的在AWGN信道下的BER 性能，仿真中同样设置子载波数为256，使用64QAM调制，如图\ref{fig:BER_1}所示，BER 随着设定的阀值$\eta_c$变大而减少，当CR=10 dB 时，RoC-ACO-OFDM几乎接近理想ACO-OFDM，并且一直优于直接削波的方法；同时在图中也可以看出，我们提出的简化的接收端信号检测并恢复的方式是非常有效的，在大大降低了计算复杂度的前提下，误比特率性能几乎和MAP算法一样。
+同时也考察了RoC-ACO-OFDM的误比特率性能，这个才是通信中最关心的问题。我们仿真比较理想无削波、直接上削波、削波搬移加MAP检测、削波搬移加简化算法检测四组ACO-OFDM调制方案，并且后三种给出了CR=10、8、7dB三种情况。仿真中同样设置子载波数为256，使用64QAM调制，如图\ref{fig:BER_1}所示，BER 随着设定的阀值$\eta_c$变大而减少，当CR=10 dB 时，RoC-ACO-OFDM几乎接近理想ACO-OFDM，并且一直优于直接削波的方法；同时在图中也可以看出，我们提出的简化的接收端信号检测并恢复的方式是非常有效的，在大大降低了计算复杂度的前提下，误比特率性能几乎和MAP算法一样。
 \section{本章小结}
 本章首先简述了可见光通信的基本原理，包括系统模型、信道特征及光电元器件等，本文联系实际情况将可见光通信信道建模为线性信道，然后介绍了电光转换器件LED，详细说明了荧光激发型LED和多色混合型LED的工作原理和特性，还介绍PIN 和APD两类光电转换器件及接收端使用的滤光片。理解这些光电元器件的原理与作用有益于理解整个可见光通信系统。由于OFDM调制技术非常适应光低通信道，在可见光通信中也得到了广泛的使用，所以本章也介绍了光OFDM技术，主要说明了DCO-OFDM和ACO-OFDM的工作原理及区别，在此基础上提出了一种改善ACO-OFDM 系统PAPR 性能的RoC-ACO-OFDM方案，并且在理论和数值仿真的角度论证了该方案的有效性。
