@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  22 JAN 2016 22:01
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2015.10.14)  25 JAN 2016 16:47
 entering extended mode
 **Main
 (E:\WuMan\Master_Thesis_WuMan\Main.tex
@@ -1400,7 +1400,7 @@ File: se-ascii-print.def 2010/03/01 v1.8 stringenc: Printable ASCII characters
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 38.
+(hyperref)                removing `\@ifnextchar' on input line 40.
 
 File: figures/front-cover.jpg Graphic file (type QTm)
 <use  "figures/front-cover.jpg" >
@@ -1409,28 +1409,28 @@ File: figures/master.png Graphic file (type QTm)
 File: figures/seu-color-logo.png Graphic file (type QTm)
 
 <use  "figures/seu-color-logo.png" >
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 38.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 40.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 38.
+(Font)              size <10.95> substituted on input line 40.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 38.
+(Font)              size <10.95> substituted on input line 40.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
 (d:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (d:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 38.
+(Font)              size <10.95> substituted on input line 40.
 
 .................................................
 . fontspec info: "no-scripts"
@@ -1461,27 +1461,27 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . <->"SimSun/ICU:mapping=tex-text;embolden=4,slant=0.17;"
 .................................................
 
-Underfull \hbox (badness 1616) detected at line 38
+Underfull \hbox (badness 1616) detected at line 40
 \xeCJK@rm/m/n/9 学 校 代 码
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 40
 \xeCJK@rm/m/n/9 分 类 号
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 40
 \xeCJK@rm/m/n/9 密 级
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 40
 \EU1/TimesNewRoman(0)/m/n/9 U D C
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 40
 \xeCJK@rm/m/n/9 学 号
  []
 
@@ -1529,7 +1529,7 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \hbox (6.61525pt too wide) detected at line 38
+Overfull \hbox (6.61525pt too wide) detected at line 40
 \xeCJK@zhsong/m/n/18 研 究 生 姓 名：| 
  []
 
@@ -1549,7 +1549,7 @@ ei},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \hbox (6.61525pt too wide) detected at line 38
+Overfull \hbox (6.61525pt too wide) detected at line 40
 \xeCJK@zhsong/m/n/18 导  师  姓  名：| 
  []
 
@@ -1584,47 +1584,47 @@ ei},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \hbox (6.11812pt too wide) detected at line 38
+Overfull \hbox (6.11812pt too wide) detected at line 40
  \xeCJK@zhsong/m/n/12 申 请 学 位 类 别 $[]$ 
  []
 
 
-Overfull \hbox (6.11812pt too wide) detected at line 38
+Overfull \hbox (6.11812pt too wide) detected at line 40
  \xeCJK@zhsong/m/n/12 学 位 授 予 单 位 $[]$ 
  []
 
 
-Overfull \hbox (6.11812pt too wide) detected at line 38
+Overfull \hbox (6.11812pt too wide) detected at line 40
  \xeCJK@zhsong/m/n/12 一 级 学 科 名 称 $[]$ 
  []
 
 
-Overfull \hbox (6.11812pt too wide) detected at line 38
+Overfull \hbox (6.11812pt too wide) detected at line 40
  \xeCJK@zhsong/m/n/12 论 文 答 辩 日 期 $[]$ 
  []
 
 
-Overfull \hbox (6.11812pt too wide) detected at line 38
+Overfull \hbox (6.11812pt too wide) detected at line 40
  \xeCJK@zhsong/m/n/12 二 级 学 科 名 称 $[]$ 
  []
 
 
-Overfull \hbox (6.11812pt too wide) detected at line 38
+Overfull \hbox (6.11812pt too wide) detected at line 40
  \xeCJK@zhsong/m/n/12 学 位 授 予 日 期 $[]$ 
  []
 
 
-Overfull \hbox (3.89174pt too wide) detected at line 38
+Overfull \hbox (3.89174pt too wide) detected at line 40
  \xeCJK@zhsong/m/n/12 答 辩 委 员 会 主 席 $[]$ 
  []
 
 
-Overfull \hbox (6.11812pt too wide) detected at line 38
+Overfull \hbox (6.11812pt too wide) detected at line 40
  \xeCJK@zhsong/m/n/12 评         阅         人 $[]$ 
  []
 
 
-Overfull \hbox (6.67273pt too wide) detected at line 38
+Overfull \hbox (6.67273pt too wide) detected at line 40
  [] $[]$ 
  []
 
@@ -1653,34 +1653,34 @@ File: figures/seu-text-logo.eps Graphic file (type eps)
  <figures/seu-text-logo.eps>
 File: figures/master-hwzs.eps Graphic file (type eps)
  <figures/master-hwzs.eps>
-LaTeX Font Info:    Calculating math sizes for size <28> on input line 38.
+LaTeX Font Info:    Calculating math sizes for size <28> on input line 40.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <28> not available
-(Font)              size <24.88> substituted on input line 38.
+(Font)              size <24.88> substituted on input line 40.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <19.59991> not available
-(Font)              size <20.74> substituted on input line 38.
+(Font)              size <20.74> substituted on input line 40.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <28> not available
-(Font)              size <24.88> substituted on input line 38.
+(Font)              size <24.88> substituted on input line 40.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <19.59991> not available
-(Font)              size <20.74> substituted on input line 38.
+(Font)              size <20.74> substituted on input line 40.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <28> not available
-(Font)              size <24.88> substituted on input line 38.
+(Font)              size <24.88> substituted on input line 40.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <19.59991> not available
-(Font)              size <20.74> substituted on input line 38.
+(Font)              size <20.74> substituted on input line 40.
 
 
-Overfull \hbox (6.61525pt too wide) detected at line 38
+Overfull \hbox (6.61525pt too wide) detected at line 40
 \xeCJK@zhhei/m/n/18 专  业  名  称：| 
  []
 
@@ -1700,17 +1700,17 @@ un},BoldItalicFeatures={RawFeature={embolden=4,slant=0.17}}].
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \hbox (6.61525pt too wide) detected at line 38
+Overfull \hbox (6.61525pt too wide) detected at line 40
 \xeCJK@zhhei/m/n/18 研 究 生 姓 名：| 
  []
 
 
-Overfull \hbox (6.61525pt too wide) detected at line 38
+Overfull \hbox (6.61525pt too wide) detected at line 40
 \xeCJK@zhhei/m/n/18 导  师  姓  名：| 
  []
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 38.
+Package hyperref Warning: Ignoring empty anchor on input line 40.
 
 .................................................
 . fontspec info: "no-scripts"
@@ -2346,12 +2346,12 @@ File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: figures/back-cover.png Graphic file (type QTm)
 
 <use  "figures/back-cover.png" >
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
  [78
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
  (E:\WuMan\Master_Thesis_WuMan\Main.aux
 (E:\WuMan\Master_Thesis_WuMan\abstract-cn.aux)
 (E:\WuMan\Master_Thesis_WuMan\abstract-en.aux)
@@ -2364,8 +2364,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
 (E:\WuMan\Master_Thesis_WuMan\chapter-6.aux)
 (E:\WuMan\Master_Thesis_WuMan\Resume.aux)
 (E:\WuMan\Master_Thesis_WuMan\Acknowledgement.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 79.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 79.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 81.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 81.
 
 
 LaTeX Font Warning: Size substitutions with differences
